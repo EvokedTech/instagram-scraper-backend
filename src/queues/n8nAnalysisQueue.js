@@ -285,26 +285,33 @@ async function getSessionAnalysisStats(sessionId) {
 }
 
 // Queue event handlers
-n8nAnalysisQueue.on('completed', (job, result) => {
-  logger.info(`n8n analysis job completed for ${result.username}`, {
-    jobId: job.id,
-    processingTime: result.processingTime
+if (n8nAnalysisQueue) {
+  // Increase max listeners to prevent warnings
+  if (n8nAnalysisQueue.setMaxListeners) {
+    n8nAnalysisQueue.setMaxListeners(15);
+  }
+  
+  n8nAnalysisQueue.on('completed', (job, result) => {
+    logger.info(`n8n analysis job completed for ${result.username}`, {
+      jobId: job.id,
+      processingTime: result.processingTime
+    });
   });
-});
 
-n8nAnalysisQueue.on('failed', (job, error) => {
-  logger.error(`n8n analysis job failed for ${job.data.username}`, {
-    jobId: job.id,
-    error: error.message,
-    attempts: job.attemptsMade
+  n8nAnalysisQueue.on('failed', (job, error) => {
+    logger.error(`n8n analysis job failed for ${job.data.username}`, {
+      jobId: job.id,
+      error: error.message,
+      attempts: job.attemptsMade
+    });
   });
-});
 
-n8nAnalysisQueue.on('stalled', (job) => {
-  logger.warn(`n8n analysis job stalled for ${job.data.username}`, {
-    jobId: job.id
+  n8nAnalysisQueue.on('stalled', (job) => {
+    logger.warn(`n8n analysis job stalled for ${job.data.username}`, {
+      jobId: job.id
+    });
   });
-});
+}
 
 // Helper functions
 async function queueProfileForN8nAnalysis(profileId, sessionId, username, depth) {

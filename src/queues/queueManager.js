@@ -28,6 +28,11 @@ const queues = defaultQueueOptions ? {
 Object.entries(queues).forEach(([queueName, queue]) => {
   if (!queue) return; // Skip if queue is null
   
+  // Increase max listeners for queue to prevent warnings
+  if (queue.setMaxListeners) {
+    queue.setMaxListeners(15);
+  }
+  
   queue.on('completed', (job, result) => {
     logger.info(`Job ${job.id} completed in ${queueName}`, {
       jobId: job.id,

@@ -40,17 +40,24 @@ function createSharedClients() {
       }
     });
 
+    // Increase max listeners to prevent warning
+    client.setMaxListeners(20);
+    
     // Create subscriber (for pub/sub)
     const subscriber = client.duplicate();
+    subscriber.setMaxListeners(20);
     
     // Create bclient (for blocking operations)
     const bclient = client.duplicate();
+    bclient.setMaxListeners(20);
 
-    // Log successful connection
+    // Log successful connection only on main client
     client.on('connect', () => {
       logger.info('Shared Redis client connected for Bull queues');
     });
 
+    // Add error handler only on main client
+    // Duplicated clients will inherit the error handling behavior
     client.on('error', (err) => {
       logger.error('Shared Redis client error:', err);
     });

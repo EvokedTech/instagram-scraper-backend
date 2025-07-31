@@ -2251,3 +2251,153 @@
 {"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:28:00"}
 {"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:28:10"}
 {"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:28:20"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:28:30"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:28:40"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:28:50"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:29:00"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:29:10"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:29:20"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:29:30"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:29:40"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:29:50"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:30:00"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:30:10"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:30:20"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:30:30"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:30:40"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:30:50"}
+{"level":"info","message":"Using Redis URL configuration for redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-08-01 02:38:03"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-08-01 02:38:03"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-08-01 02:38:04"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-08-01 02:38:04"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-08-01 02:38:04"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-08-01 02:38:04","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"info","message":"Shared Redis client connected for Bull queues","service":"instagram-scraper","timestamp":"2025-08-01 02:38:05"}
+{"level":"info","message":"MongoDB connected successfully","service":"instagram-scraper","timestamp":"2025-08-01 02:38:06"}
+{"level":"info","message":"Redis client connected","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Redis client ready","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Connected to Redis at redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Redis connection verified with PING","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Initializing queue processors...","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Root profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Related profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Depth processing queue processor initialized","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Related profile batch queue processor initialized","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Analysis will be processed through n8n webhook","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"All queue processors initialized successfully","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Session completion checker started","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Server is running on port 5000","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Environment: development","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-08-01 02:38:07"}
+{"level":"info","message":"New socket connection: McrXp2Gbk3kOKq5nAAAB","service":"instagram-scraper","timestamp":"2025-08-01 02:38:10"}
+{"level":"info","message":"Socket McrXp2Gbk3kOKq5nAAAB unsubscribed from session 688bb09dcb3fc366e3af7bed","service":"instagram-scraper","timestamp":"2025-08-01 02:38:10"}
+{"level":"info","message":"Socket McrXp2Gbk3kOKq5nAAAB subscribed to session 688bb09dcb3fc366e3af7bed","service":"instagram-scraper","timestamp":"2025-08-01 02:38:10"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:38:17"}
+{"level":"info","message":"New socket connection: Bs1MG4oPK_0vWowVAAAD","service":"instagram-scraper","timestamp":"2025-08-01 02:38:24"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:38:27"}
+{"level":"info","message":"Socket disconnected: Bs1MG4oPK_0vWowVAAAD","service":"instagram-scraper","timestamp":"2025-08-01 02:38:29"}
+{"level":"info","message":"New socket connection: T-P6IwfNM9T-ORgsAAAF","service":"instagram-scraper","timestamp":"2025-08-01 02:38:34"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:38:37"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:38:48"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:38:58"}
+{"level":"info","message":"Socket disconnected: McrXp2Gbk3kOKq5nAAAB","service":"instagram-scraper","timestamp":"2025-08-01 02:39:05"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:39:08"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:39:18"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:39:28"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:39:38"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:39:48"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:39:58"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:40:08"}
+{"level":"info","message":"Socket disconnected: T-P6IwfNM9T-ORgsAAAF","service":"instagram-scraper","timestamp":"2025-08-01 02:40:10"}
+{"level":"info","message":"New socket connection: 2SYS5cyLhpKHNTEEAAAH","service":"instagram-scraper","timestamp":"2025-08-01 02:40:10"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:40:18"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:40:28"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:40:38"}
+{"level":"info","message":"Socket disconnected: 2SYS5cyLhpKHNTEEAAAH","service":"instagram-scraper","timestamp":"2025-08-01 02:40:38"}
+{"level":"info","message":"New socket connection: Damhigx1-sGdHNTjAAAJ","service":"instagram-scraper","timestamp":"2025-08-01 02:40:38"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:40:48"}
+{"level":"info","message":"New socket connection: QJXa6DvVTAcReAP0AAAL","service":"instagram-scraper","timestamp":"2025-08-01 02:40:56"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:40:58"}
+{"level":"info","message":"Socket disconnected: QJXa6DvVTAcReAP0AAAL","service":"instagram-scraper","timestamp":"2025-08-01 02:41:05"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:41:08"}
+{"level":"info","message":"New socket connection: b-RPHF_6OFPvlLyaAAAN","service":"instagram-scraper","timestamp":"2025-08-01 02:41:09"}
+{"level":"info","message":"Socket disconnected: Damhigx1-sGdHNTjAAAJ","service":"instagram-scraper","timestamp":"2025-08-01 02:41:09"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:41:18"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN subscribed to session 688bcff343bc3fded1414ddc","service":"instagram-scraper","timestamp":"2025-08-01 02:41:19"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN unsubscribed from session 688bcff343bc3fded1414ddc","service":"instagram-scraper","timestamp":"2025-08-01 02:41:19"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN subscribed to session 688bcff343bc3fded1414ddc","service":"instagram-scraper","timestamp":"2025-08-01 02:41:19"}
+{"level":"info","message":"Root profile aggregation result:","result":"[\n  {\n    \"_id\": \"pending\",\n    \"count\": 1,\n    \"profiles\": [\n      {\n        \"username\": \"melinadbr1\",\n        \"profileUrl\": \"https://www.instagram.com/melinadbr1/\"\n      }\n    ],\n    \"totalRelatedProfilesFound\": 0\n  }\n]","service":"instagram-scraper","sessionId":"688bcff343bc3fded1414ddc","timestamp":"2025-08-01 02:41:20"}
+{"level":"info","message":"Root profile aggregation result:","result":"[\n  {\n    \"_id\": \"pending\",\n    \"count\": 1,\n    \"profiles\": [\n      {\n        \"username\": \"melinadbr1\",\n        \"profileUrl\": \"https://www.instagram.com/melinadbr1/\"\n      }\n    ],\n    \"totalRelatedProfilesFound\": 0\n  }\n]","service":"instagram-scraper","sessionId":"688bcff343bc3fded1414ddc","timestamp":"2025-08-01 02:41:20"}
+{"level":"info","message":"Validating session ID: 688bcff343bc3fded1414ddc","service":"instagram-scraper","timestamp":"2025-08-01 02:41:24"}
+{"level":"info","message":"Session 688bcff343bc3fded1414ddc and related data deleted from database","service":"instagram-scraper","timestamp":"2025-08-01 02:41:25"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN unsubscribed from session 688bcff343bc3fded1414ddc","service":"instagram-scraper","timestamp":"2025-08-01 02:41:25"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:41:28"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN subscribed to session 688bc3d748aabd467007c7cd","service":"instagram-scraper","timestamp":"2025-08-01 02:41:30"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN unsubscribed from session 688bc3d748aabd467007c7cd","service":"instagram-scraper","timestamp":"2025-08-01 02:41:30"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN subscribed to session 688bc3d748aabd467007c7cd","service":"instagram-scraper","timestamp":"2025-08-01 02:41:30"}
+{"level":"info","message":"Sample root profile metadata:","metadata":{"apifyRunId":"57101995290","dataVersion":"1.0","error":{},"igtvCount":0,"postsCount":12,"processingTime":0.289,"relatedProfilesCount":80,"scrapingSource":"apify"},"service":"instagram-scraper","timestamp":"2025-08-01 02:41:31","username":"siarlyxo"}
+{"level":"info","message":"Sample root profile metadata:","metadata":{"apifyRunId":"57101995290","dataVersion":"1.0","error":{},"igtvCount":0,"postsCount":12,"processingTime":0.289,"relatedProfilesCount":80,"scrapingSource":"apify"},"service":"instagram-scraper","timestamp":"2025-08-01 02:41:31","username":"siarlyxo"}
+{"level":"info","message":"Root profile aggregation result:","result":"[\n  {\n    \"_id\": \"scraped\",\n    \"count\": 1,\n    \"profiles\": [\n      {\n        \"username\": \"siarlyxo\",\n        \"profileUrl\": \"https://www.instagram.com/siarlyxo\"\n      }\n    ],\n    \"totalRelatedProfilesFound\": 80\n  }\n]","service":"instagram-scraper","sessionId":"688bc3d748aabd467007c7cd","timestamp":"2025-08-01 02:41:31"}
+{"level":"info","message":"Root profile aggregation result:","result":"[\n  {\n    \"_id\": \"scraped\",\n    \"count\": 1,\n    \"profiles\": [\n      {\n        \"username\": \"siarlyxo\",\n        \"profileUrl\": \"https://www.instagram.com/siarlyxo\"\n      }\n    ],\n    \"totalRelatedProfilesFound\": 80\n  }\n]","service":"instagram-scraper","sessionId":"688bc3d748aabd467007c7cd","timestamp":"2025-08-01 02:41:31"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN unsubscribed from session 688bc3d748aabd467007c7cd","service":"instagram-scraper","timestamp":"2025-08-01 02:41:34"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN subscribed to session 688bc3d748aabd467007c7cd","service":"instagram-scraper","timestamp":"2025-08-01 02:41:35"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN unsubscribed from session 688bc3d748aabd467007c7cd","service":"instagram-scraper","timestamp":"2025-08-01 02:41:35"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN subscribed to session 688bc3d748aabd467007c7cd","service":"instagram-scraper","timestamp":"2025-08-01 02:41:35"}
+{"level":"info","message":"Sample root profile metadata:","metadata":{"apifyRunId":"57101995290","dataVersion":"1.0","error":{},"igtvCount":0,"postsCount":12,"processingTime":0.289,"relatedProfilesCount":80,"scrapingSource":"apify"},"service":"instagram-scraper","timestamp":"2025-08-01 02:41:35","username":"siarlyxo"}
+{"level":"info","message":"Sample root profile metadata:","metadata":{"apifyRunId":"57101995290","dataVersion":"1.0","error":{},"igtvCount":0,"postsCount":12,"processingTime":0.289,"relatedProfilesCount":80,"scrapingSource":"apify"},"service":"instagram-scraper","timestamp":"2025-08-01 02:41:35","username":"siarlyxo"}
+{"level":"info","message":"Root profile aggregation result:","result":"[\n  {\n    \"_id\": \"scraped\",\n    \"count\": 1,\n    \"profiles\": [\n      {\n        \"username\": \"siarlyxo\",\n        \"profileUrl\": \"https://www.instagram.com/siarlyxo\"\n      }\n    ],\n    \"totalRelatedProfilesFound\": 80\n  }\n]","service":"instagram-scraper","sessionId":"688bc3d748aabd467007c7cd","timestamp":"2025-08-01 02:41:35"}
+{"level":"info","message":"Root profile aggregation result:","result":"[\n  {\n    \"_id\": \"scraped\",\n    \"count\": 1,\n    \"profiles\": [\n      {\n        \"username\": \"siarlyxo\",\n        \"profileUrl\": \"https://www.instagram.com/siarlyxo\"\n      }\n    ],\n    \"totalRelatedProfilesFound\": 80\n  }\n]","service":"instagram-scraper","sessionId":"688bc3d748aabd467007c7cd","timestamp":"2025-08-01 02:41:35"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:41:38"}
+{"level":"info","message":"Socket b-RPHF_6OFPvlLyaAAAN unsubscribed from session 688bc3d748aabd467007c7cd","service":"instagram-scraper","timestamp":"2025-08-01 02:41:39"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:41:48"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:41:58"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:42:08"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:42:18"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:42:28"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:42:38"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:42:48"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:42:58"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:43:08"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:43:18"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:43:28"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:43:38"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:43:48"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:43:58"}
+{"level":"info","message":"Socket disconnected: b-RPHF_6OFPvlLyaAAAN","service":"instagram-scraper","timestamp":"2025-08-01 02:44:00"}
+{"level":"info","message":"New socket connection: -JzaKfth_ZWbdXH1AAAP","service":"instagram-scraper","timestamp":"2025-08-01 02:44:00"}
+{"level":"info","message":"Socket disconnected: -JzaKfth_ZWbdXH1AAAP","service":"instagram-scraper","timestamp":"2025-08-01 02:44:05"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:44:08"}
+{"level":"info","message":"New socket connection: 3Br1rclWex8bKaN8AAAR","service":"instagram-scraper","timestamp":"2025-08-01 02:44:11"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:44:18"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:44:28"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:44:38"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:44:48"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:44:58"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:45:08"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:45:18"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:45:28"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:45:38"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:45:48"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:45:58"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:46:08"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:46:18"}
+{"level":"info","message":"Checking 0 running sessions for completion","service":"instagram-scraper","timestamp":"2025-08-01 02:46:28"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-08-01 02:46:34"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-08-01 02:46:35","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"warn","message":"Cloudflare R2 configuration is incomplete. CDN features will be disabled until properly configured.","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Cloudflare R2 is not configured. Service will be disabled.","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Cloudflare CDN conversion disabled - missing configuration","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"address":"127.0.0.1","code":"ECONNREFUSED","errno":-4078,"level":"error","message":"Shared Redis client error: connect ECONNREFUSED 127.0.0.1:6379","port":6379,"service":"instagram-scraper","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)","syscall":"connect","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Redis retry attempt 1, waiting 100ms","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Redis retry attempt 1, waiting 100ms","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Redis retry attempt 1, waiting 100ms","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Redis retry attempt 2, waiting 200ms","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Redis retry attempt 2, waiting 200ms","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"address":"127.0.0.1","code":"ECONNREFUSED","errno":-4078,"level":"error","message":"Shared Redis client error: connect ECONNREFUSED 127.0.0.1:6379","port":6379,"service":"instagram-scraper","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)","syscall":"connect","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Redis retry attempt 2, waiting 200ms","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Redis retry attempt 3, waiting 300ms","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Redis retry attempt 3, waiting 300ms","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"address":"127.0.0.1","code":"ECONNREFUSED","errno":-4078,"level":"error","message":"Shared Redis client error: connect ECONNREFUSED 127.0.0.1:6379","port":6379,"service":"instagram-scraper","stack":"Error: connect ECONNREFUSED 127.0.0.1:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)","syscall":"connect","timestamp":"2025-08-01 02:46:35"}
+{"level":"warn","message":"Redis retry attempt 3, waiting 300ms","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
+{"level":"error","message":"Max Redis retry attempts reached for Bull client","service":"instagram-scraper","timestamp":"2025-08-01 02:46:35"}
