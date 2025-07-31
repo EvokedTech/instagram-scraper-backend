@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: instagram-scraper-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: instagram-scraper
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+    networks:
+      - scraper-network
+
+  app:
+    build: .
+    container_name: instagram-scraper-app
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      MONGODB_URI: mongodb://admin:password123@mongodb:27017/instagram-scraper?authSource=admin
+      LOG_LEVEL: info
+    depends_on:
+      - mongodb
+    volumes:
+      - ./logs:/usr/src/app/logs
+    networks:
+      - scraper-network
+
+volumes:
+  mongodb_data:
+  mongodb_config:
+
+networks:
+  scraper-network:
+    driver: bridge
