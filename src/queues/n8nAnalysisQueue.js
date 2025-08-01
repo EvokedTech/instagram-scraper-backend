@@ -243,6 +243,7 @@ async function getSessionAnalysisStats(sessionId) {
       totalScraped,
       totalAnalyzed: totalProcessed,
       totalPending,
+      totalPendingAnalysis: totalPending, // Add this for frontend compatibility
       totalStored,
       totalSkipped,
       percentComplete: totalScraped > 0 ? Math.round((totalProcessed / totalScraped) * 100) : 0,
@@ -257,6 +258,7 @@ async function getSessionAnalysisStats(sessionId) {
         }
       },
       queue: queueStats,
+      n8nQueueStats: queueStats, // Add this for frontend compatibility
       depthProgress: depthProgress ? depthProgress.depthDetails : []
     };
   } catch (error) {
@@ -265,6 +267,7 @@ async function getSessionAnalysisStats(sessionId) {
       totalScraped: 0,
       totalAnalyzed: 0,
       totalPending: 0,
+      totalPendingAnalysis: 0, // Add this for frontend compatibility
       totalStored: 0,
       totalSkipped: 0,
       percentComplete: 0,
@@ -279,6 +282,7 @@ async function getSessionAnalysisStats(sessionId) {
         }
       },
       queue: { waiting: 0, active: 0 },
+      n8nQueueStats: { waiting: 0, active: 0 }, // Add this for frontend compatibility
       depthProgress: []
     };
   }

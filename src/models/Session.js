@@ -123,27 +123,40 @@ sessionSchema.index({ name: 'text' });
 sessionSchema.virtual('progressPercentage').get(function() {
   if (!this.config || !this.config.maxDepth || this.config.maxDepth === 0) return 0;
   
-  // Calculate completed depths
-  const completedDepths = this.depthProgress.filter(
-    dp => dp.isScrapingComplete && dp.isAnalysisComplete
-  ).length;
+  const maxDepth = this.config.maxDepth;
+  let totalExpectedDepths = maxDepth + 1; // Include depth 0 (root profiles)
+  let completedDepthsScore = 0;
   
-  // Get current depth progress
-  const currentDepthProgress = this.depthProgress.find(
-    dp => dp.depth === this.stats.currentDepth
-  );
-  
-  let currentDepthPercentage = 0;
-  if (currentDepthProgress && currentDepthProgress.totalProfiles > 0) {
-    // Calculate progress for current depth (50% scraping, 50% analysis)
-    const scrapingProgress = (currentDepthProgress.scrapedProfiles / currentDepthProgress.totalProfiles) * 0.5;
-    const analysisProgress = (currentDepthProgress.analyzedProfiles / currentDepthProgress.totalProfiles) * 0.5;
-    currentDepthPercentage = scrapingProgress + analysisProgress;
+  // Check root profiles (depth 0)
+  if (this.stats.scrapedProfiles > 0 && this.rootProfiles && this.rootProfiles.length > 0) {
+    const rootProgress = Math.min(this.stats.scrapedProfiles / this.rootProfiles.length, 1);
+    completedDepthsScore += rootProgress;
   }
   
-  // Overall progress: (completed depths + current depth progress) / total depths
-  const totalProgress = (completedDepths + currentDepthPercentage) / this.config.maxDepth;
-  return Math.min(Math.round(totalProgress * 100), 100); // Cap at 100%
+  // Check each depth level
+  for (let depth = 1; depth <= maxDepth; depth++) {
+    const depthData = this.depthProgress.find(dp => dp.depth === depth);
+    
+    if (depthData) {
+      // If we have data for this depth, calculate its completion
+      if (depthData.totalProfiles === 0) {
+        // No profiles at this depth means it's complete
+        completedDepthsScore += 1;
+      } else {
+        // Calculate completion based on scraped profiles
+        const scrapingProgress = depthData.scrapedProfiles / depthData.totalProfiles;
+        completedDepthsScore += scrapingProgress;
+      }
+    } else {
+      // If no data for this depth yet, it might still be processing
+      // Don't count it as complete
+      completedDepthsScore += 0;
+    }
+  }
+  
+  // Calculate overall percentage
+  const progressPercentage = (completedDepthsScore / totalExpectedDepths) * 100;
+  return Math.min(Math.round(progressPercentage), 100);
 });
 
 // Virtual for duration

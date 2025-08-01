@@ -59,97 +59,27 @@ class SessionCompletionService {
      */
     async isSessionComplete(session) {
         const sessionId = session._id;
-        const maxDepth = session.config.maxDepth;
-
-        logger.info(`Checking completion for session ${sessionId} with maxDepth ${maxDepth}`);
-
-        // Check root profiles completion
-        const rootProfileStats = await RootProfileScraped.aggregate([
-            { $match: { sessionId: session._id } },
-            {
-                $group: {
-                    _id: '$status',
-                    count: { $sum: 1 }
-                }
-            }
-        ]);
-
-        const rootStats = rootProfileStats.reduce((acc, stat) => {
-            acc[stat._id] = stat.count;
-            return acc;
-        }, {});
-
-        logger.info(`Root profile stats for session ${sessionId}:`, rootStats);
-
-        // If there are any pending root profiles, not complete
-        if (rootStats.pending && rootStats.pending > 0) {
-            logger.info(`Session ${sessionId} has ${rootStats.pending} pending root profiles`);
+        
+        // Get session with virtuals to access progressPercentage
+        const sessionWithVirtuals = await Session.findById(sessionId);
+        if (!sessionWithVirtuals) {
+            logger.error(`Session ${sessionId} not found`);
             return false;
         }
-
-        // Check all depths
-        for (let depth = 1; depth <= maxDepth; depth++) {
-            const depthStats = await RelatedProfileScraped.aggregate([
-                { 
-                    $match: { 
-                        sessionId: session._id,
-                        depth: depth 
-                    } 
-                },
-                {
-                    $group: {
-                        _id: '$status',
-                        count: { $sum: 1 }
-                    }
-                }
-            ]);
-
-            const stats = depthStats.reduce((acc, stat) => {
-                acc[stat._id] = stat.count;
-                return acc;
-            }, {});
-
-            const totalAtDepth = Object.values(stats).reduce((sum, count) => sum + count, 0);
-            logger.info(`Depth ${depth} stats for session ${sessionId}:`, { ...stats, total: totalAtDepth });
-
-            // If this depth has profiles and any are pending, not complete
-            if (stats.pending && stats.pending > 0) {
-                logger.info(`Session ${sessionId} has ${stats.pending} pending profiles at depth ${depth}`);
-                return false;
-            }
-
-            // If this depth has no profiles at all and we haven't reached max depth, 
-            // it might still be processing from previous depth
-            if (totalAtDepth === 0 && depth < maxDepth) {
-                // Check if previous depth is still being processed
-                const prevDepthPending = await this.hasActiveBatchJobsForDepth(sessionId, depth - 1);
-                if (prevDepthPending) {
-                    logger.info(`Session ${sessionId} is still processing depth ${depth - 1}`);
-                    return false;
-                }
-            }
-        }
-
-        // Check if there are any active jobs in queues for this session
-        const hasActiveJobs = await this.hasActiveJobsForSession(sessionId);
-        if (hasActiveJobs) {
-            logger.info(`Session ${sessionId} still has active jobs in queues`);
-            return false;
-        }
-
-        // Check if analysis is enabled and complete
-        if (session.config.analysisEnabled !== false) {
-            const isAnalysisComplete = await this.isAnalysisComplete(session);
-            if (!isAnalysisComplete) {
-                logger.info(`Session ${sessionId} analysis is not complete`);
-                return false;
-            }
+        
+        const progressPercentage = sessionWithVirtuals.progressPercentage;
+        logger.info(`Session ${sessionId} progress: ${progressPercentage}%`);
+        
+        // Simple check: if progress is 100%, session is complete
+        const isComplete = progressPercentage >= 100;
+        
+        if (isComplete) {
+            logger.info(`Session ${sessionId} is complete! (${progressPercentage}% progress)`);
         } else {
-            logger.info(`Session ${sessionId} has analysis disabled, skipping analysis check`);
+            logger.info(`Session ${sessionId} is not complete yet (${progressPercentage}% progress)`);
         }
-
-        logger.info(`Session ${sessionId} is complete!`);
-        return true;
+        
+        return isComplete;
     }
 
     /**
@@ -340,8 +270,11 @@ class SessionCompletionService {
                     // Calculate progress using virtual property
                     const sessionObj = session.toObject({ virtuals: true });
                     
-                    // Only check sessions that are near completion (90% or more)
-                    if (sessionObj.progressPercentage >= 90) {
+                    // Check all running sessions, especially those at 100%
+                    if (sessionObj.progressPercentage >= 100) {
+                        logger.info(`Session ${session._id} has ${sessionObj.progressPercentage}% progress, marking as complete`);
+                        await this.checkAndUpdateSessionCompletion(session._id);
+                    } else if (sessionObj.progressPercentage >= 90) {
                         logger.info(`Session ${session._id} has ${sessionObj.progressPercentage}% progress, checking for completion`);
                         await this.checkAndUpdateSessionCompletion(session._id);
                     }

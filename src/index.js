@@ -41,13 +41,18 @@ const corsOptions = {
       process.env.FRONTEND_URL,
     ].filter(Boolean);
     
+    // Allow any localhost origin in development
+    const isLocalhost = origin.includes('localhost') || origin.includes('127.0.0.1') || origin.includes('[::1]');
+    const isDevelopment = process.env.NODE_ENV === 'development';
+    
     // Allow any Vercel deployment
     const isVercelDeployment = origin.includes('.vercel.app');
     const isAllowedOrigin = allowedOrigins.includes(origin);
     
-    if (isAllowedOrigin || isVercelDeployment) {
+    if (isAllowedOrigin || isVercelDeployment || (isDevelopment && isLocalhost)) {
       callback(null, true);
     } else {
+      logger.warn(`CORS blocked origin: ${origin}`);
       callback(new Error('Not allowed by CORS'));
     }
   },
