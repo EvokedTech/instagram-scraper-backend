@@ -19,7 +19,10 @@ const sessionController = {
       if (existingSession) {
         return res.status(409).json({
           success: false,
-          error: 'A session with this name already exists'
+          error: {
+            message: 'A session with this name already exists',
+            status: 409
+          }
         });
       }
       
@@ -147,7 +150,10 @@ const sessionController = {
       if (!session) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
@@ -198,7 +204,10 @@ const sessionController = {
       if (!session) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
@@ -213,7 +222,10 @@ const sessionController = {
       if (invalidTransitions[currentStatus]?.includes(status)) {
         return res.status(400).json({
           success: false,
-          error: `Cannot transition from '${currentStatus}' to '${status}'`
+          error: {
+            message: `Cannot transition from '${currentStatus}' to '${status}'`,
+            status: 400
+          }
         });
       }
       
@@ -273,7 +285,10 @@ const sessionController = {
       if (!session) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
@@ -281,7 +296,10 @@ const sessionController = {
       if (session.status === 'running') {
         return res.status(400).json({
           success: false,
-          error: 'Cannot delete a running session. Please pause or stop it first.'
+          error: {
+            message: 'Cannot delete a running session. Please pause or stop it first.',
+            status: 400
+          }
         });
       }
       
@@ -316,7 +334,10 @@ const sessionController = {
       if (!session) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
@@ -377,14 +398,20 @@ const sessionController = {
       if (!session) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
       if (session.status !== 'pending' && session.status !== 'paused') {
         return res.status(400).json({
           success: false,
-          error: `Cannot start batch processing for session in '${session.status}' status`
+          error: {
+            message: `Cannot start batch processing for session in '${session.status}' status`,
+            status: 400
+          }
         });
       }
       
@@ -426,7 +453,10 @@ const sessionController = {
       if (!status.sessionStatus) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
@@ -451,7 +481,10 @@ const sessionController = {
       if (!session) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
@@ -501,7 +534,10 @@ const sessionController = {
       if (!session) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
@@ -558,14 +594,20 @@ const sessionController = {
       if (!session) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
       if (session.status !== 'pending' && session.status !== 'paused') {
         return res.status(400).json({
           success: false,
-          error: `Cannot start processing for session in '${session.status}' status`
+          error: {
+            message: `Cannot start processing for session in '${session.status}' status`,
+            status: 400
+          }
         });
       }
       
@@ -660,7 +702,10 @@ const sessionController = {
       if (!session) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
@@ -697,7 +742,10 @@ const sessionController = {
       if (!session) {
         return res.status(404).json({
           success: false,
-          error: 'Session not found'
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
         });
       }
       
