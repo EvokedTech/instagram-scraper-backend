@@ -98,6 +98,20 @@ router.post(
   sessionController.startQueuedBatchProcessing
 );
 
+// Pause session
+router.post(
+  '/:id/pause',
+  validateSessionId,
+  sessionController.pauseSession
+);
+
+// Resume session
+router.post(
+  '/:id/resume',
+  validateSessionId,
+  sessionController.resumeSession
+);
+
 // Stop session and clear all queues
 router.post(
   '/:id/stop',

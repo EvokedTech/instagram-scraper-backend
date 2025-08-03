@@ -783,6 +783,105 @@ const sessionController = {
       logger.error('Error checking session completion:', error);
       next(error);
     }
+  },
+
+  // Pause session
+  async pauseSession(req, res, next) {
+    try {
+      const { id } = req.params;
+      
+      const session = await Session.findById(id);
+      
+      if (!session) {
+        return res.status(404).json({
+          success: false,
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
+        });
+      }
+      
+      // Check if session can be paused
+      if (session.status !== 'running') {
+        return res.status(400).json({
+          success: false,
+          error: {
+            message: `Cannot pause session with status '${session.status}'`,
+            status: 400
+          }
+        });
+      }
+      
+      // Pause the session
+      await session.pause();
+      
+      // Emit socket event
+      const socketService = require('../services/socketService');
+      socketService.emitSessionUpdate(id, { status: 'paused' });
+      
+      res.status(200).json({
+        success: true,
+        data: {
+          _id: session._id,
+          status: 'paused'
+        },
+        message: 'Session paused successfully'
+      });
+    } catch (error) {
+      logger.error('Error pausing session:', error);
+      next(error);
+    }
+  },
+
+  // Resume session
+  async resumeSession(req, res, next) {
+    try {
+      const { id } = req.params;
+      
+      const session = await Session.findById(id);
+      
+      if (!session) {
+        return res.status(404).json({
+          success: false,
+          error: {
+            message: 'Session not found',
+            status: 404
+          }
+        });
+      }
+      
+      // Check if session can be resumed
+      if (session.status !== 'paused') {
+        return res.status(400).json({
+          success: false,
+          error: {
+            message: `Cannot resume session with status '${session.status}'`,
+            status: 400
+          }
+        });
+      }
+      
+      // Resume the session
+      session.status = 'running';
+      await session.save();
+      
+      // Emit socket event
+      const socketService = require('../services/socketService');
+      socketService.emitSessionUpdate(id, { status: 'running' });
+      
+      res.status(200).json({
+        success: true,
+        data: {
+          _id: session._id,
+          status: 'running'
+        },
+        message: 'Session resumed successfully'
+      });
+    } catch (error) {
+      logger.error('Error resuming session:', error);
+      next(error);
+    }
   }
 };
 
