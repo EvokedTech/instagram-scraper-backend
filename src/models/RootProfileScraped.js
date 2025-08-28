@@ -163,7 +163,7 @@ const rootProfileScrapedSchema = new mongoose.Schema({
     url: String,
     fullName: String,
     biography: String,
-    externalUrls: [String],
+    externalUrls: mongoose.Schema.Types.Mixed,
     followersCount: Number,
     followsCount: Number,
     hasChannel: Boolean,

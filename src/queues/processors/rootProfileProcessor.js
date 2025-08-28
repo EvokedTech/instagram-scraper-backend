@@ -8,6 +8,7 @@ const ProfileDuplicateChecker = require('../../utils/profileDuplicateChecker');
 const { getBatchSizeForDepth } = require('../../utils/batchSizeCalculator');
 const socketService = require('../../services/socketService');
 const sessionCompletionService = require('../../services/sessionCompletionService');
+const profileAnalysisService = require('../../services/profileAnalysisService');
 
 /**
  * Process root profile scraping job
@@ -62,6 +63,18 @@ async function processRootProfile(job) {
         existingProfile.metadata.relatedProfilesCount = existingProfile.profileData.relatedProfiles.length;
         await existingProfile.save();
         logger.info(`Updated metadata.relatedProfilesCount for ${username}: ${existingProfile.profileData.relatedProfiles.length}`);
+      }
+      
+      // Check if root profile analysis is enabled for this session
+      if (session?.config?.analyzeRootProfiles) {
+        try {
+          logger.info(`Analyzing existing root profile ${username} as per session config`);
+          await profileAnalysisService.analyzeRootProfile(existingProfile, sessionId);
+          logger.info(`Successfully analyzed existing root profile ${username}`);
+        } catch (analysisError) {
+          logger.error(`Failed to analyze existing root profile ${username}:`, analysisError);
+          // Continue with the process even if analysis fails
+        }
       }
       
       // Extract related profiles from existing data
@@ -216,6 +229,18 @@ async function processRootProfile(job) {
     }
 
     await job.progress(90);
+
+    // Check if root profile analysis is enabled for this session
+    if (session?.config?.analyzeRootProfiles && profile) {
+      try {
+        logger.info(`Analyzing root profile ${username} as per session config`);
+        await profileAnalysisService.analyzeRootProfile(profile, sessionId);
+        logger.info(`Successfully analyzed root profile ${username}`);
+      } catch (analysisError) {
+        logger.error(`Failed to analyze root profile ${username}:`, analysisError);
+        // Continue with the process even if analysis fails
+      }
+    }
 
     // Track queued profiles count
     let queuedProfilesCount = 0;

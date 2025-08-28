@@ -43,6 +43,10 @@ const sessionSchema = new mongoose.Schema({
     analysisEnabled: {
       type: Boolean,
       default: true
+    },
+    analyzeRootProfiles: {
+      type: Boolean,
+      default: false
     }
   },
   status: {

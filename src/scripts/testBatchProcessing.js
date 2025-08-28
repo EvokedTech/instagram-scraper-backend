@@ -1,148 +1,115 @@
 require('dotenv').config();
-const mongoose = require('mongoose');
 const axios = require('axios');
 const logger = require('../utils/logger');
 
-const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:5000';
-
-// Test profiles - using provided Instagram accounts
-const TEST_PROFILES = [
-  'https://www.instagram.com/soy_loruga/',
-  'https://www.instagram.com/lowbri22/',
-  'https://www.instagram.com/mary.katee_/'
-];
+const API_BASE_URL = 'http://localhost:5002/api';
 
 async function testBatchProcessing() {
   try {
-    logger.info('Starting batch processing test');
+    console.log('========================================');
+    console.log('BATCH PROCESSING TEST');
+    console.log('========================================');
+    console.log('This test will create a session with multiple profiles');
+    console.log('and process them in batches of 10\n');
     
-    // 1. Create a new session
-    logger.info('Creating test session...');
-    const createSessionResponse = await axios.post(`${API_BASE_URL}/api/sessions`, {
-      name: `Batch Test Session - ${new Date().toISOString()}`,
-      description: 'Testing batch processing functionality',
-      rootProfiles: TEST_PROFILES,
+    // Test profiles (you can add more)
+    const testProfiles = [
+      'https://www.instagram.com/cristiano',
+      'https://www.instagram.com/leomessi',
+      'https://www.instagram.com/selenagomez',
+      'https://www.instagram.com/kyliejenner',
+      'https://www.instagram.com/therock',
+      'https://www.instagram.com/arianagrande',
+      'https://www.instagram.com/kimkardashian',
+      'https://www.instagram.com/beyonce',
+      'https://www.instagram.com/justinbieber',
+      'https://www.instagram.com/taylorswift',
+      'https://www.instagram.com/kendalljenner',
+      'https://www.instagram.com/jenniferaniston',
+      'https://www.instagram.com/nickiminaj',
+      'https://www.instagram.com/mileycyrus',
+      'https://www.instagram.com/khloekardashian',
+      'https://www.instagram.com/jlo',
+      'https://www.instagram.com/kourtneykardash',
+      'https://www.instagram.com/kevinhart4real',
+      'https://www.instagram.com/dualipa',
+      'https://www.instagram.com/camilacabello'
+    ];
+    
+    console.log(`Creating session with ${testProfiles.length} profiles...`);
+    
+    // Create session
+    const sessionResponse = await axios.post(`${API_BASE_URL}/sessions`, {
+      name: `Batch Test Session ${Date.now()}`,
+      description: 'Testing batch processing with 20 celebrity profiles',
+      rootProfiles: testProfiles,
       config: {
         maxDepth: 1,
         maxProfilesPerDepth: 10,
-        analysisEnabled: true
+        analysisEnabled: false
       }
     });
     
-    const session = createSessionResponse.data.data;
-    logger.info(`Session created: ${session._id}`);
-    
-    // 2. Start batch processing
-    logger.info('Starting batch processing...');
-    const batchProcessResponse = await axios.post(
-      `${API_BASE_URL}/api/sessions/${session._id}/batch-process`,
-      {
-        batchSize: 2, // Process 2 profiles at a time
-        maxConcurrentRequests: 2
-      }
-    );
-    
-    logger.info('Batch processing started:', batchProcessResponse.data.message);
-    
-    // 3. Monitor batch processing status
-    logger.info('Monitoring batch processing status...');
-    let isProcessing = true;
-    let lastStatus = null;
-    
-    while (isProcessing) {
-      await new Promise(resolve => setTimeout(resolve, 5000)); // Wait 5 seconds
+    if (sessionResponse.data.success) {
+      const session = sessionResponse.data.data;
+      console.log(`\n✅ Session created: ${session.name}`);
+      console.log(`Session ID: ${session._id}`);
+      console.log(`\nProfiles will be processed in batches of 10`);
+      console.log('Each batch will have:');
+      console.log('- 30 second delay between batches');
+      console.log('- 10 second delay between individual profiles');
+      console.log('- Profiles saved to database every 5 profiles\n');
       
-      try {
-        const statusResponse = await axios.get(
-          `${API_BASE_URL}/api/sessions/${session._id}/batch-status`
-        );
-        
-        const status = statusResponse.data.data;
-        
-        // Log progress if changed
-        if (JSON.stringify(status) !== JSON.stringify(lastStatus)) {
-          logger.info('Batch processing status:', {
-            sessionStatus: status.sessionStatus,
-            progress: `${status.progress}%`,
-            profiles: status.profiles,
-            duration: status.duration ? `${Math.round(status.duration / 1000)}s` : 'N/A'
-          });
-          lastStatus = status;
+      // Monitor status
+      console.log('Batch processing has started automatically!');
+      console.log('Monitor the progress in the backend logs...\n');
+      
+      // Check status periodically
+      const checkStatus = async () => {
+        try {
+          const statusResponse = await axios.get(`${API_BASE_URL}/sessions/${session._id}/batch-status`);
+          if (statusResponse.data.success) {
+            const status = statusResponse.data.data;
+            console.log('========================================');
+            console.log('CURRENT STATUS:');
+            console.log('========================================');
+            console.log(`Session Status: ${status.sessionStatus}`);
+            console.log(`Progress: ${status.profiles.progress}%`);
+            console.log(`Total Profiles: ${status.profiles.total}`);
+            console.log(`Processed: ${status.profiles.processed}`);
+            console.log(`✅ Scraped: ${status.profiles.scraped}`);
+            console.log(`❌ Failed: ${status.profiles.failed}`);
+            console.log(`🔒 Skipped: ${status.profiles.skipped}`);
+            console.log(`⏳ Pending: ${status.profiles.pending}`);
+            if (status.estimatedTimeRemaining > 0) {
+              console.log(`⏱️ Estimated Time Remaining: ${status.estimatedTimeRemaining} minutes`);
+            }
+            console.log('========================================\n');
+            
+            // Continue checking if not complete
+            if (status.profiles.pending > 0 && status.sessionStatus !== 'failed') {
+              setTimeout(checkStatus, 30000); // Check every 30 seconds
+            } else {
+              console.log('🎉 Batch processing complete!');
+            }
+          }
+        } catch (error) {
+          console.error('Error checking status:', error.message);
         }
-        
-        // Check if processing is complete
-        if (['completed', 'failed', 'completed_with_errors'].includes(status.sessionStatus)) {
-          isProcessing = false;
-          logger.info('Batch processing completed');
-        }
-      } catch (error) {
-        logger.error('Error checking status:', error.message);
-      }
+      };
+      
+      // Start checking status after 5 seconds
+      setTimeout(checkStatus, 5000);
+      
+    } else {
+      console.error('Failed to create session:', sessionResponse.data.error);
     }
-    
-    // 4. Get final session statistics
-    logger.info('Fetching final session statistics...');
-    const statsResponse = await axios.get(
-      `${API_BASE_URL}/api/sessions/${session._id}/stats`
-    );
-    
-    const stats = statsResponse.data.data;
-    logger.info('Final session statistics:', {
-      totalProfiles: stats.profiles.total,
-      rootProfiles: stats.profiles.rootProfiles,
-      relatedProfiles: stats.profiles.relatedProfiles,
-      duration: stats.session.duration ? `${Math.round(stats.session.duration / 1000)}s` : 'N/A'
-    });
-    
-    // 5. Test re-scraping prevention
-    logger.info('Testing re-scraping prevention...');
-    const reScrapeResponse = await axios.post(
-      `${API_BASE_URL}/api/sessions/${session._id}/batch-process`,
-      {
-        batchSize: 2
-      }
-    ).catch(error => {
-      logger.info('Re-scraping prevented as expected:', error.response?.data?.error || error.message);
-      return null;
-    });
-    
-    if (reScrapeResponse) {
-      logger.warn('Re-scraping was not prevented!');
-    }
-    
-    logger.info('Batch processing test completed successfully');
     
   } catch (error) {
-    if (error.response) {
-      logger.error('Test failed with HTTP error:', {
-        status: error.response.status,
-        statusText: error.response.statusText,
-        data: error.response.data
-      });
-    } else {
-      logger.error('Test failed:', error.message);
-    }
-    throw error;
+    console.error('Test failed:', error.response?.data || error.message);
   }
 }
 
-// Run test if executed directly
-if (require.main === module) {
-  logger.info('Connecting to database...');
-  
-  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/instagram-scraper')
-    .then(() => {
-      logger.info('Database connected');
-      return testBatchProcessing();
-    })
-    .then(() => {
-      logger.info('Test completed');
-      process.exit(0);
-    })
-    .catch(error => {
-      logger.error('Test failed:', error);
-      process.exit(1);
-    });
-}
-
-module.exports = testBatchProcessing;
+// Run the test
+console.log('Starting batch processing test...\n');
+testBatchProcessing();

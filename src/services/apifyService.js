@@ -3,6 +3,7 @@ const logger = require('../utils/logger');
 const RootProfileScraped = require('../models/RootProfileScraped');
 const RelatedProfileScraped = require('../models/RelatedProfileScraped');
 const { getApifyBatchSizeForDepth } = require('../utils/batchSizeCalculator');
+const axios = require('axios');
 
 class ApifyService {
     constructor() {
@@ -23,7 +24,10 @@ class ApifyService {
             addParentData: false,
             enhanceUserSearchWithFacebookPage: false,
             isUserReelFeedURL: false,
-            isUserTaggedFeedURL: false
+            isUserTaggedFeedURL: false,
+            extendOutputFunction: '', // This ensures all available data is collected
+            extendScraperFunction: '', // This ensures deeper scraping
+            includeContactInfo: true  // Explicitly request contact information including email
         };
 
         const input = {
@@ -107,6 +111,7 @@ class ApifyService {
             }
             
             const Model = isRootProfile ? RootProfileScraped : RelatedProfileScraped;
+            let savedProfile;
             
             if (isRootProfile) {
                 const existingProfile = await Model.findOne({ 
@@ -115,7 +120,7 @@ class ApifyService {
                 });
                 
                 if (existingProfile) {
-                    return await existingProfile.markAsScraped(profileData.rawData, {
+                    savedProfile = await existingProfile.markAsScraped(profileData.rawData, {
                         apifyRunId: profileData.rawData.id || 'unknown',
                         processingTime: (Date.now() - profileData.scrapedAt.getTime()) / 1000
                     });
@@ -128,11 +133,16 @@ class ApifyService {
                         status: 'pending'
                     });
                     
-                    return await newProfile.markAsScraped(profileData.rawData, {
+                    savedProfile = await newProfile.markAsScraped(profileData.rawData, {
                         apifyRunId: profileData.rawData.id || 'unknown',
                         processingTime: (Date.now() - profileData.scrapedAt.getTime()) / 1000
                     });
                 }
+                
+                // Trigger analysis webhook for root profiles
+                await this.triggerAnalysisWebhook(profileData.username);
+                
+                return savedProfile;
             } else {
                 // For related profiles, we need additional fields
                 if (!options.depth || !options.parentUsername || !options.parentProfileUrl) {
@@ -179,6 +189,34 @@ class ApifyService {
     extractUsernameFromUrl(url) {
         const match = url.match(/instagram\.com\/([^\/\?]+)/);
         return match ? match[1] : '';
+    }
+    
+    /**
+     * Trigger analysis webhook to analyze the scraped profile
+     * @param {string} username - Instagram username
+     */
+    async triggerAnalysisWebhook(username) {
+        try {
+            // Get analysis backend URL from environment or use default
+            const analysisBackendUrl = process.env.ANALYSIS_BACKEND_URL || 'http://localhost:5001';
+            const webhookUrl = `${analysisBackendUrl}/api/analyze/webhook`;
+            
+            logger.info(`Triggering analysis webhook for ${username}`);
+            
+            const response = await axios.post(webhookUrl, {
+                username: username,
+                action: 'new_profile_scraped'
+            }, {
+                timeout: 5000 // 5 second timeout
+            });
+            
+            logger.info(`Analysis webhook triggered successfully for ${username}: ${response.data.status}`);
+            
+        } catch (error) {
+            // Don't throw error - analysis will be caught by backup monitor
+            logger.warn(`Failed to trigger analysis webhook for ${username}: ${error.message}`);
+            logger.warn('Profile will be analyzed by backup monitor within 5 minutes');
+        }
     }
 
     delay(ms) {
@@ -256,7 +294,10 @@ class ApifyService {
             addParentData: false,
             enhanceUserSearchWithFacebookPage: false,
             isUserReelFeedURL: false,
-            isUserTaggedFeedURL: false
+            isUserTaggedFeedURL: false,
+            extendOutputFunction: '', // This ensures all available data is collected
+            extendScraperFunction: '', // This ensures deeper scraping
+            includeContactInfo: true  // Explicitly request contact information including email
         };
 
         const input = {

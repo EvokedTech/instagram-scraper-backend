@@ -1,0 +1,638 @@
+2025-08-27T18:45:34.830Z - Connected to MongoDB
+
+2025-08-27T18:45:35.496Z - Found 50 failed profiles to retry
+
+2025-08-27T18:45:35.500Z - ========================================
+2025-08-27T18:45:35.500Z - STARTING RETRY WITH OPTIMIZED CONFIG:
+2025-08-27T18:45:35.500Z - ========================================
+2025-08-27T18:45:35.501Z - ✅ Using RESIDENTIAL proxies
+2025-08-27T18:45:35.501Z - ✅ 120 second timeout per profile
+2025-08-27T18:45:35.501Z - ✅ Processing ONE at a time
+2025-08-27T18:45:35.501Z - ✅ 10 second delay between profiles
+2025-08-27T18:45:35.502Z - ✅ Minimal data limits (10 results max)
+2025-08-27T18:45:35.542Z - ✅ Starting at: 12:45:32 AM
+2025-08-27T18:45:35.542Z - ========================================
+
+2025-08-27T18:45:35.542Z - [1/50] Processing mariarovaz...
+2025-08-27T18:45:35.542Z -   Previous error: No error message
+2025-08-27T18:46:00.466Z -   ✅ SUCCESS! Followers: 46087, Posts: 371
+2025-08-27T18:46:00.467Z -   Processing time: 25s
+2025-08-27T18:46:00.467Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:46:10.469Z - [2/50] Processing sara_mlf...
+2025-08-27T18:46:10.469Z -   Previous error: No error message
+2025-08-27T18:46:21.029Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: 'Todos mis planes ✅',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fsaramlf.es%2F&e=AT2KKtjABu8Kz1avolIFA14O-jfLRZFsoRMXThFBpc85sFVeC1rD_rlnCIjKBpveepSQ9E5uGMi_domW28_tR5rh9-BsqjeR',\n" +
+  "    url: 'https://saramlf.es',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'Mis favoritos Amazon❤️',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Famzlink.to%2Faz0V94lmQqj0F&e=AT3n6BdG4ho7PvoCpL8i47S0nhwYFGg7wvbBH2eeXX-YRXbCb3aSglurGgwfpmBY8wjOoaLKbd7zTGr06FhixXvZrioB6WLe',\n" +
+  "    url: 'https://amzlink.to/az0V94lmQqj0F',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'IO.GENIX, código: SARITATEAM',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fiogenixnutrition.com%2F&e=AT2rfe7-FdzX_bNMMy6_QOJWC5CIFJ7eRk4p-Zkt8IDc30IrPvrLyCj8ufaXRNJ4sdkK59Icl-PIXFPMMCZWGiS7BfmpHDbb',\n" +
+  "    url: 'https://iogenixnutrition.com',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'BANDAS ELÁSTICAS',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Famzlink.to%2Faz02lnOPvZ0mX&e=AT28d0xe7QvtYBUuGK37UmNAf-yx3BwlG2Q5NmmtWNhk_hr1zqPebzETUZg0QrBOH8sFd4cF2qkvzVKdzSOQiKNB7FVTRmez',\n" +
+  "    url: 'https://amzlink.to/az02lnOPvZ0mX',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T18:46:21.119Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:46:31.121Z - [3/50] Processing barbaradomenechf...
+2025-08-27T18:46:31.121Z -   Previous error: No error message
+2025-08-27T18:46:41.260Z -   ✅ SUCCESS! Followers: 22140, Posts: 202
+2025-08-27T18:46:41.261Z -   Processing time: 10s
+2025-08-27T18:46:41.261Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:46:51.262Z - [4/50] Processing anna.campillo...
+2025-08-27T18:46:51.263Z -   Previous error: No error message
+2025-08-27T18:47:01.778Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: 'Prozis💘',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=http%3A%2F%2Fprozis.com%2F1p8P7&e=AT1hR4TG6Vz2elbU_v8n8awhxiIRnAzbp9eLUIlWWSmMi6cS6qfz65CQGXMwSYTPaNbUxg-KawgaSq-v83iqqbnGi1rlmsT5',\n" +
+  "    url: 'http://prozis.com/1p8P7',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'TikTok👸',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fwww.tiktok.com%2F%40anna.campillo%3F_t%3DZN-8vLkOzviXGY%26_r%3D1&e=AT0ojD9eLgWnjtGtaZEhghPn4yF33UupVRhiVI5YIy0Fh-q2AoybKQ7PaGpWNYCghGQ-92dq18RDUZ2EZqoi0-eLb5Z2Avf9',\n" +
+  "    url: 'https://www.tiktok.com/@anna.campillo?_t=ZN-8vLkOzviXGY&_r=1',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'Burga Oficial 📲',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fget.aspr.app%2FSH14R9&e=AT1A5W1pcCEW8924ZjkMNHOLOCKSCYyy5OkHW0XNDQ9WO1Oy0Godao-6scBepty8qUP33cRUyrmJhfl6RSeyFzACFeiZAdfy',\n" +
+  "    url: 'https://get.aspr.app/SH14R9',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'BeLevels ⚡️',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fbelevels.com%2Fanna.campillo&e=AT3xOvKaif2_pAA-DuUSbMJJ00j3DZjooZY27iJQqogy7iPlmsdAHBIsmfrDdzHjNbXI09AN3CbUnQhImBzVl_jrKGbELS4R',\n" +
+  "    url: 'https://belevels.com/anna.campillo',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T18:47:01.868Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:47:11.870Z - [5/50] Processing nereeadellago...
+2025-08-27T18:47:11.872Z -   Previous error: No error message
+2025-08-27T18:47:22.224Z -   ✅ SUCCESS! Followers: 20980, Posts: 704
+2025-08-27T18:47:22.226Z -   Processing time: 10s
+2025-08-27T18:47:22.227Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:47:32.228Z - [6/50] Processing __noabarak__...
+2025-08-27T18:47:32.229Z -   Previous error: No error message
+2025-08-27T18:47:40.509Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fm.youtube.com%2Fwatch%3Fv%3DZ0ZrkBCnfxw%26feature%3Dyoutu.be&e=AT30wzjc8vBbdTuIBswsAIFaItsp2vWjNa-46_1_lhzvGD_II_-mtvp0Kck-q2ZLvcIsjL3JtKa-7LOYsWtFyxQLArz6bxvM',\n" +
+  "    url: 'https://m.youtube.com/watch?v=Z0ZrkBCnfxw&feature=youtu.be',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T18:47:40.598Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:47:50.598Z - [7/50] Processing eliangalim...
+2025-08-27T18:47:50.598Z -   Previous error: No error message
+2025-08-27T18:48:00.480Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: 'Facebook profile',\n" +
+  "    lynx_url: '',\n" +
+  "    url: '',\n" +
+  "    link_type: 'facebook'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T18:48:00.570Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:48:10.574Z - [8/50] Processing tali.golan...
+2025-08-27T18:48:10.575Z -   Previous error: No error message
+2025-08-27T18:48:20.620Z -   ✅ SUCCESS! Followers: 11051, Posts: 549
+2025-08-27T18:48:20.621Z -   Processing time: 10s
+2025-08-27T18:48:20.622Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:48:30.623Z - [9/50] Processing marina_chenko...
+2025-08-27T18:48:30.624Z -   Previous error: No error message
+2025-08-27T18:48:39.800Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Finstagram.com%2Fmalaya_swimwear%3Figshid%3D1i783mlw11fxq&e=AT28KB3s1EyTIHWNm1n-NMWmsMCYfU4K0s1w0pkKwzqShLChg3R3nrTGJ0Bofdy1df3PsH2B9s-CGEYM2GGMsBBFLozrJCFs',\n" +
+  "    url: 'https://instagram.com/malaya_swimwear?igshid=1i783mlw11fxq',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T18:48:39.890Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:48:49.892Z - [10/50] Processing jasmine__ay...
+2025-08-27T18:48:49.893Z -   Previous error: No error message
+2025-08-27T18:48:59.144Z -   ✅ SUCCESS! Followers: 18898, Posts: 155
+2025-08-27T18:48:59.144Z -   Processing time: 9s
+2025-08-27T18:48:59.144Z - 
+📊 Progress: 10/50 (3 min elapsed, ~7 min remaining)
+2025-08-27T18:48:59.144Z -    Success: 5, Failed: 5, Private: 0, Not Found: 0
+
+2025-08-27T18:48:59.144Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:49:09.146Z - [11/50] Processing ilana_akrm...
+2025-08-27T18:49:09.148Z -   Previous error: No error message
+2025-08-27T18:49:16.934Z -   ✅ SUCCESS! Followers: 13332, Posts: 34
+2025-08-27T18:49:16.934Z -   Processing time: 8s
+2025-08-27T18:49:16.934Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:49:26.936Z - [12/50] Processing idannaor224...
+2025-08-27T18:49:26.937Z -   Previous error: No error message
+2025-08-27T18:49:35.966Z -   ✅ SUCCESS! Followers: 24418, Posts: 35
+2025-08-27T18:49:35.967Z -   Processing time: 9s
+2025-08-27T18:49:35.967Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:49:45.968Z - [13/50] Processing roni.tzur...
+2025-08-27T18:49:45.970Z -   Previous error: No error message
+2025-08-27T18:49:59.096Z -   ✅ SUCCESS! Followers: 46301, Posts: 112
+2025-08-27T18:49:59.097Z -   Processing time: 13s
+2025-08-27T18:49:59.097Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:50:09.098Z - [14/50] Processing nofaradmon...
+2025-08-27T18:50:09.099Z -   Previous error: No error message
+2025-08-27T18:50:24.653Z -   ✅ SUCCESS! Followers: 44898, Posts: 212
+2025-08-27T18:50:24.653Z -   Processing time: 16s
+2025-08-27T18:50:24.653Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:50:34.655Z - [15/50] Processing adiharell...
+2025-08-27T18:50:34.656Z -   Previous error: No error message
+2025-08-27T18:50:46.856Z -   ✅ SUCCESS! Followers: 14956, Posts: 254
+2025-08-27T18:50:46.856Z -   Processing time: 12s
+2025-08-27T18:50:46.857Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:50:56.858Z - [16/50] Processing mika_levyy...
+2025-08-27T18:50:56.859Z -   Previous error: No error message
+2025-08-27T18:51:08.237Z -   ✅ SUCCESS! Followers: 27695, Posts: 299
+2025-08-27T18:51:08.237Z -   Processing time: 11s
+2025-08-27T18:51:08.238Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:51:18.239Z - [17/50] Processing linoy_vaknin1...
+2025-08-27T18:51:18.240Z -   Previous error: No error message
+2025-08-27T18:51:28.557Z -   ✅ SUCCESS! Followers: 36497, Posts: 288
+2025-08-27T18:51:28.559Z -   Processing time: 10s
+2025-08-27T18:51:28.559Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:51:38.561Z - [18/50] Processing keli_ezra...
+2025-08-27T18:51:38.562Z -   Previous error: No error message
+2025-08-27T18:51:55.136Z -   ✅ SUCCESS! Followers: 24706, Posts: 215
+2025-08-27T18:51:55.136Z -   Processing time: 17s
+2025-08-27T18:51:55.136Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:52:05.134Z - [19/50] Processing tehilafadida...
+2025-08-27T18:52:05.135Z -   Previous error: No error message
+2025-08-27T18:52:16.027Z -   ✅ SUCCESS! Followers: 13083, Posts: 198
+2025-08-27T18:52:16.028Z -   Processing time: 11s
+2025-08-27T18:52:16.028Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:52:26.029Z - [20/50] Processing kim_hadad...
+2025-08-27T18:52:26.031Z -   Previous error: No error message
+2025-08-27T18:52:32.915Z -   🔒 PRIVATE PROFILE - Marking as skipped
+2025-08-27T18:52:33.007Z - 
+📊 Progress: 20/50 (7 min elapsed, ~5 min remaining)
+2025-08-27T18:52:33.008Z -    Success: 14, Failed: 5, Private: 1, Not Found: 0
+
+2025-08-27T18:52:33.008Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:52:43.009Z - [21/50] Processing michal.hakun...
+2025-08-27T18:52:43.011Z -   Previous error: No error message
+2025-08-27T18:52:53.292Z -   ✅ SUCCESS! Followers: 16530, Posts: 191
+2025-08-27T18:52:53.293Z -   Processing time: 10s
+2025-08-27T18:52:53.293Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:53:03.295Z - [22/50] Processing linoy_dahan2...
+2025-08-27T18:53:03.296Z -   Previous error: No error message
+2025-08-27T18:53:10.827Z -   ✅ SUCCESS! Followers: 16850, Posts: 312
+2025-08-27T18:53:10.828Z -   Processing time: 8s
+2025-08-27T18:53:10.828Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:53:20.829Z - [23/50] Processing miaschory...
+2025-08-27T18:53:20.831Z -   Previous error: No error message
+2025-08-27T18:53:28.485Z -   🔒 PRIVATE PROFILE - Marking as skipped
+2025-08-27T18:53:28.589Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:53:38.591Z - [24/50] Processing noam_hillel...
+2025-08-27T18:53:38.592Z -   Previous error: No error message
+2025-08-27T18:53:52.919Z -   ✅ SUCCESS! Followers: 245, Posts: 7
+2025-08-27T18:53:52.920Z -   Processing time: 14s
+2025-08-27T18:53:52.921Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:54:02.922Z - [25/50] Processing klepikova_av...
+2025-08-27T18:54:02.923Z -   Previous error: No error message
+2025-08-27T18:54:13.550Z -   ✅ SUCCESS! Followers: 11664, Posts: 23
+2025-08-27T18:54:13.551Z -   Processing time: 11s
+2025-08-27T18:54:13.551Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:54:23.552Z - [26/50] Processing ilinadupin...
+2025-08-27T18:54:23.553Z -   Previous error: No error message
+2025-08-27T18:54:37.731Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fwww.idcollection.co.il%2F&e=AT3J6mDoEvpiBKuNSGqfIpDnVeQZBMF5g6bImFeTP5o2GJ0Xpi-IV5tmWl-RIn9jm8oOlmwhZ2p34nLKnme3JFJCdT1UCGoB',\n" +
+  "    url: 'https://www.idcollection.co.il',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T18:54:37.825Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:54:47.827Z - [27/50] Processing luvuluce...
+2025-08-27T18:54:47.828Z -   Previous error: No error message
+2025-08-27T18:54:57.480Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flink.me%2Fitslucesworldd&e=AT2iZhAzGy14cmLzqaAX-BgExiSmVHzuIxunc85oRHCMZaIsVT3VCnb6uL16-pKnDr3DHmCf-TX3Wt2Ciq-YaBVriKL_ECzX',\n" +
+  "    url: 'https://link.me/itslucesworldd',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T18:54:57.577Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:55:07.578Z - [28/50] Processing callieebullough...
+2025-08-27T18:55:07.578Z -   Previous error: No error message
+2025-08-27T18:55:25.983Z -   ✅ SUCCESS! Followers: 41403, Posts: 215
+2025-08-27T18:55:25.983Z -   Processing time: 18s
+2025-08-27T18:55:25.983Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:55:35.984Z - [29/50] Processing emmakae...
+2025-08-27T18:55:35.985Z -   Previous error: No error message
+2025-08-27T18:55:52.008Z -   ✅ SUCCESS! Followers: 46830, Posts: 140
+2025-08-27T18:55:52.009Z -   Processing time: 16s
+2025-08-27T18:55:52.009Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:56:02.011Z - [30/50] Processing kaitlintannerfit...
+2025-08-27T18:56:02.011Z -   Previous error: No error message
+2025-08-27T18:56:12.848Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2FKaitlintannerfit&e=AT3jq6IkmcEoG8eqCyYhBBIVBZuJtlplP5467lV9AW5F2PGCERQsGj8Zbyd6NqE8x0Kwl1gaj7cVpMu_--eEhFcYUp6LTIHg',\n" +
+  "    url: 'https://linktr.ee/Kaitlintannerfit',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T18:56:12.941Z - 
+📊 Progress: 30/50 (11 min elapsed, ~3 min remaining)
+2025-08-27T18:56:12.941Z -    Success: 20, Failed: 8, Private: 2, Not Found: 0
+
+2025-08-27T18:56:12.941Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:56:22.942Z - [31/50] Processing ladybernal...
+2025-08-27T18:56:22.943Z -   Previous error: No error message
+2025-08-27T18:56:32.603Z -   🔒 PRIVATE PROFILE - Marking as skipped
+2025-08-27T18:56:32.696Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:56:42.699Z - [32/50] Processing savcannongym...
+2025-08-27T18:56:42.699Z -   Previous error: No error message
+2025-08-27T18:56:52.225Z -   ✅ SUCCESS! Followers: 40468, Posts: 56
+2025-08-27T18:56:52.226Z -   Processing time: 10s
+2025-08-27T18:56:52.227Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:57:02.228Z - [33/50] Processing therese.fit...
+2025-08-27T18:57:02.229Z -   Previous error: No error message
+2025-08-27T18:57:10.992Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Ftherese.fit&e=AT3xLtKnDOCH7FQW1-LTKW60SMpFL804T18m8bpa-ReOCjiVa_VjXYI1YynZG6a0Dn8BcbRAPh1jhaBvzbltXkvyzTdugoeK',\n" +
+  "    url: 'https://linktr.ee/therese.fit',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T18:57:11.084Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:57:21.085Z - [34/50] Processing hanna.mys...
+2025-08-27T18:57:21.086Z -   Previous error: No error message
+2025-08-27T18:57:39.998Z -   ✅ SUCCESS! Followers: 17188, Posts: 21
+2025-08-27T18:57:40.000Z -   Processing time: 19s
+2025-08-27T18:57:40.000Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:57:50.001Z - [35/50] Processing natalie_noisom...
+2025-08-27T18:57:50.002Z -   Previous error: No error message
+2025-08-27T18:58:12.258Z -   ✅ SUCCESS! Followers: 20323, Posts: 45
+2025-08-27T18:58:12.259Z -   Processing time: 22s
+2025-08-27T18:58:12.260Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:58:22.261Z - [36/50] Processing marines.ariza06...
+2025-08-27T18:58:22.262Z -   Previous error: No error message
+2025-08-27T18:58:40.452Z -   ✅ SUCCESS! Followers: 21910, Posts: 28
+2025-08-27T18:58:40.454Z -   Processing time: 18s
+2025-08-27T18:58:40.454Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:58:50.455Z - [37/50] Processing bellaahaag...
+2025-08-27T18:58:50.456Z -   Previous error: No error message
+2025-08-27T18:59:08.171Z -   ✅ SUCCESS! Followers: 42091, Posts: 71
+2025-08-27T18:59:08.172Z -   Processing time: 18s
+2025-08-27T18:59:08.173Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:59:18.175Z - [38/50] Processing hallejolene...
+2025-08-27T18:59:18.177Z -   Previous error: No error message
+2025-08-27T18:59:32.472Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fhallecooley&e=AT22UGG1F2MByLmCTVkoFa5fxLD-EvAXLpiIKptfwNao9NEZdAEl4D1PV3OF9GuHvwWyJusbv2G9nCN7k7XpChpnuv8wO7Ad',\n" +
+  "    url: 'https://linktr.ee/hallecooley',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T18:59:32.562Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T18:59:42.564Z - [39/50] Processing tamarasmidt...
+2025-08-27T18:59:42.565Z -   Previous error: No error message
+2025-08-27T18:59:56.246Z -   ✅ SUCCESS! Followers: 54462, Posts: 371
+2025-08-27T18:59:56.246Z -   Processing time: 14s
+2025-08-27T18:59:56.247Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:00:06.248Z - [40/50] Processing valeriiapastor...
+2025-08-27T19:00:06.250Z -   Previous error: No error message
+2025-08-27T19:00:31.861Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fbeacons.ai%2Fvaleriiapastor&e=AT0KWSQu-XrNlzfh2iKdytdbwGOLz_BnGi47AIriLE7IJ2S8doQk8HY_RVK4z5s6gyToWfkqaVC3EynHL2jNr11Z1SFBzjVt',\n" +
+  "    url: 'https://beacons.ai/valeriiapastor',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:00:31.951Z - 
+📊 Progress: 40/50 (15 min elapsed, ~2 min remaining)
+2025-08-27T19:00:31.951Z -    Success: 26, Failed: 11, Private: 3, Not Found: 0
+
+2025-08-27T19:00:31.951Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:00:41.952Z - [41/50] Processing itskarlivinton...
+2025-08-27T19:00:41.954Z -   Previous error: No error message
+2025-08-27T19:00:59.025Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=http%3A%2F%2Flink.me%2Fitskarlivinton&e=AT2QF2rViXREt5I5KfcWlsKGkAMIvOCzC142Txnjs4il6SF-jUAX_WfUkBD2M2ChLbDAXxKk61YXPlkIobVspW5qMwnUIWYa',\n" +
+  "    url: 'http://link.me/itskarlivinton',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:00:59.116Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:01:09.118Z - [42/50] Processing carolinequinnlifts...
+2025-08-27T19:01:09.120Z -   Previous error: No error message
+2025-08-27T19:01:20.061Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: 'My Links',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fcquinnarchive&e=AT2-RIcCFBo_So4gjagzMKpB2kiwcCpoT7WRSAcwPIuBf40XvTj5vf07F6vrUKmrORrVhwqlNUDl8CNsczW4J-XdiwJLvlf6',\n" +
+  "    url: 'https://linktr.ee/cquinnarchive',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:01:20.162Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:01:30.164Z - [43/50] Processing madisongnovo...
+2025-08-27T19:01:30.166Z -   Previous error: No error message
+2025-08-27T19:01:43.443Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fhoo.be%2Fmadisongnovo&e=AT3Rk7gO-N_6CHAc79oMcMK_jO27D9D--p-7I0tm0P2GzYkIhqurw9w834FEx4AcrP-0vnf8lo8aq5xbFMRxxVhJ7RdZCgQ0',\n" +
+  "    url: 'https://hoo.be/madisongnovo',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:01:43.534Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:01:53.535Z - [44/50] Processing sydneyabler...
+2025-08-27T19:01:53.536Z -   Previous error: No error message
+2025-08-27T19:02:07.294Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fhoo.be%2Fsydneyabler&e=AT0yCkYRyQhAUkbHf3O5cL_jukKD2dpuXyXO8SNa_fRCB4vma_B5Zeg-kJyPuoSob4aSL9L7fkdcLnxdTgwk24ffBzzr80Lc',\n" +
+  "    url: 'https://hoo.be/sydneyabler',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:02:07.384Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:02:17.385Z - [45/50] Processing taylatownsend...
+2025-08-27T19:02:17.386Z -   Previous error: No error message
+2025-08-27T19:02:29.005Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Ftaylatownsendfitness&e=AT2ZHjPf9xWHDqBT3NXQgLtDJcxosoxemqoe4eUunUeFwj1HxUAnDpRQrUBUoAN3E4YfxAsGFrnbzzkjgQExE417ZxAKeXiP',\n" +
+  "    url: 'https://linktr.ee/taylatownsendfitness',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:02:29.096Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:02:39.097Z - [46/50] Processing manuelavelez...
+2025-08-27T19:02:39.099Z -   Previous error: No error message
+2025-08-27T19:02:47.075Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: 'Links',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fmanuelavelez&e=AT3It0hK2pChHgTngyqVJXpb5adXWbZa81_YCFUQjrtb6CLzhv6liMANXgVuFzd-Cq_qbhtkCDENL8FWByHApAcSQXWBubdf',\n" +
+  "    url: 'https://linktr.ee/manuelavelez',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:02:47.163Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:02:57.165Z - [47/50] Processing izziemacc...
+2025-08-27T19:02:57.165Z -   Previous error: No error message
+2025-08-27T19:03:06.590Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: 'Build Your Booty - 6 Week Transformation (',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fwww.solin.stream%2Fizziemacc%2Fprogram%2F3017&e=AT05YvX8CMETeh0iHxYa8xv8TOTSFXF9Gy2wyRDjqtlCU-LuyfUvxEzdqmPQA0PYggAR1oLWXd0Ub2H6AKHPsbvxwS3AUurD',\n" +
+  "    url: 'https://www.solin.stream/izziemacc/program/3017',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'Link Tree 🎀',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fizziemacc&e=AT2G7ceT8Mw_OzqpHETvsSQ2-zeV2h0gsT9VdhjFOkhVZgB7Urt5B6iDNxd12harkAYSy813IYnrJemoKoencLqLYeARrlxv',\n" +
+  "    url: 'https://linktr.ee/izziemacc',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:03:06.680Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:03:16.681Z - [48/50] Processing julessjacobson...
+2025-08-27T19:03:16.683Z -   Previous error: No error message
+2025-08-27T19:04:04.338Z -   ✅ SUCCESS! Followers: N/A, Posts: N/A
+2025-08-27T19:04:04.340Z -   Processing time: 48s
+2025-08-27T19:04:04.340Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:04:14.341Z - [49/50] Processing catirephy...
+2025-08-27T19:04:14.341Z -   Previous error: No error message
+2025-08-27T19:04:28.433Z -   ❌ STILL FAILED: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=http%3A%2F%2Fcatirephy.com%2F&e=AT3_TcFtkCQbaS33knUL73xfGvdyF1PGD_Wmy8K-ehTy_7tpami4I7kDXyyxuplotNM0o-E_u8wHYhilRmGKwZXKyQi_4srJ',\n" +
+  "    url: 'http://catirephy.com',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:28.523Z -   ⏳ Waiting 10 seconds before next profile...
+
+2025-08-27T19:04:38.525Z - [50/50] Processing dudha.furno...
+2025-08-27T19:04:38.527Z -   Previous error: No error message
+2025-08-27T19:04:49.292Z -   ✅ SUCCESS! Followers: 20443, Posts: 158
+2025-08-27T19:04:49.293Z -   Processing time: 11s
+2025-08-27T19:04:49.293Z - 
+📊 Progress: 50/50 (19 min elapsed, ~0 min remaining)
+2025-08-27T19:04:49.293Z -    Success: 28, Failed: 19, Private: 3, Not Found: 0
+
+2025-08-27T19:04:49.293Z - 
+========================================
+2025-08-27T19:04:49.293Z - FINAL RESULTS:
+2025-08-27T19:04:49.293Z - ========================================
+2025-08-27T19:04:49.293Z - ✅ Successfully scraped: 28/50 (56%)
+2025-08-27T19:04:49.293Z - ❌ Still failed: 19/50
+2025-08-27T19:04:49.293Z - 🔒 Private profiles: 3/50
+2025-08-27T19:04:49.293Z - 🚫 Not found (deleted): 0/50
+2025-08-27T19:04:49.293Z - ⏱️ Total processing time: 19 minutes
+2025-08-27T19:04:49.294Z - 
+🎉 SUCCESSFUL PROFILES:
+2025-08-27T19:04:49.294Z -   - mariarovaz (46087 followers, 371 posts)
+2025-08-27T19:04:49.294Z -   - barbaradomenechf (22140 followers, 202 posts)
+2025-08-27T19:04:49.294Z -   - nereeadellago (20980 followers, 704 posts)
+2025-08-27T19:04:49.294Z -   - tali.golan (11051 followers, 549 posts)
+2025-08-27T19:04:49.294Z -   - jasmine__ay (18898 followers, 155 posts)
+2025-08-27T19:04:49.294Z -   - ilana_akrm (13332 followers, 34 posts)
+2025-08-27T19:04:49.294Z -   - idannaor224 (24418 followers, 35 posts)
+2025-08-27T19:04:49.295Z -   - roni.tzur (46301 followers, 112 posts)
+2025-08-27T19:04:49.295Z -   - nofaradmon (44898 followers, 212 posts)
+2025-08-27T19:04:49.295Z -   - adiharell (14956 followers, 254 posts)
+2025-08-27T19:04:49.295Z -   ... and 18 more
+2025-08-27T19:04:49.295Z - 
+⚠️ PROFILES STILL FAILING:
+2025-08-27T19:04:49.295Z -   - sara_mlf: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: 'Todos mis planes ✅',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fsaramlf.es%2F&e=AT2KKtjABu8Kz1avolIFA14O-jfLRZFsoRMXThFBpc85sFVeC1rD_rlnCIjKBpveepSQ9E5uGMi_domW28_tR5rh9-BsqjeR',\n" +
+  "    url: 'https://saramlf.es',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'Mis favoritos Amazon❤️',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Famzlink.to%2Faz0V94lmQqj0F&e=AT3n6BdG4ho7PvoCpL8i47S0nhwYFGg7wvbBH2eeXX-YRXbCb3aSglurGgwfpmBY8wjOoaLKbd7zTGr06FhixXvZrioB6WLe',\n" +
+  "    url: 'https://amzlink.to/az0V94lmQqj0F',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'IO.GENIX, código: SARITATEAM',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fiogenixnutrition.com%2F&e=AT2rfe7-FdzX_bNMMy6_QOJWC5CIFJ7eRk4p-Zkt8IDc30IrPvrLyCj8ufaXRNJ4sdkK59Icl-PIXFPMMCZWGiS7BfmpHDbb',\n" +
+  "    url: 'https://iogenixnutrition.com',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'BANDAS ELÁSTICAS',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Famzlink.to%2Faz02lnOPvZ0mX&e=AT28d0xe7QvtYBUuGK37UmNAf-yx3BwlG2Q5NmmtWNhk_hr1zqPebzETUZg0QrBOH8sFd4cF2qkvzVKdzSOQiKNB7FVTRmez',\n" +
+  "    url: 'https://amzlink.to/az02lnOPvZ0mX',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:49.295Z -   - anna.campillo: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: 'Prozis💘',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=http%3A%2F%2Fprozis.com%2F1p8P7&e=AT1hR4TG6Vz2elbU_v8n8awhxiIRnAzbp9eLUIlWWSmMi6cS6qfz65CQGXMwSYTPaNbUxg-KawgaSq-v83iqqbnGi1rlmsT5',\n" +
+  "    url: 'http://prozis.com/1p8P7',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'TikTok👸',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fwww.tiktok.com%2F%40anna.campillo%3F_t%3DZN-8vLkOzviXGY%26_r%3D1&e=AT0ojD9eLgWnjtGtaZEhghPn4yF33UupVRhiVI5YIy0Fh-q2AoybKQ7PaGpWNYCghGQ-92dq18RDUZ2EZqoi0-eLb5Z2Avf9',\n" +
+  "    url: 'https://www.tiktok.com/@anna.campillo?_t=ZN-8vLkOzviXGY&_r=1',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'Burga Oficial 📲',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fget.aspr.app%2FSH14R9&e=AT1A5W1pcCEW8924ZjkMNHOLOCKSCYyy5OkHW0XNDQ9WO1Oy0Godao-6scBepty8qUP33cRUyrmJhfl6RSeyFzACFeiZAdfy',\n" +
+  "    url: 'https://get.aspr.app/SH14R9',\n" +
+  "    link_type: 'external'\n" +
+  '  },\n' +
+  '  {\n' +
+  "    title: 'BeLevels ⚡️',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fbelevels.com%2Fanna.campillo&e=AT3xOvKaif2_pAA-DuUSbMJJ00j3DZjooZY27iJQqogy7iPlmsdAHBIsmfrDdzHjNbXI09AN3CbUnQhImBzVl_jrKGbELS4R',\n" +
+  "    url: 'https://belevels.com/anna.campillo',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:49.295Z -   - __noabarak__: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fm.youtube.com%2Fwatch%3Fv%3DZ0ZrkBCnfxw%26feature%3Dyoutu.be&e=AT30wzjc8vBbdTuIBswsAIFaItsp2vWjNa-46_1_lhzvGD_II_-mtvp0Kck-q2ZLvcIsjL3JtKa-7LOYsWtFyxQLArz6bxvM',\n" +
+  "    url: 'https://m.youtube.com/watch?v=Z0ZrkBCnfxw&feature=youtu.be',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:49.296Z -   - eliangalim: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: 'Facebook profile',\n" +
+  "    lynx_url: '',\n" +
+  "    url: '',\n" +
+  "    link_type: 'facebook'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:49.296Z -   - marina_chenko: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Finstagram.com%2Fmalaya_swimwear%3Figshid%3D1i783mlw11fxq&e=AT28KB3s1EyTIHWNm1n-NMWmsMCYfU4K0s1w0pkKwzqShLChg3R3nrTGJ0Bofdy1df3PsH2B9s-CGEYM2GGMsBBFLozrJCFs',\n" +
+  "    url: 'https://instagram.com/malaya_swimwear?igshid=1i783mlw11fxq',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:49.296Z -   - ilinadupin: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fwww.idcollection.co.il%2F&e=AT3J6mDoEvpiBKuNSGqfIpDnVeQZBMF5g6bImFeTP5o2GJ0Xpi-IV5tmWl-RIn9jm8oOlmwhZ2p34nLKnme3JFJCdT1UCGoB',\n" +
+  "    url: 'https://www.idcollection.co.il',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:49.296Z -   - luvuluce: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flink.me%2Fitslucesworldd&e=AT2iZhAzGy14cmLzqaAX-BgExiSmVHzuIxunc85oRHCMZaIsVT3VCnb6uL16-pKnDr3DHmCf-TX3Wt2Ciq-YaBVriKL_ECzX',\n" +
+  "    url: 'https://link.me/itslucesworldd',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:49.296Z -   - kaitlintannerfit: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2FKaitlintannerfit&e=AT3jq6IkmcEoG8eqCyYhBBIVBZuJtlplP5467lV9AW5F2PGCERQsGj8Zbyd6NqE8x0Kwl1gaj7cVpMu_--eEhFcYUp6LTIHg',\n" +
+  "    url: 'https://linktr.ee/Kaitlintannerfit',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:49.296Z -   - therese.fit: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Ftherese.fit&e=AT3xLtKnDOCH7FQW1-LTKW60SMpFL804T18m8bpa-ReOCjiVa_VjXYI1YynZG6a0Dn8BcbRAPh1jhaBvzbltXkvyzTdugoeK',\n" +
+  "    url: 'https://linktr.ee/therese.fit',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:49.296Z -   - hallejolene: Cast to [string] failed for value "[\n' +
+  '  {\n' +
+  "    title: '',\n" +
+  "    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fhallecooley&e=AT22UGG1F2MByLmCTVkoFa5fxLD-EvAXLpiIKptfwNao9NEZdAEl4D1PV3OF9GuHvwWyJusbv2G9nCN7k7XpChpnuv8wO7Ad',\n" +
+  "    url: 'https://linktr.ee/hallecooley',\n" +
+  "    link_type: 'external'\n" +
+  '  }\n' +
+  ']" (type string) at path "profileData.externalUrls.0" because of "CastError"
+2025-08-27T19:04:49.296Z -   ... and 9 more
+2025-08-27T19:04:49.296Z - 
+Possible reasons for continued failures:
+2025-08-27T19:04:49.296Z - 1. Instagram is actively blocking these specific profiles
+2025-08-27T19:04:49.296Z - 2. Profiles might be shadow-banned or restricted
+2025-08-27T19:04:49.296Z - 3. Regional restrictions or special characters in URLs
+2025-08-27T19:04:49.296Z - 4. Consider using Instagram Graph API for these profiles
+2025-08-27T19:04:49.297Z - 
+📄 Detailed results saved to: /Users/ahnafzarifchowdhury/Documents/Scraper-backend/instagram-scraper-backend/src/scripts/retry-results-1756321489297.json
+2025-08-27T19:04:49.297Z - 📄 Full log saved to: /Users/ahnafzarifchowdhury/Documents/Scraper-backend/instagram-scraper-backend/src/scripts/retry-log-1756320332775.txt
+2025-08-27T19:04:49.306Z - 
+Disconnected from MongoDB

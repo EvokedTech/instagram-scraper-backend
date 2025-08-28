@@ -2,40 +2,59 @@ const logger = require('../utils/logger');
 
 // Helper function to convert username/URL to proper Instagram URL
 const normalizeInstagramUrl = (input) => {
+  if (!input || typeof input !== 'string') {
+    throw new Error(`Invalid input: ${input}`);
+  }
+  
   input = input.trim();
   
-  // If it's already a full URL
-  if (input.startsWith('http://') || input.startsWith('https://')) {
-    // Validate it's an Instagram URL
-    const instagramRegex = /^https?:\/\/(www\.)?instagram\.com\/[a-zA-Z0-9._]+\/?$/;
-    if (!instagramRegex.test(input)) {
+  // If it looks like it was incorrectly split (just "https:" or "http:")
+  if (input === 'https:' || input === 'http:') {
+    throw new Error(`Invalid Instagram username: ${input}`);
+  }
+  
+  // If it's already a full Instagram URL (with or without protocol)
+  if (input.includes('instagram.com/')) {
+    // Extract username from Instagram URL
+    const match = input.match(/instagram\.com\/([a-zA-Z0-9._]+)/);
+    if (!match || !match[1]) {
       throw new Error(`Invalid Instagram URL: ${input}`);
     }
-    // Ensure it uses https
-    return input.replace('http://', 'https://');
+    const username = match[1];
+    // Return clean URL
+    return `https://www.instagram.com/${username}/`;
   }
   
-  // If it's just a username
-  const usernameRegex = /^[a-zA-Z0-9._]+$/;
-  if (usernameRegex.test(input)) {
-    return `https://www.instagram.com/${input}/`;
-  }
-  
-  // If it starts with @, remove it and process
+  // If it starts with @, remove it
   if (input.startsWith('@')) {
-    const username = input.substring(1);
-    if (usernameRegex.test(username)) {
-      return `https://www.instagram.com/${username}/`;
-    }
+    input = input.substring(1);
   }
   
-  throw new Error(`Invalid Instagram username or URL: ${input}`);
+  // Remove any protocol prefixes that might remain
+  input = input.replace(/^https?:\/\//, '');
+  input = input.replace(/^www\./, '');
+  
+  // Validate username format
+  const usernameRegex = /^[a-zA-Z0-9._]+$/;
+  if (!usernameRegex.test(input)) {
+    throw new Error(`Invalid Instagram username: ${input}`);
+  }
+  
+  return `https://www.instagram.com/${input}/`;
 };
 
 // Validation middleware for creating a session
 const validateCreateSession = (req, res, next) => {
   try {
-    const { name, rootProfiles, description, config } = req.body;
+    let { name, rootProfiles, description, config } = req.body;
+    
+    // Log the incoming request for debugging
+    logger.info('Session creation request received:', {
+      name,
+      rootProfilesType: typeof rootProfiles,
+      rootProfilesLength: Array.isArray(rootProfiles) ? rootProfiles.length : (typeof rootProfiles === 'string' ? rootProfiles.length : 0),
+      hasConfig: !!config
+    });
     
     // Validate required fields
     if (!name || typeof name !== 'string' || name.trim().length === 0) {
@@ -43,6 +62,39 @@ const validateCreateSession = (req, res, next) => {
         success: false,
         error: 'Session name is required and must be a non-empty string'
       });
+    }
+    
+    // Handle case where rootProfiles might be a string (from frontend)
+    if (typeof rootProfiles === 'string') {
+      logger.info('Converting string rootProfiles to array');
+      logger.info('Original string length:', rootProfiles.length);
+      
+      // Extract all Instagram URLs and usernames
+      let extractedProfiles = [];
+      
+      // First try to extract full Instagram URLs
+      const urlPattern = /(https?:\/\/)?(www\.)?instagram\.com\/[a-zA-Z0-9._]+/g;
+      const urlMatches = rootProfiles.match(urlPattern);
+      
+      if (urlMatches && urlMatches.length > 0) {
+        // Found Instagram URLs
+        extractedProfiles = urlMatches;
+        logger.info(`Extracted ${urlMatches.length} Instagram URLs`);
+      } else {
+        // No URLs found, try to parse as usernames
+        // Split by newlines, spaces, or commas
+        const profiles = rootProfiles
+          .split(/[\n\r\s,]+/)
+          .map(p => p.trim())
+          .filter(p => p && p.length > 0 && p !== 'https:' && p !== 'http:');
+        
+        extractedProfiles = profiles;
+        logger.info(`Extracted ${profiles.length} profiles as usernames`);
+      }
+      
+      rootProfiles = extractedProfiles;
+      req.body.rootProfiles = rootProfiles; // Update the request body
+      logger.info(`Final array with ${rootProfiles.length} profiles:`, rootProfiles.slice(0, 5)); // Log first 5 for debugging
     }
     
     if (!rootProfiles || !Array.isArray(rootProfiles) || rootProfiles.length === 0) {
@@ -58,9 +110,12 @@ const validateCreateSession = (req, res, next) => {
     
     rootProfiles.forEach((profile, index) => {
       try {
+        logger.info(`Normalizing profile ${index + 1}: "${profile}"`);
         const normalized = normalizeInstagramUrl(profile);
         normalizedProfiles.push(normalized);
+        logger.info(`Successfully normalized to: ${normalized}`);
       } catch (error) {
+        logger.error(`Failed to normalize profile ${index + 1}: "${profile}" - ${error.message}`);
         errors.push(`Profile ${index + 1}: ${error.message}`);
       }
     });

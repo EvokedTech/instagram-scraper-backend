@@ -19,6 +19,7 @@ const apifyRoutes = require('./routes/apify');
 const queueRoutes = require('./routes/queues');
 const dashboardRoutes = require('./routes/dashboard');
 const analysisRoutes = require('./routes/analysis');
+const testRoutes = require('./routes/test');
 const bullBoard = require('./routes/bullBoard');
 
 const app = express();
@@ -93,6 +94,7 @@ app.use('/api/apify', apifyRoutes);
 app.use('/api/queues', queueRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/analysis', analysisRoutes);
+app.use('/api/test', testRoutes);
 
 // Bull Board UI (only in development and if Redis is available)
 // Note: Bull Board is loaded but will show connection errors without Redis

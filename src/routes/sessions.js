@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const sessionController = require('../controllers/sessionController');
+const directScrapingService = require('../services/directScrapingService');
 const {
   validateCreateSession,
   validateUpdateStatus,
@@ -145,6 +146,43 @@ router.post(
   '/:id/check-completion',
   validateSessionId,
   sessionController.checkCompletion
+);
+
+// Start direct session processing (without queues)
+router.post(
+  '/:id/start',
+  validateSessionId,
+  async (req, res) => {
+    try {
+      const { id } = req.params;
+      
+      // Check if already processing
+      if (directScrapingService.isProcessing(id)) {
+        return res.status(400).json({
+          success: false,
+          error: 'Session is already being processed'
+        });
+      }
+      
+      // Start processing in background
+      directScrapingService.processSession(id)
+        .catch(error => {
+          console.error(`Session processing failed for ${id}:`, error);
+        });
+      
+      res.json({
+        success: true,
+        message: 'Session processing started',
+        sessionId: id
+      });
+      
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        error: error.message
+      });
+    }
+  }
 );
 
 module.exports = router;

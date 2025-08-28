@@ -1,0 +1,226 @@
+{
+  "successful": [
+    {
+      "username": "mariarovaz",
+      "followers": 46087,
+      "posts": 371
+    },
+    {
+      "username": "barbaradomenechf",
+      "followers": 22140,
+      "posts": 202
+    },
+    {
+      "username": "nereeadellago",
+      "followers": 20980,
+      "posts": 704
+    },
+    {
+      "username": "tali.golan",
+      "followers": 11051,
+      "posts": 549
+    },
+    {
+      "username": "jasmine__ay",
+      "followers": 18898,
+      "posts": 155
+    },
+    {
+      "username": "ilana_akrm",
+      "followers": 13332,
+      "posts": 34
+    },
+    {
+      "username": "idannaor224",
+      "followers": 24418,
+      "posts": 35
+    },
+    {
+      "username": "roni.tzur",
+      "followers": 46301,
+      "posts": 112
+    },
+    {
+      "username": "nofaradmon",
+      "followers": 44898,
+      "posts": 212
+    },
+    {
+      "username": "adiharell",
+      "followers": 14956,
+      "posts": 254
+    },
+    {
+      "username": "mika_levyy",
+      "followers": 27695,
+      "posts": 299
+    },
+    {
+      "username": "linoy_vaknin1",
+      "followers": 36497,
+      "posts": 288
+    },
+    {
+      "username": "keli_ezra",
+      "followers": 24706,
+      "posts": 215
+    },
+    {
+      "username": "tehilafadida",
+      "followers": 13083,
+      "posts": 198
+    },
+    {
+      "username": "michal.hakun",
+      "followers": 16530,
+      "posts": 191
+    },
+    {
+      "username": "linoy_dahan2",
+      "followers": 16850,
+      "posts": 312
+    },
+    {
+      "username": "noam_hillel",
+      "followers": 245,
+      "posts": 7
+    },
+    {
+      "username": "klepikova_av",
+      "followers": 11664,
+      "posts": 23
+    },
+    {
+      "username": "callieebullough",
+      "followers": 41403,
+      "posts": 215
+    },
+    {
+      "username": "emmakae",
+      "followers": 46830,
+      "posts": 140
+    },
+    {
+      "username": "savcannongym",
+      "followers": 40468,
+      "posts": 56
+    },
+    {
+      "username": "hanna.mys",
+      "followers": 17188,
+      "posts": 21
+    },
+    {
+      "username": "natalie_noisom",
+      "followers": 20323,
+      "posts": 45
+    },
+    {
+      "username": "marines.ariza06",
+      "followers": 21910,
+      "posts": 28
+    },
+    {
+      "username": "bellaahaag",
+      "followers": 42091,
+      "posts": 71
+    },
+    {
+      "username": "tamarasmidt",
+      "followers": 54462,
+      "posts": 371
+    },
+    {
+      "username": "julessjacobson"
+    },
+    {
+      "username": "dudha.furno",
+      "followers": 20443,
+      "posts": 158
+    }
+  ],
+  "stillFailed": [
+    {
+      "username": "sara_mlf",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: 'Todos mis planes ✅',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fsaramlf.es%2F&e=AT2KKtjABu8Kz1avolIFA14O-jfLRZFsoRMXThFBpc85sFVeC1rD_rlnCIjKBpveepSQ9E5uGMi_domW28_tR5rh9-BsqjeR',\\n\" +\n  \"    url: 'https://saramlf.es',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  },\\n' +\n  '  {\\n' +\n  \"    title: 'Mis favoritos Amazon❤️',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Famzlink.to%2Faz0V94lmQqj0F&e=AT3n6BdG4ho7PvoCpL8i47S0nhwYFGg7wvbBH2eeXX-YRXbCb3aSglurGgwfpmBY8wjOoaLKbd7zTGr06FhixXvZrioB6WLe',\\n\" +\n  \"    url: 'https://amzlink.to/az0V94lmQqj0F',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  },\\n' +\n  '  {\\n' +\n  \"    title: 'IO.GENIX, código: SARITATEAM',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fiogenixnutrition.com%2F&e=AT2rfe7-FdzX_bNMMy6_QOJWC5CIFJ7eRk4p-Zkt8IDc30IrPvrLyCj8ufaXRNJ4sdkK59Icl-PIXFPMMCZWGiS7BfmpHDbb',\\n\" +\n  \"    url: 'https://iogenixnutrition.com',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  },\\n' +\n  '  {\\n' +\n  \"    title: 'BANDAS ELÁSTICAS',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Famzlink.to%2Faz02lnOPvZ0mX&e=AT28d0xe7QvtYBUuGK37UmNAf-yx3BwlG2Q5NmmtWNhk_hr1zqPebzETUZg0QrBOH8sFd4cF2qkvzVKdzSOQiKNB7FVTRmez',\\n\" +\n  \"    url: 'https://amzlink.to/az02lnOPvZ0mX',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "anna.campillo",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: 'Prozis💘',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=http%3A%2F%2Fprozis.com%2F1p8P7&e=AT1hR4TG6Vz2elbU_v8n8awhxiIRnAzbp9eLUIlWWSmMi6cS6qfz65CQGXMwSYTPaNbUxg-KawgaSq-v83iqqbnGi1rlmsT5',\\n\" +\n  \"    url: 'http://prozis.com/1p8P7',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  },\\n' +\n  '  {\\n' +\n  \"    title: 'TikTok👸',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fwww.tiktok.com%2F%40anna.campillo%3F_t%3DZN-8vLkOzviXGY%26_r%3D1&e=AT0ojD9eLgWnjtGtaZEhghPn4yF33UupVRhiVI5YIy0Fh-q2AoybKQ7PaGpWNYCghGQ-92dq18RDUZ2EZqoi0-eLb5Z2Avf9',\\n\" +\n  \"    url: 'https://www.tiktok.com/@anna.campillo?_t=ZN-8vLkOzviXGY&_r=1',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  },\\n' +\n  '  {\\n' +\n  \"    title: 'Burga Oficial 📲',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fget.aspr.app%2FSH14R9&e=AT1A5W1pcCEW8924ZjkMNHOLOCKSCYyy5OkHW0XNDQ9WO1Oy0Godao-6scBepty8qUP33cRUyrmJhfl6RSeyFzACFeiZAdfy',\\n\" +\n  \"    url: 'https://get.aspr.app/SH14R9',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  },\\n' +\n  '  {\\n' +\n  \"    title: 'BeLevels ⚡️',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fbelevels.com%2Fanna.campillo&e=AT3xOvKaif2_pAA-DuUSbMJJ00j3DZjooZY27iJQqogy7iPlmsdAHBIsmfrDdzHjNbXI09AN3CbUnQhImBzVl_jrKGbELS4R',\\n\" +\n  \"    url: 'https://belevels.com/anna.campillo',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "__noabarak__",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fm.youtube.com%2Fwatch%3Fv%3DZ0ZrkBCnfxw%26feature%3Dyoutu.be&e=AT30wzjc8vBbdTuIBswsAIFaItsp2vWjNa-46_1_lhzvGD_II_-mtvp0Kck-q2ZLvcIsjL3JtKa-7LOYsWtFyxQLArz6bxvM',\\n\" +\n  \"    url: 'https://m.youtube.com/watch?v=Z0ZrkBCnfxw&feature=youtu.be',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "eliangalim",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: 'Facebook profile',\\n\" +\n  \"    lynx_url: '',\\n\" +\n  \"    url: '',\\n\" +\n  \"    link_type: 'facebook'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "marina_chenko",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Finstagram.com%2Fmalaya_swimwear%3Figshid%3D1i783mlw11fxq&e=AT28KB3s1EyTIHWNm1n-NMWmsMCYfU4K0s1w0pkKwzqShLChg3R3nrTGJ0Bofdy1df3PsH2B9s-CGEYM2GGMsBBFLozrJCFs',\\n\" +\n  \"    url: 'https://instagram.com/malaya_swimwear?igshid=1i783mlw11fxq',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "ilinadupin",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fwww.idcollection.co.il%2F&e=AT3J6mDoEvpiBKuNSGqfIpDnVeQZBMF5g6bImFeTP5o2GJ0Xpi-IV5tmWl-RIn9jm8oOlmwhZ2p34nLKnme3JFJCdT1UCGoB',\\n\" +\n  \"    url: 'https://www.idcollection.co.il',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "luvuluce",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flink.me%2Fitslucesworldd&e=AT2iZhAzGy14cmLzqaAX-BgExiSmVHzuIxunc85oRHCMZaIsVT3VCnb6uL16-pKnDr3DHmCf-TX3Wt2Ciq-YaBVriKL_ECzX',\\n\" +\n  \"    url: 'https://link.me/itslucesworldd',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "kaitlintannerfit",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2FKaitlintannerfit&e=AT3jq6IkmcEoG8eqCyYhBBIVBZuJtlplP5467lV9AW5F2PGCERQsGj8Zbyd6NqE8x0Kwl1gaj7cVpMu_--eEhFcYUp6LTIHg',\\n\" +\n  \"    url: 'https://linktr.ee/Kaitlintannerfit',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "therese.fit",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Ftherese.fit&e=AT3xLtKnDOCH7FQW1-LTKW60SMpFL804T18m8bpa-ReOCjiVa_VjXYI1YynZG6a0Dn8BcbRAPh1jhaBvzbltXkvyzTdugoeK',\\n\" +\n  \"    url: 'https://linktr.ee/therese.fit',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "hallejolene",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fhallecooley&e=AT22UGG1F2MByLmCTVkoFa5fxLD-EvAXLpiIKptfwNao9NEZdAEl4D1PV3OF9GuHvwWyJusbv2G9nCN7k7XpChpnuv8wO7Ad',\\n\" +\n  \"    url: 'https://linktr.ee/hallecooley',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "valeriiapastor",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fbeacons.ai%2Fvaleriiapastor&e=AT0KWSQu-XrNlzfh2iKdytdbwGOLz_BnGi47AIriLE7IJ2S8doQk8HY_RVK4z5s6gyToWfkqaVC3EynHL2jNr11Z1SFBzjVt',\\n\" +\n  \"    url: 'https://beacons.ai/valeriiapastor',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "itskarlivinton",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=http%3A%2F%2Flink.me%2Fitskarlivinton&e=AT2QF2rViXREt5I5KfcWlsKGkAMIvOCzC142Txnjs4il6SF-jUAX_WfUkBD2M2ChLbDAXxKk61YXPlkIobVspW5qMwnUIWYa',\\n\" +\n  \"    url: 'http://link.me/itskarlivinton',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "carolinequinnlifts",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: 'My Links',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fcquinnarchive&e=AT2-RIcCFBo_So4gjagzMKpB2kiwcCpoT7WRSAcwPIuBf40XvTj5vf07F6vrUKmrORrVhwqlNUDl8CNsczW4J-XdiwJLvlf6',\\n\" +\n  \"    url: 'https://linktr.ee/cquinnarchive',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "madisongnovo",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fhoo.be%2Fmadisongnovo&e=AT3Rk7gO-N_6CHAc79oMcMK_jO27D9D--p-7I0tm0P2GzYkIhqurw9w834FEx4AcrP-0vnf8lo8aq5xbFMRxxVhJ7RdZCgQ0',\\n\" +\n  \"    url: 'https://hoo.be/madisongnovo',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "sydneyabler",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fhoo.be%2Fsydneyabler&e=AT0yCkYRyQhAUkbHf3O5cL_jukKD2dpuXyXO8SNa_fRCB4vma_B5Zeg-kJyPuoSob4aSL9L7fkdcLnxdTgwk24ffBzzr80Lc',\\n\" +\n  \"    url: 'https://hoo.be/sydneyabler',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "taylatownsend",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Ftaylatownsendfitness&e=AT2ZHjPf9xWHDqBT3NXQgLtDJcxosoxemqoe4eUunUeFwj1HxUAnDpRQrUBUoAN3E4YfxAsGFrnbzzkjgQExE417ZxAKeXiP',\\n\" +\n  \"    url: 'https://linktr.ee/taylatownsendfitness',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "manuelavelez",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: 'Links',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fmanuelavelez&e=AT3It0hK2pChHgTngyqVJXpb5adXWbZa81_YCFUQjrtb6CLzhv6liMANXgVuFzd-Cq_qbhtkCDENL8FWByHApAcSQXWBubdf',\\n\" +\n  \"    url: 'https://linktr.ee/manuelavelez',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "izziemacc",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: 'Build Your Booty - 6 Week Transformation (',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Fwww.solin.stream%2Fizziemacc%2Fprogram%2F3017&e=AT05YvX8CMETeh0iHxYa8xv8TOTSFXF9Gy2wyRDjqtlCU-LuyfUvxEzdqmPQA0PYggAR1oLWXd0Ub2H6AKHPsbvxwS3AUurD',\\n\" +\n  \"    url: 'https://www.solin.stream/izziemacc/program/3017',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  },\\n' +\n  '  {\\n' +\n  \"    title: 'Link Tree 🎀',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fizziemacc&e=AT2G7ceT8Mw_OzqpHETvsSQ2-zeV2h0gsT9VdhjFOkhVZgB7Urt5B6iDNxd12harkAYSy813IYnrJemoKoencLqLYeARrlxv',\\n\" +\n  \"    url: 'https://linktr.ee/izziemacc',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    },
+    {
+      "username": "catirephy",
+      "error": "Cast to [string] failed for value \"[\\n' +\n  '  {\\n' +\n  \"    title: '',\\n\" +\n  \"    lynx_url: 'https://l.instagram.com/?u=http%3A%2F%2Fcatirephy.com%2F&e=AT3_TcFtkCQbaS33knUL73xfGvdyF1PGD_Wmy8K-ehTy_7tpami4I7kDXyyxuplotNM0o-E_u8wHYhilRmGKwZXKyQi_4srJ',\\n\" +\n  \"    url: 'http://catirephy.com',\\n\" +\n  \"    link_type: 'external'\\n\" +\n  '  }\\n' +\n  ']\" (type string) at path \"profileData.externalUrls.0\" because of \"CastError\""
+    }
+  ],
+  "private": [
+    "kim_hadad",
+    "miaschory",
+    "ladybernal"
+  ],
+  "notFound": []
+}

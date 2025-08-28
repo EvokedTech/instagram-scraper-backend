@@ -5,8 +5,12 @@ const batchProcessingService = require('../services/batchProcessingService');
 const relatedProfilesService = require('../services/relatedProfilesService');
 const depthProcessingService = require('../services/depthProcessingService');
 const queuedBatchProcessingService = require('../services/queuedBatchProcessingService');
+const directScrapingService = require('../services/directScrapingService');
+const batchScrapingService = require('../services/batchScrapingService');
+const profileCheckService = require('../services/profileCheckService');
 const socketService = require('../services/socketService');
 const logger = require('../utils/logger');
+const batchConfig = require('../config/batchConfig');
 
 const sessionController = {
   // Create a new session
@@ -26,19 +30,67 @@ const sessionController = {
         });
       }
       
-      // Create new session
+      // Check if we should skip privacy check (for faster processing)
+      const skipPrivacyCheck = config?.skipPrivacyCheck === true;
+      let publicProfileUrls = rootProfiles;
+      let privateProfileUrls = [];
+      let notFoundProfiles = [];
+      
+      if (!skipPrivacyCheck) {
+        // Check profiles for privacy status
+        logger.info(`Checking privacy status of ${rootProfiles.length} profiles...`);
+        const profileUsernames = rootProfiles.map(url => {
+          const match = url.match(/instagram\.com\/([a-zA-Z0-9._]+)/);
+          return match ? match[1] : '';
+        }).filter(u => u);
+        
+        const profileChecks = await profileCheckService.checkMultipleProfiles(profileUsernames);
+        
+        // Filter out private profiles
+        publicProfileUrls = rootProfiles.filter(url => {
+          const username = url.match(/instagram\.com\/([a-zA-Z0-9._]+)/)?.[1]?.toLowerCase();
+          return username && profileChecks.public.includes(username);
+        });
+        
+        privateProfileUrls = rootProfiles.filter(url => {
+          const username = url.match(/instagram\.com\/([a-zA-Z0-9._]+)/)?.[1]?.toLowerCase();
+          return username && profileChecks.private.includes(username);
+        });
+        
+        notFoundProfiles = profileChecks.notFound;
+        
+        logger.info(`Profile check results - Public: ${publicProfileUrls.length}, Private: ${privateProfileUrls.length}, Not Found: ${notFoundProfiles.length}`);
+        
+        // If no public profiles, return error
+        if (publicProfileUrls.length === 0) {
+          return res.status(400).json({
+            success: false,
+            error: 'No public profiles found',
+            details: {
+              private: privateProfileUrls.length,
+              notFound: notFoundProfiles.length,
+              message: 'All provided profiles are either private or do not exist. Private profiles cannot be scraped.'
+            }
+          });
+        }
+      } else {
+        logger.info(`Skipping privacy check - processing all ${rootProfiles.length} profiles`);
+      }
+      
+      // Create new session with profiles
       const session = new Session({
         name,
         description,
-        rootProfiles,
+        rootProfiles: publicProfileUrls,
         config: {
           maxDepth: config?.maxDepth || 2,
           maxProfilesPerDepth: config?.maxProfilesPerDepth === null ? null : (config?.maxProfilesPerDepth || 100),
-          analysisEnabled: config?.analysisEnabled !== false
+          analysisEnabled: config?.analysisEnabled !== false,
+          analyzeRootProfiles: config?.analyzeRootProfiles || false
         },
         status: 'pending',
         stats: {
-          totalProfiles: rootProfiles.length,
+          totalProfiles: publicProfileUrls.length,  // Count only public profiles
           scrapedProfiles: 0,
           currentDepth: 0
         }
@@ -46,16 +98,36 @@ const sessionController = {
       
       await session.save();
       
-      // Check which root profiles already exist in the database (from any session)
-      const existingProfiles = await RootProfileScraped.find({
-        profileUrl: { $in: rootProfiles },
-        status: 'scraped'
-      }).select('profileUrl profileData');
+      // Check which root profiles already exist in the database (from ANY session, ANY status)
+      const allExistingProfiles = await RootProfileScraped.find({
+        profileUrl: { $in: publicProfileUrls }
+      }).select('profileUrl username status scrapedAt profileData');
       
-      const existingUrlsSet = new Set(existingProfiles.map(p => p.profileUrl));
+      // Separate already scraped vs pending/failed
+      const alreadyScrapedProfiles = allExistingProfiles.filter(p => p.status === 'scraped' || p.status === 'analyzed');
+      const failedProfiles = allExistingProfiles.filter(p => p.status === 'failed');
+      const pendingProfiles = allExistingProfiles.filter(p => p.status === 'pending');
       
-      // Create pending root profile records only for non-existing profiles
-      const newProfileUrls = rootProfiles.filter(url => !existingUrlsSet.has(url));
+      const existingUrlsSet = new Set(allExistingProfiles.map(p => p.profileUrl));
+      
+      // Only create records for profiles that don't exist at all in database
+      const newProfileUrls = publicProfileUrls.filter(url => !existingUrlsSet.has(url));
+      
+      // For this session, we'll only process new profiles and retry failed ones
+      const profilesToProcess = [...newProfileUrls];
+      
+      // Update failed profiles to retry them
+      if (failedProfiles.length > 0) {
+        logger.info(`Found ${failedProfiles.length} failed profiles that will be retried`);
+        for (const failedProfile of failedProfiles) {
+          await RootProfileScraped.findByIdAndUpdate(failedProfile._id, {
+            status: 'pending',
+            sessionId: session._id,
+            error: null
+          });
+          profilesToProcess.push(failedProfile.profileUrl);
+        }
+      }
       
       if (newProfileUrls.length > 0) {
         const rootProfileDocs = newProfileUrls.map(profileUrl => {
@@ -72,30 +144,47 @@ const sessionController = {
         await RootProfileScraped.insertMany(rootProfileDocs);
       }
       
-      // Extract related profiles from existing profiles
-      let extractedRelatedCount = 0;
-      for (const existingProfile of existingProfiles) {
-        if (existingProfile.profileData?.relatedProfiles?.length > 0) {
-          extractedRelatedCount += existingProfile.profileData.relatedProfiles.length;
-          // Related profiles will be processed when the queue starts
-        }
+      // Log already scraped profiles that will be skipped
+      if (alreadyScrapedProfiles.length > 0) {
+        logger.info(`Skipping ${alreadyScrapedProfiles.length} already scraped profiles:`, 
+          alreadyScrapedProfiles.map(p => p.username).join(', '));
       }
       
-      logger.info(`Session created: ${session.name} - Total: ${rootProfiles.length}, New: ${newProfileUrls.length}, Existing: ${existingProfiles.length}`);
+      logger.info(`Session created: ${session.name} - Public: ${publicProfileUrls.length}, Private Filtered: ${privateProfileUrls.length}, New: ${newProfileUrls.length}, Already Scraped: ${alreadyScrapedProfiles.length}, Failed to Retry: ${failedProfiles.length}`);
+      
+      // Automatically start batch processing for the session
+      logger.info(`Auto-starting BATCH processing for session: ${session._id}`);
+      logger.info(`Profiles will be processed in batches of ${batchConfig.BATCH_SIZE}`);
+      
+      batchScrapingService.processSessionInBatches(session._id.toString())
+        .then((results) => {
+          logger.info(`Session ${session._id} batch processing completed:`, results);
+        })
+        .catch(error => {
+          logger.error(`Session ${session._id} batch processing failed:`, error);
+        });
       
       res.status(201).json({
         success: true,
         data: session,
-        message: `Session created successfully with ${rootProfiles.length} root profiles`,
+        message: `Processing ${newProfileUrls.length + failedProfiles.length} profiles (${alreadyScrapedProfiles.length} already scraped, ${privateProfileUrls.length} private filtered)`,
         profilesInfo: {
-          total: rootProfiles.length,
-          existing: existingProfiles.length,
+          submitted: rootProfiles.length,
+          public: publicProfileUrls.length,
+          private: privateProfileUrls.length,
+          notFound: notFoundProfiles.length,
+          alreadyScraped: alreadyScrapedProfiles.length,
+          failedToRetry: failedProfiles.length,
           new: newProfileUrls.length,
-          existingProfiles: existingProfiles.map(p => ({
-            username: p.profileUrl.match(/instagram\.com\/([^\/]+)/)?.[1] || '',
+          toProcess: profilesToProcess.length,
+          filteredPrivateProfiles: privateProfileUrls.map(url => url.match(/instagram\.com\/([^\/]+)/)?.[1] || ''),
+          skippedProfiles: alreadyScrapedProfiles.map(p => ({
+            username: p.username,
             profileUrl: p.profileUrl,
-            relatedProfilesCount: p.profileData?.relatedProfiles?.length || 0
-          }))
+            status: p.status,
+            scrapedAt: p.scrapedAt
+          })),
+          retryingProfiles: failedProfiles.map(p => p.username)
         }
       });
     } catch (error) {
@@ -391,7 +480,6 @@ const sessionController = {
   async startBatchProcessing(req, res, next) {
     try {
       const { id } = req.params;
-      const { batchSize, maxConcurrentRequests } = req.body;
       
       const session = await Session.findById(id);
       
@@ -415,22 +503,18 @@ const sessionController = {
         });
       }
       
-      // Start the session
-      await session.start();
-      
+      // Start batch processing
       logger.info(`Starting batch processing for session ${id}`);
+      logger.info(`Batch size: ${batchConfig.BATCH_SIZE}, Delay between batches: ${batchConfig.DELAY_BETWEEN_BATCHES}ms`);
       
-      // Start batch processing in the background
-      batchProcessingService.processRootProfilesBatch(
-        session._id.toString(),
-        session.rootProfiles,
-        {
-          batchSize: batchSize || undefined,
-          maxConcurrentRequests: maxConcurrentRequests || undefined
-        }
-      ).catch(error => {
-        logger.error(`Batch processing failed for session ${id}:`, error);
-      });
+      // Start batch processing in the background using the new batch scraping service
+      batchScrapingService.processSessionInBatches(session._id.toString())
+        .then(results => {
+          logger.info(`Batch processing completed for session ${id}:`, results);
+        })
+        .catch(error => {
+          logger.error(`Batch processing failed for session ${id}:`, error);
+        });
       
       res.status(200).json({
         success: true,
@@ -448,9 +532,8 @@ const sessionController = {
     try {
       const { id } = req.params;
       
-      const status = await batchProcessingService.getBatchStatus(id);
-      
-      if (!status.sessionStatus) {
+      const session = await Session.findById(id);
+      if (!session) {
         return res.status(404).json({
           success: false,
           error: {
@@ -460,9 +543,39 @@ const sessionController = {
         });
       }
       
+      // Get profiles status counts
+      const [pending, scraped, failed, skipped] = await Promise.all([
+        RootProfileScraped.countDocuments({ sessionId: id, status: 'pending' }),
+        RootProfileScraped.countDocuments({ sessionId: id, status: 'scraped' }),
+        RootProfileScraped.countDocuments({ sessionId: id, status: 'failed' }),
+        RootProfileScraped.countDocuments({ sessionId: id, status: 'skipped' })
+      ]);
+      
+      const total = pending + scraped + failed + skipped;
+      const processed = scraped + failed + skipped;
+      
       res.status(200).json({
         success: true,
-        data: status
+        data: {
+          sessionStatus: session.status,
+          batchConfig: {
+            batchSize: batchConfig.BATCH_SIZE,
+            delayBetweenBatches: batchConfig.DELAY_BETWEEN_BATCHES,
+            delayBetweenProfiles: batchConfig.DELAY_BETWEEN_PROFILES
+          },
+          profiles: {
+            total,
+            processed,
+            pending,
+            scraped,
+            failed,
+            skipped,
+            progress: total > 0 ? Math.round((processed / total) * 100) : 0
+          },
+          estimatedTimeRemaining: pending > 0 ? 
+            Math.round((pending * (batchConfig.DELAY_BETWEEN_PROFILES + 20000) + 
+            Math.ceil(pending / batchConfig.BATCH_SIZE) * batchConfig.DELAY_BETWEEN_BATCHES) / 60000) : 0
+        }
       });
     } catch (error) {
       logger.error('Error fetching batch processing status:', error);
