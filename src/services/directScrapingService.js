@@ -7,6 +7,8 @@ const profileAnalysisService = require('./profileAnalysisService');
 const profileCheckService = require('./profileCheckService');
 const socketService = require('./socketService');
 const logger = require('../utils/logger');
+const cloudflareR2Service = require('./cloudflareR2Service');
+const axios = require('axios');
 
 class DirectScrapingService {
   constructor() {
@@ -222,6 +224,30 @@ class DirectScrapingService {
       }
 
       const scrapedData = items[0];
+      
+      // Convert profile pictures to Cloudflare CDN immediately
+      try {
+        if (scrapedData.profilePicUrl) {
+          logger.info(`  📸 Converting profile pic for ${profile.username} to Cloudflare CDN...`);
+          scrapedData.profilePicUrl = await cloudflareR2Service.processProfileImage(
+            scrapedData.profilePicUrl, 
+            profile.username
+          );
+        }
+        
+        if (scrapedData.profilePicUrlHD) {
+          logger.info(`  📸 Converting HD profile pic for ${profile.username} to Cloudflare CDN...`);
+          scrapedData.profilePicUrlHD = await cloudflareR2Service.processProfileImage(
+            scrapedData.profilePicUrlHD, 
+            profile.username
+          );
+        }
+        
+        logger.info(`  ✅ Profile pics converted to Cloudflare CDN for ${profile.username}`);
+      } catch (cdnError) {
+        logger.warn(`  ⚠️ Failed to convert profile pics to CDN for ${profile.username}: ${cdnError.message}`);
+        // Continue with original URLs if CDN conversion fails
+      }
 
       // Update profile with scraped data
       await profile.markAsScraped(scrapedData, {
@@ -230,6 +256,15 @@ class DirectScrapingService {
       });
 
       logger.info(`Successfully scraped profile: ${profile.username}`);
+      
+      // CRITICAL: Add delay to ensure data is fully saved before triggering webhook
+      // This prevents race condition where webhook sees incomplete data
+      setTimeout(() => {
+        logger.info(`⏰ Triggering delayed webhook for ${profile.username} (ensuring data is saved)`);
+        this.triggerAnalysisWebhook(profile.username).catch(err => {
+          logger.warn(`Failed to trigger analysis for ${profile.username}: ${err.message}`);
+        });
+      }, 3000); // 3 second delay to ensure database write is complete
       
       // Emit scraping success event
       if (socketService.io) {
@@ -358,6 +393,50 @@ class DirectScrapingService {
   // Get processing status
   getStatus(sessionId) {
     return this.activeJobs.get(sessionId);
+  }
+
+  /**
+   * Trigger analysis webhook to analyze the scraped profile
+   */
+  async triggerAnalysisWebhook(username) {
+    const maxRetries = 3;
+    let retryCount = 0;
+    
+    while (retryCount < maxRetries) {
+      try {
+        // Get analysis backend URL from environment or use default
+        const analysisBackendUrl = process.env.ANALYSIS_BACKEND_URL || 'http://localhost:5001';
+        const webhookUrl = `${analysisBackendUrl}/api/analyze/webhook`;
+        
+        if (retryCount === 0) {
+          logger.info(`🔔 Triggering analysis webhook for ${username}`);
+        } else {
+          logger.info(`🔔 Retry ${retryCount}/${maxRetries} for analysis webhook: ${username}`);
+        }
+        
+        const response = await axios.post(webhookUrl, {
+          username: username,
+          action: 'new_profile_scraped'
+        }, {
+          timeout: 10000 // 10 second timeout
+        });
+        
+        logger.info(`✅ Analysis webhook triggered successfully for ${username}: ${response.data.status}`);
+        return; // Success, exit
+        
+      } catch (error) {
+        retryCount++;
+        
+        if (retryCount >= maxRetries) {
+          // Don't throw error - analysis will happen in background
+          logger.warn(`⚠️ Failed to trigger analysis webhook for ${username} after ${maxRetries} attempts: ${error.message}`);
+          logger.warn('Profile will be analyzed later by the analysis backend');
+        } else {
+          // Wait before retry
+          await new Promise(resolve => setTimeout(resolve, 2000 * retryCount));
+        }
+      }
+    }
   }
 }
 
