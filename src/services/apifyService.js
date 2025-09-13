@@ -145,10 +145,10 @@ class ApifyService {
                         processingTime: (Date.now() - profileData.scrapedAt.getTime()) / 1000
                     });
                 }
-                
+
                 // Trigger analysis webhook for root profiles
                 await this.triggerAnalysisWebhook(profileData.username);
-                
+
                 return savedProfile;
             } else {
                 // For related profiles, we need additional fields
@@ -291,19 +291,20 @@ class ApifyService {
      */
     async triggerAnalysisWebhook(username) {
         try {
-            const webhookConfig = require('../config/webhook');
-            const webhookUrl = webhookConfig.webhookUrl;
+            // Get analysis backend URL from environment or use default
+            const analysisBackendUrl = process.env.ANALYSIS_BACKEND_URL || 'http://localhost:5001';
+            const webhookUrl = `${analysisBackendUrl}/api/analyze/webhook`;
 
-            logger.info(`Triggering analysis webhook for ${username} at ${webhookUrl}`);
+            logger.info(`Triggering analysis webhook for ${username}`);
 
             const response = await axios.post(webhookUrl, {
-                event: 'new_profile_scraped',
-                username: username
+                username: username,
+                action: 'new_profile_scraped'
             }, {
                 timeout: 5000 // 5 second timeout
             });
 
-            logger.info(`Analysis webhook triggered successfully for ${username}: ${response.data.message || response.data.status}`);
+            logger.info(`Analysis webhook triggered successfully for ${username}: ${response.data.status}`);
 
         } catch (error) {
             // Don't throw error - analysis will be caught by backup monitor

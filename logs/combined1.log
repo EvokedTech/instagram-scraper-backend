@@ -18625,3 +18625,285 @@
 {"level":"info","message":"APIFY_API_TOKEN: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:44:47"}
 {"level":"info","message":"CLOUDFLARE_R2: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:44:47"}
 {"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:44:47"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:44:57"}
+{"level":"info","message":"Using Redis URL configuration for redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:49:43"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:49:43"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 01:49:43"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:49:43"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 01:49:43"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-09-14 01:49:43","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"info","message":"ProfileAnalysisService initialized with AI fallback support","service":"instagram-scraper","timestamp":"2025-09-14 01:49:43"}
+{"level":"info","message":"Shared Redis client connected for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:49:44"}
+{"level":"info","message":"MongoDB connected successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:49:45"}
+{"level":"info","message":"Redis client connected","service":"instagram-scraper","timestamp":"2025-09-14 01:49:45"}
+{"level":"info","message":"Redis client ready","service":"instagram-scraper","timestamp":"2025-09-14 01:49:45"}
+{"level":"info","message":"Connected to Redis at redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:49:45"}
+{"level":"info","message":"Redis connection verified with PING","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Initializing queue processors...","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Root profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Related profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Depth processing queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Related profile batch queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Analysis will be processed through n8n webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"All queue processors initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Session completion checker started","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Server is running on port 5002","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Environment: development","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"CONFIGURATION CHECK:","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"ANALYSIS_BACKEND_URL: http://localhost:5001","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"MONGODB_URI: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"APIFY_API_TOKEN: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"CLOUDFLARE_R2: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:49:46"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:49:56"}
+{"level":"info","message":"Using Redis URL configuration for redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:50:04"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:50:04"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 01:50:04"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:50:04"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 01:50:04"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-09-14 01:50:04","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"info","message":"ProfileAnalysisService initialized with AI fallback support","service":"instagram-scraper","timestamp":"2025-09-14 01:50:04"}
+{"level":"info","message":"Shared Redis client connected for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:50:05"}
+{"level":"info","message":"MongoDB connected successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:50:05"}
+{"level":"info","message":"Redis client connected","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Redis client ready","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Connected to Redis at redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Redis connection verified with PING","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Initializing queue processors...","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Root profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Related profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Depth processing queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Related profile batch queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Analysis will be processed through n8n webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"All queue processors initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Session completion checker started","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Server is running on port 5002","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Environment: development","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"CONFIGURATION CHECK:","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"ANALYSIS_BACKEND_URL: http://localhost:5001","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"MONGODB_URI: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"APIFY_API_TOKEN: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"CLOUDFLARE_R2: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:50:06"}
+{"level":"info","message":"Using Redis URL configuration for redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:50:11"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:50:11"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 01:50:11"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:50:11"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 01:50:11"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-09-14 01:50:11","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"info","message":"ProfileAnalysisService initialized with AI fallback support","service":"instagram-scraper","timestamp":"2025-09-14 01:50:11"}
+{"level":"info","message":"Shared Redis client connected for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:50:12"}
+{"level":"info","message":"MongoDB connected successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:50:12"}
+{"level":"info","message":"Redis client connected","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Redis client ready","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Connected to Redis at redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Redis connection verified with PING","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Initializing queue processors...","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Root profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Related profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Depth processing queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Related profile batch queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Analysis will be processed through n8n webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"All queue processors initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Session completion checker started","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Server is running on port 5002","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Environment: development","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"CONFIGURATION CHECK:","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"ANALYSIS_BACKEND_URL: http://localhost:5001","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"MONGODB_URI: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"APIFY_API_TOKEN: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"CLOUDFLARE_R2: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:50:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:50:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:50:33"}
+{"level":"info","message":"Using Redis URL configuration for redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:50:43"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:50:43"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 01:50:44"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:50:44"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 01:50:44"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-09-14 01:50:44","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"info","message":"ProfileAnalysisService initialized with AI fallback support","service":"instagram-scraper","timestamp":"2025-09-14 01:50:44"}
+{"level":"info","message":"Shared Redis client connected for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:50:44"}
+{"level":"info","message":"MongoDB connected successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:50:45"}
+{"level":"info","message":"Redis client connected","service":"instagram-scraper","timestamp":"2025-09-14 01:50:45"}
+{"level":"info","message":"Redis client ready","service":"instagram-scraper","timestamp":"2025-09-14 01:50:45"}
+{"level":"info","message":"Connected to Redis at redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:50:45"}
+{"level":"info","message":"Redis connection verified with PING","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Initializing queue processors...","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Root profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Related profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Depth processing queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Related profile batch queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Analysis will be processed through n8n webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"All queue processors initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Session completion checker started","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Server is running on port 5002","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Environment: development","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"CONFIGURATION CHECK:","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"ANALYSIS_BACKEND_URL: http://localhost:5001","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"MONGODB_URI: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"APIFY_API_TOKEN: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"CLOUDFLARE_R2: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:50:46"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:50:56"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:51:06"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:51:16"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:51:26"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:51:36"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:51:46"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:51:56"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:52:06"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:52:16"}
+{"level":"info","message":"Using Redis URL configuration for redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:52:18"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:52:18"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 01:52:18"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:52:18"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 01:52:18"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-09-14 01:52:18","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"info","message":"ProfileAnalysisService initialized with AI fallback support","service":"instagram-scraper","timestamp":"2025-09-14 01:52:18"}
+{"level":"info","message":"Shared Redis client connected for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:52:18"}
+{"level":"info","message":"MongoDB connected successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:52:19"}
+{"level":"info","message":"Redis client connected","service":"instagram-scraper","timestamp":"2025-09-14 01:52:19"}
+{"level":"info","message":"Redis client ready","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Connected to Redis at redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Redis connection verified with PING","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Initializing queue processors...","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Root profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Related profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Depth processing queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Related profile batch queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Analysis will be processed through n8n webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"All queue processors initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Session completion checker started","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Server is running on port 5002","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Environment: development","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"CONFIGURATION CHECK:","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"ANALYSIS_BACKEND_URL: http://localhost:5001","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"MONGODB_URI: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"APIFY_API_TOKEN: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"CLOUDFLARE_R2: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:52:20"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 01:52:22"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:52:22"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 01:52:22"}
+{"level":"info","message":"[WEBHOOK] Starting webhook trigger for username: test_user_webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:52:22"}
+{"level":"info","message":"Using internal analysis webhook: http://localhost:5002/api/analyze/webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:52:22"}
+{"level":"info","message":"[WEBHOOK] Triggering analysis webhook for test_user_webhook at http://localhost:5002/api/analyze/webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:52:22"}
+{"level":"info","message":"📨 Webhook received: new_profile_scraped for test_user_webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:52:22"}
+{"level":"info","message":"🔍 Starting analysis for: test_user_webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:52:22"}
+{"level":"error","message":"Profile not found: test_user_webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:52:22"}
+{"level":"warn","message":"Failed to trigger analysis webhook for test_user_webhook: Request failed with status code 404","service":"instagram-scraper","timestamp":"2025-09-14 01:52:22"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:52:30"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"[WEBHOOK] Starting webhook trigger for username: julmodelsagency","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"Using internal analysis webhook: http://localhost:5002/api/analyze/webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"[WEBHOOK] Triggering analysis webhook for julmodelsagency at http://localhost:5002/api/analyze/webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"📨 Webhook received: new_profile_scraped for julmodelsagency","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"🔍 Starting analysis for: julmodelsagency","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"📊 Found profile data for julmodelsagency","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"  Followers: 39401","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"  Posts: 315","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"🤖 Generating AI analysis...","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"level":"info","message":"Attempting analysis with deepseek-r1","service":"instagram-scraper","timestamp":"2025-09-14 01:52:39"}
+{"error":{"code":"invalid_request_error","message":"Authentication Fails, Your api key: ****ined is invalid","param":null,"type":"authentication_error"},"level":"error","message":"Error calling deepseek-r1:","service":"instagram-scraper","timestamp":"2025-09-14 01:52:40"}
+{"level":"error","message":"Failed with deepseek-r1: Request failed with status code 401","service":"instagram-scraper","timestamp":"2025-09-14 01:52:40"}
+{"level":"info","message":"Attempting analysis with grok","service":"instagram-scraper","timestamp":"2025-09-14 01:52:40"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:52:40"}
+{"code":"Client specified an invalid argument","error":"Incorrect API key provided: un***ed. You can obtain an API key from https://console.x.ai.","level":"error","message":"Error calling grok:","service":"instagram-scraper","timestamp":"2025-09-14 01:52:40"}
+{"level":"error","message":"Failed with grok: Request failed with status code 400","service":"instagram-scraper","timestamp":"2025-09-14 01:52:40"}
+{"level":"info","message":"Attempting analysis with mistral","service":"instagram-scraper","timestamp":"2025-09-14 01:52:40"}
+{"detail":"Unauthorized","level":"error","message":"Error calling mistral:","service":"instagram-scraper","timestamp":"2025-09-14 01:52:41"}
+{"level":"error","message":"Failed with mistral: Request failed with status code 401","service":"instagram-scraper","timestamp":"2025-09-14 01:52:41"}
+{"0":"A","1":"l","10":"e","11":"l","12":"s","13":" ","14":"f","15":"a","16":"i","17":"l","18":"e","19":"d","2":"l","20":".","21":" ","22":"L","23":"a","24":"s","25":"t","26":" ","27":"e","28":"r","29":"r","3":" ","30":"o","31":"r","32":":","33":" ","34":"R","35":"e","36":"q","37":"u","38":"e","39":"s","4":"A","40":"t","41":" ","42":"f","43":"a","44":"i","45":"l","46":"e","47":"d","48":" ","49":"w","5":"I","50":"i","51":"t","52":"h","53":" ","54":"s","55":"t","56":"a","57":"t","58":"u","59":"s","6":" ","60":" ","61":"c","62":"o","63":"d","64":"e","65":" ","66":"4","67":"0","68":"1","7":"m","8":"o","9":"d","level":"error","message":"❌ AI analysis failed for julmodelsagency:","service":"instagram-scraper","timestamp":"2025-09-14 01:52:41"}
+{"level":"info","message":"Analysis webhook triggered successfully for julmodelsagency: Analysis failed but webhook processed","service":"instagram-scraper","timestamp":"2025-09-14 01:52:41"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:52:50"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 01:53:00"}
+{"level":"info","message":"Using Redis URL configuration for redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:53:05"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:53:05"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 01:53:05"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:53:05"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 01:53:05"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-09-14 01:53:05","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"info","message":"ProfileAnalysisService initialized with AI fallback support","service":"instagram-scraper","timestamp":"2025-09-14 01:53:05"}
+{"level":"info","message":"Shared Redis client connected for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 01:53:07"}
+{"level":"info","message":"MongoDB connected successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:53:08"}
+{"level":"info","message":"Redis client connected","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Redis client ready","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Connected to Redis at redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Redis connection verified with PING","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Initializing queue processors...","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Root profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Related profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Depth processing queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Related profile batch queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Analysis will be processed through n8n webhook","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"All queue processors initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Session completion checker started","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Server is running on port 5002","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Environment: development","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"CONFIGURATION CHECK:","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"ANALYSIS_BACKEND_URL: http://localhost:5001","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"MONGODB_URI: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"APIFY_API_TOKEN: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"CLOUDFLARE_R2: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 01:53:09"}
+{"level":"info","message":"Using Redis URL configuration for redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 02:01:58"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 02:01:58"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 02:01:59"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 02:01:59"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 02:01:59"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-09-14 02:01:59","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"info","message":"ProfileAnalysisService initialized with AI fallback support","service":"instagram-scraper","timestamp":"2025-09-14 02:01:59"}
+{"level":"info","message":"Shared Redis client connected for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 02:01:59"}
+{"level":"info","message":"MongoDB connected successfully","service":"instagram-scraper","timestamp":"2025-09-14 02:02:00"}
+{"level":"info","message":"Redis client connected","service":"instagram-scraper","timestamp":"2025-09-14 02:02:00"}
+{"level":"info","message":"Redis client ready","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Connected to Redis at redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Redis connection verified with PING","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Initializing queue processors...","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Root profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Related profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Depth processing queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Related profile batch queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Analysis will be processed through n8n webhook","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"All queue processors initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Session completion checker started","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Server is running on port 5002","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Environment: development","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"CONFIGURATION CHECK:","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"ANALYSIS_BACKEND_URL: http://localhost:5001","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"MONGODB_URI: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"APIFY_API_TOKEN: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"CLOUDFLARE_R2: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 02:02:01"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 02:02:11"}
+{"level":"warn","message":"Cloudflare R2 configuration is incomplete. CDN features will be disabled until properly configured.","service":"instagram-scraper","timestamp":"2025-09-14 02:02:13"}
+{"level":"warn","message":"Cloudflare R2 is not configured. Service will be disabled.","service":"instagram-scraper","timestamp":"2025-09-14 02:02:13"}
+{"level":"warn","message":"Cloudflare CDN conversion disabled - missing configuration","service":"instagram-scraper","timestamp":"2025-09-14 02:02:13"}
+{"level":"info","message":"Triggering analysis webhook for julmodelsagency","service":"instagram-scraper","timestamp":"2025-09-14 02:02:13"}
+{"level":"warn","message":"Failed to trigger analysis webhook for julmodelsagency: ","service":"instagram-scraper","timestamp":"2025-09-14 02:02:13"}
+{"level":"warn","message":"Profile will be analyzed by backup monitor within 5 minutes","service":"instagram-scraper","timestamp":"2025-09-14 02:02:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 02:02:21"}
