@@ -413,34 +413,25 @@ class BatchScrapingService {
   async triggerAnalysisWebhook(username) {
     const maxRetries = 3;
     let retryCount = 0;
-    
-    // Get analysis backend URL from environment or use default
-    let analysisBackendUrl = process.env.ANALYSIS_BACKEND_URL || 'http://localhost:5001';
-    
-    // CRITICAL: Remove trailing slash to prevent double slashes in URL
-    analysisBackendUrl = analysisBackendUrl.replace(/\/$/, '');
-    
+
+    // Use webhook configuration
+    const webhookConfig = require('../config/webhook');
+    const webhookUrl = webhookConfig.webhookUrl;
+
     // Log the URL being used (important for debugging production issues)
-    if (!process.env.ANALYSIS_BACKEND_URL) {
-      logger.warn(`⚠️ ANALYSIS_BACKEND_URL not set, using default: ${analysisBackendUrl}`);
-      logger.warn('This will fail in production! Set ANALYSIS_BACKEND_URL environment variable.');
-    } else {
-      logger.info(`📍 Using analysis backend URL: ${analysisBackendUrl}`);
-    }
-    
+    logger.info(`📍 Using ${webhookConfig.useInternalAnalysis ? 'internal' : 'external'} analysis webhook: ${webhookUrl}`);
+
     while (retryCount < maxRetries) {
       try {
-        const webhookUrl = `${analysisBackendUrl}/api/analyze/webhook`;
-        
         if (retryCount === 0) {
           logger.info(`🔔 Triggering analysis webhook for ${username} at ${webhookUrl}`);
         } else {
           logger.info(`🔔 Retry ${retryCount}/${maxRetries} for analysis webhook: ${username}`);
         }
-        
+
         const response = await axios.post(webhookUrl, {
-          username: username,
-          action: 'new_profile_scraped'
+          event: 'new_profile_scraped',
+          username: username
         }, {
           timeout: 10000, // 10 second timeout
           headers: {

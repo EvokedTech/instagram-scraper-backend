@@ -99,6 +99,10 @@ app.use('/api/analysis', analysisRoutes);
 app.use('/api/ai-analysis', aiAnalysisRoutes);
 app.use('/api/test', testRoutes);
 
+// Add the analyze webhook route (replaces external analysis backend)
+const analyzeWebhookRoutes = require('./routes/analyzeWebhook');
+app.use('/api/analyze', analyzeWebhookRoutes);
+
 // Bull Board UI (only in development and if Redis is available)
 // Note: Bull Board is loaded but will show connection errors without Redis
 
