@@ -3,7 +3,23 @@ const logger = require('../utils/logger');
 
 class AIAnalysisService {
     constructor() {
+        // Use OpenRouter API with Qwen model as primary
         this.models = [
+            {
+                name: 'openrouter-qwen',
+                endpoint: 'https://openrouter.ai/api/v1/chat/completions',
+                apiKey: process.env.OPENROUTER_API_KEY,
+                model: 'qwen/qwen2.5-vl-72b-instruct:free',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + process.env.OPENROUTER_API_KEY,
+                    'HTTP-Referer': process.env.SITE_URL || 'https://instagram-analyzer.com',
+                    'X-Title': process.env.SITE_NAME || 'Instagram Profile Analyzer'
+                },
+                maxTokens: 4000,
+                temperature: 0.7
+            },
+            // Keep other models as fallback
             {
                 name: 'deepseek-r1',
                 endpoint: 'https://api.deepseek.com/v1/chat/completions',
