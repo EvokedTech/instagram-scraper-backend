@@ -402,14 +402,26 @@ class DirectScrapingService {
     const maxRetries = 3;
     let retryCount = 0;
     
+    // Get analysis backend URL from environment or use default
+    let analysisBackendUrl = process.env.ANALYSIS_BACKEND_URL || 'http://localhost:5001';
+    
+    // CRITICAL: Remove trailing slash to prevent double slashes in URL
+    analysisBackendUrl = analysisBackendUrl.replace(/\/$/, '');
+    
+    // Log the URL being used (important for debugging production issues)
+    if (!process.env.ANALYSIS_BACKEND_URL) {
+      logger.warn(`⚠️ ANALYSIS_BACKEND_URL not set, using default: ${analysisBackendUrl}`);
+      logger.warn('This will fail in production! Set ANALYSIS_BACKEND_URL environment variable.');
+    } else {
+      logger.info(`📍 Using analysis backend URL: ${analysisBackendUrl}`);
+    }
+    
     while (retryCount < maxRetries) {
       try {
-        // Get analysis backend URL from environment or use default
-        const analysisBackendUrl = process.env.ANALYSIS_BACKEND_URL || 'http://localhost:5001';
         const webhookUrl = `${analysisBackendUrl}/api/analyze/webhook`;
         
         if (retryCount === 0) {
-          logger.info(`🔔 Triggering analysis webhook for ${username}`);
+          logger.info(`🔔 Triggering analysis webhook for ${username} at ${webhookUrl}`);
         } else {
           logger.info(`🔔 Retry ${retryCount}/${maxRetries} for analysis webhook: ${username}`);
         }
@@ -418,7 +430,11 @@ class DirectScrapingService {
           username: username,
           action: 'new_profile_scraped'
         }, {
-          timeout: 10000 // 10 second timeout
+          timeout: 10000, // 10 second timeout
+          headers: {
+            'Content-Type': 'application/json',
+            'User-Agent': 'Instagram-Scraper-Backend/1.0'
+          }
         });
         
         logger.info(`✅ Analysis webhook triggered successfully for ${username}: ${response.data.status}`);
@@ -427,11 +443,20 @@ class DirectScrapingService {
       } catch (error) {
         retryCount++;
         
+        // More detailed error logging
+        const errorDetails = error.response ? 
+          `Status: ${error.response.status}, Data: ${JSON.stringify(error.response.data)}` :
+          error.request ? 
+          `No response received. URL: ${error.config?.url}` :
+          `Error: ${error.message}`;
+        
         if (retryCount >= maxRetries) {
           // Don't throw error - analysis will happen in background
-          logger.warn(`⚠️ Failed to trigger analysis webhook for ${username} after ${maxRetries} attempts: ${error.message}`);
+          logger.error(`❌ Failed to trigger analysis webhook for ${username} after ${maxRetries} attempts`);
+          logger.error(`   Error details: ${errorDetails}`);
           logger.warn('Profile will be analyzed later by the analysis backend');
         } else {
+          logger.warn(`   Webhook attempt ${retryCount} failed: ${errorDetails}`);
           // Wait before retry
           await new Promise(resolve => setTimeout(resolve, 2000 * retryCount));
         }

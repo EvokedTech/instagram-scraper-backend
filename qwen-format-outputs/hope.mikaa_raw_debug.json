@@ -1,0 +1,314 @@
+{
+  "parentUsername": null,
+  "parentProfileUrl": null,
+  "username": "hope.mikaa",
+  "fullName": "Michaela Hope",
+  "profileUrl": "https://www.instagram.com/hope.mikaa",
+  "profilePicUrl": "https://pub-20acc51a480e4a9691ed5b1c6b8891a6.r2.dev/instagram-profiles/hope.mikaa/3d2e0c66498149f0aea2f467b6633547_1757777230321.jpg",
+  "gender": "Female",
+  "age": 28,
+  "profileSummary": [
+    "Nano-tier influencer with exactly 0 followers.",
+    "Content focuses on travel modeling, professional photography, and aerialist performances based on bio.",
+    "Exhibits a low engagement rate of 0.00%, calculated from an average of 0 likes and 0 comments per post.",
+    "Strong geographic focus on United States, likely in Baltimore, Maryland.",
+    "The account is a non-verified, personal Instagram profile.",
+    "Audience is estimated to be predominantly Female (65%) in the 25-34 age range, with interests in travel, photography, and performing arts.",
+    "Content performance is stable with rare high-performing posts, indicating low viral potential.",
+    "Monetization is possible through collaborations and rates for services. Shows evidence of professional photography and aerialist handles for potential income.",
+    "Contact is facilitated via direct messages; rates available upon messaging."
+  ],
+  "adultContentScore": 5,
+  "engagementRate": 0,
+  "contentType": [
+    "Travel Modeling",
+    "Professional Photography",
+    "Aerialist Performances",
+    "Collaborative Projects",
+    "Bio Promotion"
+  ],
+  "contactInformation": {
+    "email": null,
+    "phoneNumber": null,
+    "businessEmail": null,
+    "externalLinks": [
+      {
+        "type": "social",
+        "url": "https://www.instagram.com/michaelahopephotography",
+        "platform": "Instagram"
+      },
+      {
+        "type": "social",
+        "url": "https://www.instagram.com/aerialmika",
+        "platform": "Instagram"
+      }
+    ],
+    "collaborationMethod": "direct",
+    "mediaKit": false,
+    "rateCardAvailable": true
+  },
+  "accountMetrics": {
+    "followersCount": 0,
+    "followingCount": 0,
+    "postsCount": 0,
+    "verified": false,
+    "businessAccount": false,
+    "lastActiveDate": "2025-09-13T18:04:47.532Z",
+    "accountAge": "New",
+    "postingConsistency": "sporadic",
+    "profileCompleteness": 60
+  },
+  "contentMetrics": {
+    "avgLikesPerPost": 0,
+    "avgCommentsPerPost": 0,
+    "avgViewsPerPost": null,
+    "postFrequency": "monthly",
+    "primaryHashtags": [],
+    "sponsoredContentRate": 0,
+    "engagementRate": 0,
+    "engagementGrowthTrend": "stable",
+    "contentQualityScore": 40,
+    "viralPotential": 10,
+    "brandMentionFrequency": 0,
+    "hashtagStrategy": "low",
+    "captionLength": "medium",
+    "contentFormats": [
+      "photo",
+      "video",
+      "carousel",
+      "reels"
+    ],
+    "postingTimePatterns": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ]
+  },
+  "geographicSignals": [
+    {
+      "index": 0,
+      "location": "English language in bio",
+      "code": "US",
+      "confidence": "high"
+    },
+    {
+      "index": 1,
+      "location": "Name Michaela Hope suggests Western origin",
+      "code": "US",
+      "confidence": "medium"
+    },
+    {
+      "index": 2,
+      "location": "Baltimore based explicitly mentioned",
+      "code": "US",
+      "confidence": "high"
+    }
+  ],
+  "audienceSignals": {
+    "likelyAudienceGender": "Female",
+    "primaryAgeGroup": "25-34",
+    "networkVerificationRate": "0.00",
+    "engagementQuality": "Low",
+    "audienceGenderBreakdown": {
+      "male": 30,
+      "female": 65,
+      "non_binary": 5
+    },
+    "audienceAgeBreakdown": {
+      "13_17": 5,
+      "18_24": 20,
+      "25_34": 50,
+      "35_44": 15,
+      "45_54": 7,
+      "55_plus": 3
+    },
+    "audienceGeoBreakdown": [
+      {
+        "country": "US",
+        "percentage": 80,
+        "city": null
+      },
+      {
+        "country": "CA",
+        "percentage": 10,
+        "city": null
+      },
+      {
+        "country": "GB",
+        "percentage": 10,
+        "city": null
+      }
+    ],
+    "estimatedAudienceQualityScore": 20,
+    "audienceInterests": [
+      "Travel",
+      "Photography",
+      "Aerial Arts",
+      "Modeling",
+      "Fitness"
+    ],
+    "audienceLanguages": [
+      "English"
+    ],
+    "audiencePurchasingPower": "medium",
+    "peakEngagementTimes": [
+      "evening"
+    ]
+  },
+  "contentAnalysis": {
+    "contentType": [
+      "Travel Modeling",
+      "Professional Photography",
+      "Aerialist Performances",
+      "Collaborative Projects",
+      "Bio Promotion"
+    ],
+    "primaryContentThemes": [
+      "Travel",
+      "Photography",
+      "Aerialism"
+    ],
+    "secondaryContentThemes": [
+      "Modeling",
+      "Professional Services",
+      "Collaborations"
+    ],
+    "contentTone": "professional",
+    "languagesUsed": [
+      "English"
+    ],
+    "visualStyle": "professional",
+    "adultContentScore": 5,
+    "brandSafetyScore": 95,
+    "adultContentType": "none",
+    "adultPlatformPresence": [],
+    "controversyRisk": "low",
+    "nicheExpertise": [
+      "Photography",
+      "Aerial Performance"
+    ],
+    "contentCategories": [
+      "Travel",
+      "Arts",
+      "Photography",
+      "Modeling"
+    ]
+  },
+  "businessCategorySuitability": {
+    "perfectMatch": [
+      {
+        "category": "Travel",
+        "confidenceScore": 90,
+        "reasoning": "Bio explicitly mentions Travel Model and Baltimore based, aligning perfectly with travel content and collaborations.",
+        "audienceAlignment": "high",
+        "contentAlignment": "high",
+        "historicalEvidence": false
+      }
+    ],
+    "highlyCompatible": [
+      {
+        "category": "Fitness",
+        "confidenceScore": 75,
+        "reasoning": "Aerialist aspect suggests fitness and performance arts compatibility.",
+        "requiredAdaptations": [
+          "Incorporate more fitness-focused content",
+          "Highlight physical training"
+        ]
+      }
+    ],
+    "moderatelyCompatible": [
+      {
+        "category": "Beauty",
+        "confidenceScore": 50,
+        "reasoning": "Modeling could extend to beauty, but no direct evidence.",
+        "successFactors": [
+          "Visual appeal",
+          "Professional photos"
+        ],
+        "risks": [
+          "Lack of posts",
+          "Low followers"
+        ]
+      }
+    ],
+    "requiresConsideration": [
+      {
+        "category": "Technology",
+        "confidenceScore": 30,
+        "specificConsiderations": [
+          "Photography tools could link to tech",
+          "Need tech-focused content"
+        ],
+        "minimumRequirements": [
+          "Add gadget reviews",
+          "Build audience"
+        ]
+      }
+    ],
+    "notRecommended": [
+      {
+        "category": "Food",
+        "reasoning": "No mention or alignment with food-related themes in bio.",
+        "conflictAreas": [
+          "Irrelevant to travel/modeling",
+          "No culinary indicators"
+        ]
+      }
+    ],
+    "brandCollaborationHistory": [],
+    "monetizationIndicators": [
+      {
+        "type": "sponsored_content",
+        "evidence": "Mentions limited collabs and rates in bio",
+        "frequency": "occasional",
+        "categories": [
+          "Travel",
+          "Photography"
+        ],
+        "adultContentMonetization": false,
+        "subscriptionModelUsage": false,
+        "fanFundingPlatforms": []
+      }
+    ]
+  },
+  "professionalReadiness": {
+    "businessSetupScore": 40,
+    "contentCreatorToolsUsage": [
+      "Instagram Bio Links",
+      "Direct Messaging"
+    ],
+    "brandCollaborationExperience": "beginner",
+    "mediaKitQuality": "basic",
+    "responseTimeEstimate": "moderate",
+    "multiPlatformPresence": [
+      "Instagram"
+    ]
+  },
+  "summaryStats": {
+    "totalGeographicSignals": 3,
+    "totalContentTypes": 5,
+    "influencerTier": "nano",
+    "engagementTier": "low",
+    "brandSafetyLevel": "high",
+    "audienceQualityTier": "low",
+    "commercialReadiness": "developing",
+    "nicheInfluence": "niche",
+    "growthTrajectory": "stable",
+    "platformOptimization": "fair",
+    "audienceAlignment": "good",
+    "contentConsistency": "inconsistent"
+  },
+  "currentStatus": {
+    "value": "Default",
+    "color": "#6B7280",
+    "isCustom": false,
+    "updatedAt": "2025-09-13T18:04:47.532Z"
+  },
+  "updatedAt": "2025-09-13T18:04:47.532Z",
+  "_aiMetadata": {
+    "modelUsed": "grok",
+    "processingTime": 58338,
+    "analyzedAt": "2025-09-13T18:05:45.869Z"
+  }
+}

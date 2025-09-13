@@ -1,0 +1,313 @@
+{
+  "parentUsername": "joakim__karlsson",
+  "parentProfileUrl": "https://www.instagram.com/joakim__karlsson",
+  "username": "thejoakimkarlsson",
+  "fullName": "Photography by Joakim Karlsson",
+  "profileUrl": "https://www.instagram.com/thejoakimkarlsson",
+  "profilePicUrl": "https://pub-20acc51a480e4a9691ed5b1c6b8891a6.r2.dev/instagram-profiles/thejoakimkarlsson/8e9f1eb20c6e2fa1a5ccddbece52977a_1757777228739.jpg",
+  "gender": "Male",
+  "age": 35,
+  "profileSummary": [
+    "Micro-tier influencer with exactly 19,444 followers.",
+    "Content focuses on photography workshops, video tutorials, and Patreon-supported educational material.",
+    "Exhibits a high engagement rate of 3.70%, calculated from an average of 683 likes and 36 comments per post.",
+    "Strong geographic focus on Sweden, likely in Scandinavian regions based on name and cultural indicators.",
+    "The account is a non-verified, personal Instagram profile.",
+    "Audience is estimated to be predominantly male (60%) in the 25-34 age range, with interests in photography, creative arts, and digital editing.",
+    "Content performance is stable with occasional high-performing posts, indicating moderate viral potential.",
+    "Monetization is strongly indicated through Patreon subscriptions and workshops. Shows evidence of monetization via bio links to tutorials and main account.",
+    "Contact is facilitated via direct messages; no direct contact info available but references main account for further interaction."
+  ],
+  "adultContentScore": 0,
+  "engagementRate": 3.7,
+  "contentType": [
+    "Photography Tutorials",
+    "Workshop Promotions",
+    "Video Editing Tips",
+    "Patreon Teasers",
+    "Creative Process Insights"
+  ],
+  "contactInformation": {
+    "email": null,
+    "phoneNumber": null,
+    "businessEmail": null,
+    "externalLinks": [
+      {
+        "type": "social",
+        "url": "https://www.instagram.com/joakim__karlsson",
+        "platform": "Instagram"
+      }
+    ],
+    "collaborationMethod": "direct",
+    "mediaKit": false,
+    "rateCardAvailable": false
+  },
+  "accountMetrics": {
+    "followersCount": 19444,
+    "followingCount": 0,
+    "postsCount": 38,
+    "verified": false,
+    "businessAccount": false,
+    "lastActiveDate": "2025-09-13T18:37:36.416Z",
+    "accountAge": "Established",
+    "postingConsistency": "irregular",
+    "profileCompleteness": 75
+  },
+  "contentMetrics": {
+    "avgLikesPerPost": 683,
+    "avgCommentsPerPost": 36,
+    "avgViewsPerPost": null,
+    "postFrequency": "monthly",
+    "primaryHashtags": [],
+    "sponsoredContentRate": 10,
+    "engagementRate": 3.7,
+    "engagementGrowthTrend": "stable",
+    "contentQualityScore": 85,
+    "viralPotential": 60,
+    "brandMentionFrequency": 2,
+    "hashtagStrategy": "moderate",
+    "captionLength": "medium",
+    "contentFormats": [
+      "photo",
+      "video",
+      "carousel",
+      "reels"
+    ],
+    "postingTimePatterns": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ]
+  },
+  "geographicSignals": [
+    {
+      "index": 0,
+      "location": "Swedish language and cultural references in bio",
+      "code": "SE",
+      "confidence": "high"
+    },
+    {
+      "index": 1,
+      "location": "Name 'Joakim Karlsson' of Swedish origin",
+      "code": "SE",
+      "confidence": "high"
+    },
+    {
+      "index": 2,
+      "location": "Inferred audience in Europe, primarily Scandinavia",
+      "code": "EU",
+      "confidence": "medium"
+    }
+  ],
+  "audienceSignals": {
+    "likelyAudienceGender": "Male",
+    "primaryAgeGroup": "25-34",
+    "networkVerificationRate": "3.70",
+    "engagementQuality": "High",
+    "audienceGenderBreakdown": {
+      "male": 60,
+      "female": 35,
+      "non_binary": 5
+    },
+    "audienceAgeBreakdown": {
+      "13_17": 5,
+      "18_24": 20,
+      "25_34": 40,
+      "35_44": 20,
+      "45_54": 10,
+      "55_plus": 5
+    },
+    "audienceGeoBreakdown": [
+      {
+        "country": "SE",
+        "percentage": 50,
+        "city": null
+      },
+      {
+        "country": "US",
+        "percentage": 20,
+        "city": null
+      },
+      {
+        "country": "GB",
+        "percentage": 15,
+        "city": null
+      }
+    ],
+    "estimatedAudienceQualityScore": 80,
+    "audienceInterests": [
+      "Photography",
+      "Digital Art",
+      "Workshops",
+      "Video Editing",
+      "Creative Tutorials"
+    ],
+    "audienceLanguages": [
+      "English",
+      "Swedish"
+    ],
+    "audiencePurchasingPower": "medium",
+    "peakEngagementTimes": [
+      "evening"
+    ]
+  },
+  "contentAnalysis": {
+    "contentType": [
+      "Photography Tutorials",
+      "Workshop Promotions",
+      "Video Editing Tips",
+      "Patreon Teasers",
+      "Creative Process Insights"
+    ],
+    "primaryContentThemes": [
+      "Photography Education",
+      "Creative Workshops",
+      "Digital Tutorials"
+    ],
+    "secondaryContentThemes": [
+      "Patreon Support",
+      "Main Account Promotion",
+      "Artistic Inspiration"
+    ],
+    "contentTone": "professional",
+    "languagesUsed": [
+      "English"
+    ],
+    "visualStyle": "professional",
+    "adultContentScore": 0,
+    "brandSafetyScore": 95,
+    "adultContentType": "none",
+    "adultPlatformPresence": [],
+    "controversyRisk": "low",
+    "nicheExpertise": [
+      "Photography",
+      "Video Tutorials"
+    ],
+    "contentCategories": [
+      "Education",
+      "Arts",
+      "Photography",
+      "Digital Media"
+    ]
+  },
+  "businessCategorySuitability": {
+    "perfectMatch": [
+      {
+        "category": "Technology",
+        "confidenceScore": 90,
+        "reasoning": "Profile focuses on photography tools and tutorials, aligning perfectly with tech brands in cameras and editing software.",
+        "audienceAlignment": "high",
+        "contentAlignment": "high",
+        "historicalEvidence": false
+      }
+    ],
+    "highlyCompatible": [
+      {
+        "category": "Travel",
+        "confidenceScore": 80,
+        "reasoning": "Photography often involves travel themes, suitable for travel gear promotions.",
+        "requiredAdaptations": [
+          "Incorporate travel stories",
+          "Collaborate on location-based content"
+        ]
+      }
+    ],
+    "moderatelyCompatible": [
+      {
+        "category": "Fitness",
+        "confidenceScore": 50,
+        "reasoning": "Limited direct alignment but possible through outdoor photography.",
+        "successFactors": [
+          "Niche fitness photography",
+          "Active lifestyle integration"
+        ],
+        "risks": [
+          "Audience mismatch",
+          "Low relevance"
+        ]
+      }
+    ],
+    "requiresConsideration": [
+      {
+        "category": "Food",
+        "confidenceScore": 40,
+        "specificConsiderations": [
+          "Adapt to food photography tutorials",
+          "Audience interest in visuals"
+        ],
+        "minimumRequirements": [
+          "Content pivot to food themes",
+          "Brand guidelines adherence"
+        ]
+      }
+    ],
+    "notRecommended": [
+      {
+        "category": "Beauty",
+        "reasoning": "No alignment with beauty products or makeup tutorials in content.",
+        "conflictAreas": [
+          "Thematic mismatch",
+          "Audience demographics"
+        ]
+      }
+    ],
+    "brandCollaborationHistory": [],
+    "monetizationIndicators": [
+      {
+        "type": "sponsored_content",
+        "evidence": "Bio mentions workshops and Patreon, indicating paid educational content.",
+        "frequency": "occasional",
+        "categories": [
+          "Photography",
+          "Education"
+        ],
+        "adultContentMonetization": false,
+        "subscriptionModelUsage": true,
+        "fanFundingPlatforms": [
+          "Patreon"
+        ]
+      }
+    ]
+  },
+  "professionalReadiness": {
+    "businessSetupScore": 70,
+    "contentCreatorToolsUsage": [
+      "Patreon",
+      "Instagram Reels"
+    ],
+    "brandCollaborationExperience": "intermediate",
+    "mediaKitQuality": "basic",
+    "responseTimeEstimate": "moderate",
+    "multiPlatformPresence": [
+      "Instagram",
+      "Patreon"
+    ]
+  },
+  "summaryStats": {
+    "totalGeographicSignals": 3,
+    "totalContentTypes": 5,
+    "influencerTier": "micro",
+    "engagementTier": "high",
+    "brandSafetyLevel": "high",
+    "audienceQualityTier": "high",
+    "commercialReadiness": "ready",
+    "nicheInfluence": "niche",
+    "growthTrajectory": "stable",
+    "platformOptimization": "good",
+    "audienceAlignment": "good",
+    "contentConsistency": "somewhat-consistent"
+  },
+  "currentStatus": {
+    "value": "Default",
+    "color": "#6B7280",
+    "isCustom": false,
+    "updatedAt": "2025-09-13T18:37:36.416Z"
+  },
+  "updatedAt": "2025-09-13T18:37:36.416Z",
+  "_aiMetadata": {
+    "modelUsed": "grok",
+    "processingTime": 47141,
+    "analyzedAt": "2025-09-13T18:38:23.556Z"
+  }
+}

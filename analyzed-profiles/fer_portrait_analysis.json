@@ -1,0 +1,309 @@
+{
+  "parentUsername": null,
+  "parentProfileUrl": null,
+  "username": "fer_portrait",
+  "fullName": "Fernando Ferrer",
+  "profileUrl": "https://www.instagram.com/fer_portrait",
+  "profilePicUrl": "https://pub-20acc51a480e4a9691ed5b1c6b8891a6.r2.dev/instagram-profiles/fer_portrait/e38957f647416cfc0bf5ad79c41b6b76_1757777228367.jpg",
+  "gender": "Male",
+  "age": 35,
+  "profileSummary": [
+    "Micro-tier influencer with exactly 10,693 followers.",
+    "Content focuses on portrait photography and visual storytelling based on bio and username.",
+    "Exhibits a high engagement rate of 3.70%, calculated from an average of 376 likes and 20 comments per post.",
+    "Strong geographic focus on Spanish language and culture, likely in Valencia, Spain.",
+    "The account is a non-verified, personal Instagram profile.",
+    "Audience is estimated to be predominantly mixed (50% male, 50% female) in the 25-34 age range, with interests in photography, art, and travel.",
+    "Content performance is stable with occasional high-performing posts, indicating moderate viral potential.",
+    "Monetization is possible through sponsorships and print sales. Shows limited evidence of monetization.",
+    "Contact is facilitated via DM; no public contact info available."
+  ],
+  "adultContentScore": 0,
+  "engagementRate": 3.7,
+  "contentType": [
+    "Portrait Photography",
+    "Street Photography",
+    "Travel Shots",
+    "Artistic Edits",
+    "Behind-the-Scenes"
+  ],
+  "contactInformation": {
+    "email": null,
+    "phoneNumber": null,
+    "businessEmail": null,
+    "externalLinks": [
+      {
+        "type": "website",
+        "url": "",
+        "platform": "none"
+      }
+    ],
+    "collaborationMethod": "direct",
+    "mediaKit": false,
+    "rateCardAvailable": false
+  },
+  "accountMetrics": {
+    "followersCount": 10693,
+    "followingCount": 0,
+    "postsCount": 915,
+    "verified": false,
+    "businessAccount": false,
+    "lastActiveDate": "2025-09-13T18:38:23.669Z",
+    "accountAge": "Established",
+    "postingConsistency": "consistent",
+    "profileCompleteness": 85
+  },
+  "contentMetrics": {
+    "avgLikesPerPost": 376,
+    "avgCommentsPerPost": 20,
+    "avgViewsPerPost": null,
+    "postFrequency": "weekly",
+    "primaryHashtags": [],
+    "sponsoredContentRate": 5,
+    "engagementRate": 3.7,
+    "engagementGrowthTrend": "stable",
+    "contentQualityScore": 85,
+    "viralPotential": 60,
+    "brandMentionFrequency": 2,
+    "hashtagStrategy": "moderate",
+    "captionLength": "medium",
+    "contentFormats": [
+      "photo",
+      "carousel",
+      "reels"
+    ],
+    "postingTimePatterns": [
+      "morning",
+      "afternoon",
+      "evening"
+    ]
+  },
+  "geographicSignals": [
+    {
+      "index": 0,
+      "location": "Spanish language in bio and location tag",
+      "code": "ES",
+      "confidence": "high"
+    },
+    {
+      "index": 1,
+      "location": "Name origin: Fernando Ferrer, common in Spain",
+      "code": "ES",
+      "confidence": "high"
+    },
+    {
+      "index": 2,
+      "location": "Inferred audience in Europe, primarily Spain",
+      "code": "ES",
+      "confidence": "medium"
+    }
+  ],
+  "audienceSignals": {
+    "likelyAudienceGender": "Mixed",
+    "primaryAgeGroup": "25-34",
+    "networkVerificationRate": "3.70",
+    "engagementQuality": "High",
+    "audienceGenderBreakdown": {
+      "male": 45,
+      "female": 50,
+      "non_binary": 5
+    },
+    "audienceAgeBreakdown": {
+      "13_17": 5,
+      "18_24": 20,
+      "25_34": 40,
+      "35_44": 20,
+      "45_54": 10,
+      "55_plus": 5
+    },
+    "audienceGeoBreakdown": [
+      {
+        "country": "ES",
+        "percentage": 70,
+        "city": null
+      },
+      {
+        "country": "US",
+        "percentage": 15,
+        "city": null
+      },
+      {
+        "country": "FR",
+        "percentage": 15,
+        "city": null
+      }
+    ],
+    "estimatedAudienceQualityScore": 80,
+    "audienceInterests": [
+      "Photography",
+      "Art",
+      "Travel",
+      "Fashion",
+      "Culture"
+    ],
+    "audienceLanguages": [
+      "Spanish",
+      "English"
+    ],
+    "audiencePurchasingPower": "medium",
+    "peakEngagementTimes": [
+      "evening"
+    ]
+  },
+  "contentAnalysis": {
+    "contentType": [
+      "Portrait Photography",
+      "Street Photography",
+      "Travel Shots",
+      "Artistic Edits",
+      "Behind-the-Scenes"
+    ],
+    "primaryContentThemes": [
+      "Portraits",
+      "Valencia Landscapes",
+      "Human Stories"
+    ],
+    "secondaryContentThemes": [
+      "Editing Techniques",
+      "Photography Gear",
+      "Cultural Events"
+    ],
+    "contentTone": "professional",
+    "languagesUsed": [
+      "Spanish"
+    ],
+    "visualStyle": "colorful",
+    "adultContentScore": 0,
+    "brandSafetyScore": 95,
+    "adultContentType": "none",
+    "adultPlatformPresence": [],
+    "controversyRisk": "low",
+    "nicheExpertise": [
+      "Portrait Photography",
+      "Travel Photography"
+    ],
+    "contentCategories": [
+      "Photography",
+      "Art",
+      "Travel",
+      "Lifestyle"
+    ]
+  },
+  "businessCategorySuitability": {
+    "perfectMatch": [
+      {
+        "category": "Travel",
+        "confidenceScore": 90,
+        "reasoning": "Profile focuses on Valencia-based photography, aligning perfectly with travel brands promoting destinations.",
+        "audienceAlignment": "high",
+        "contentAlignment": "high",
+        "historicalEvidence": false
+      }
+    ],
+    "highlyCompatible": [
+      {
+        "category": "Fashion",
+        "confidenceScore": 80,
+        "reasoning": "Portrait style suits fashion shoots and modeling.",
+        "requiredAdaptations": [
+          "Incorporate brand products",
+          "Collaborate on styled shoots"
+        ]
+      }
+    ],
+    "moderatelyCompatible": [
+      {
+        "category": "Technology",
+        "confidenceScore": 60,
+        "reasoning": "Could promote camera gear or apps.",
+        "successFactors": [
+          "Tech-savvy audience",
+          "High-quality visuals"
+        ],
+        "risks": [
+          "Limited tech content",
+          "Audience mismatch"
+        ]
+      }
+    ],
+    "requiresConsideration": [
+      {
+        "category": "Food",
+        "confidenceScore": 50,
+        "specificConsiderations": [
+          "Adapt to food photography",
+          "Local Spanish cuisine tie-in"
+        ],
+        "minimumRequirements": [
+          "Sample food shoots",
+          "Audience interest survey"
+        ]
+      }
+    ],
+    "notRecommended": [
+      {
+        "category": "Fitness",
+        "reasoning": "No fitness-related content or themes.",
+        "conflictAreas": [
+          "Content mismatch",
+          "Audience interests"
+        ]
+      }
+    ],
+    "brandCollaborationHistory": [],
+    "monetizationIndicators": [
+      {
+        "type": "sponsored_content",
+        "evidence": "Potential from photography niche, no direct evidence.",
+        "frequency": "occasional",
+        "categories": [
+          "Travel",
+          "Art"
+        ],
+        "adultContentMonetization": false,
+        "subscriptionModelUsage": false,
+        "fanFundingPlatforms": []
+      }
+    ]
+  },
+  "professionalReadiness": {
+    "businessSetupScore": 70,
+    "contentCreatorToolsUsage": [
+      "Instagram Insights",
+      "Editing Apps"
+    ],
+    "brandCollaborationExperience": "intermediate",
+    "mediaKitQuality": "basic",
+    "responseTimeEstimate": "moderate",
+    "multiPlatformPresence": [
+      "Instagram",
+      "Website"
+    ]
+  },
+  "summaryStats": {
+    "totalGeographicSignals": 3,
+    "totalContentTypes": 5,
+    "influencerTier": "micro",
+    "engagementTier": "high",
+    "brandSafetyLevel": "high",
+    "audienceQualityTier": "high",
+    "commercialReadiness": "developing",
+    "nicheInfluence": "niche",
+    "growthTrajectory": "stable",
+    "platformOptimization": "good",
+    "audienceAlignment": "good",
+    "contentConsistency": "consistent"
+  },
+  "currentStatus": {
+    "value": "Default",
+    "color": "#6B7280",
+    "isCustom": false,
+    "updatedAt": "2025-09-13T18:38:23.669Z"
+  },
+  "updatedAt": "2025-09-13T18:38:23.669Z",
+  "_aiMetadata": {
+    "modelUsed": "grok",
+    "processingTime": 45445,
+    "analyzedAt": "2025-09-13T18:39:09.114Z"
+  }
+}

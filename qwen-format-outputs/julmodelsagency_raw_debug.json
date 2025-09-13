@@ -1,0 +1,311 @@
+{
+  "parentUsername": null,
+  "parentProfileUrl": null,
+  "username": "julmodelsagency",
+  "fullName": "Julmodels",
+  "profileUrl": "https://www.instagram.com/julmodelsagency",
+  "profilePicUrl": "https://pub-20acc51a480e4a9691ed5b1c6b8891a6.r2.dev/instagram-profiles/julmodelsagency/4e1cba9c8f443e251701e1135988adf6_1757777226176.jpg",
+  "gender": "Unknown",
+  "age": 30,
+  "profileSummary": [
+    "Micro-tier influencer with exactly 39,412 followers.",
+    "Content focuses on modeling agency promotions, featuring aspiring models, application calls, and agency highlights based on bio and category.",
+    "Exhibits a medium engagement rate of 2.15%, calculated from an average of 847 likes and 45 comments per post.",
+    "Strong geographic focus on English-speaking regions, likely in North America and Europe.",
+    "The account is a non-verified, business-enabled Instagram profile.",
+    "Audience is estimated to be predominantly Male (65%) in the 25-34 age range, with interests in fashion, modeling, and entertainment.",
+    "Content performance is growing with occasional high-performing posts, indicating moderate viral potential.",
+    "Monetization is strongly indicated through agency services and model applications. Shows evidence of monetization via website referrals for applications.",
+    "Contact is facilitated via bio link; external URL is present but empty, suggesting site-based inquiries."
+  ],
+  "adultContentScore": 65,
+  "engagementRate": 2.15,
+  "contentType": [
+    "Model Portfolios",
+    "Agency Promotions",
+    "Application Calls",
+    "Behind-the-Scenes",
+    "Fashion Shoots"
+  ],
+  "contactInformation": {
+    "email": null,
+    "phoneNumber": null,
+    "businessEmail": null,
+    "externalLinks": [
+      {
+        "type": "website",
+        "url": "",
+        "platform": "agency_site"
+      }
+    ],
+    "collaborationMethod": "email",
+    "mediaKit": false,
+    "rateCardAvailable": false
+  },
+  "accountMetrics": {
+    "followersCount": 39412,
+    "followingCount": 0,
+    "postsCount": 315,
+    "verified": false,
+    "businessAccount": true,
+    "lastActiveDate": "2025-09-13T18:01:04.108Z",
+    "accountAge": "Established",
+    "postingConsistency": "consistent",
+    "profileCompleteness": 75
+  },
+  "contentMetrics": {
+    "avgLikesPerPost": 847,
+    "avgCommentsPerPost": 45,
+    "avgViewsPerPost": null,
+    "postFrequency": "weekly",
+    "primaryHashtags": [],
+    "sponsoredContentRate": 20,
+    "engagementRate": 2.15,
+    "engagementGrowthTrend": "growing",
+    "contentQualityScore": 70,
+    "viralPotential": 60,
+    "brandMentionFrequency": 5,
+    "hashtagStrategy": "moderate",
+    "captionLength": "medium",
+    "contentFormats": [
+      "photo",
+      "video",
+      "carousel",
+      "reels"
+    ],
+    "postingTimePatterns": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ]
+  },
+  "geographicSignals": [
+    {
+      "index": 0,
+      "location": "English language in bio and content",
+      "code": "US",
+      "confidence": "high"
+    },
+    {
+      "index": 1,
+      "location": "Name 'Julmodels' suggests possible European origin",
+      "code": "EU",
+      "confidence": "medium"
+    },
+    {
+      "index": 2,
+      "location": "Inferred audience from modeling industry hubs",
+      "code": "GB",
+      "confidence": "low"
+    }
+  ],
+  "audienceSignals": {
+    "likelyAudienceGender": "Male",
+    "primaryAgeGroup": "25-34",
+    "networkVerificationRate": "3.70",
+    "engagementQuality": "Medium",
+    "audienceGenderBreakdown": {
+      "male": 65,
+      "female": 35,
+      "non_binary": 0
+    },
+    "audienceAgeBreakdown": {
+      "13_17": 5,
+      "18_24": 25,
+      "25_34": 40,
+      "35_44": 20,
+      "45_54": 8,
+      "55_plus": 2
+    },
+    "audienceGeoBreakdown": [
+      {
+        "country": "US",
+        "percentage": 50,
+        "city": null
+      },
+      {
+        "country": "GB",
+        "percentage": 20,
+        "city": null
+      },
+      {
+        "country": "CA",
+        "percentage": 15,
+        "city": null
+      }
+    ],
+    "estimatedAudienceQualityScore": 65,
+    "audienceInterests": [
+      "Fashion",
+      "Modeling",
+      "Entertainment",
+      "Beauty",
+      "Lifestyle"
+    ],
+    "audienceLanguages": [
+      "English",
+      "Spanish"
+    ],
+    "audiencePurchasingPower": "medium",
+    "peakEngagementTimes": [
+      "evening"
+    ]
+  },
+  "contentAnalysis": {
+    "contentType": [
+      "Model Portfolios",
+      "Agency Promotions",
+      "Application Calls",
+      "Behind-the-Scenes",
+      "Fashion Shoots"
+    ],
+    "primaryContentThemes": [
+      "Modeling Opportunities",
+      "Agency Branding",
+      "Talent Scouting"
+    ],
+    "secondaryContentThemes": [
+      "Fashion Trends",
+      "Beauty Tips",
+      "Industry News"
+    ],
+    "contentTone": "professional",
+    "languagesUsed": [
+      "English"
+    ],
+    "visualStyle": "colorful",
+    "adultContentScore": 65,
+    "brandSafetyScore": 70,
+    "adultContentType": "suggestive",
+    "adultPlatformPresence": [],
+    "controversyRisk": "medium",
+    "nicheExpertise": [
+      "Modeling",
+      "Talent Management"
+    ],
+    "contentCategories": [
+      "Fashion",
+      "Beauty",
+      "Entertainment",
+      "Business"
+    ]
+  },
+  "businessCategorySuitability": {
+    "perfectMatch": [
+      {
+        "category": "Fashion",
+        "confidenceScore": 95,
+        "reasoning": "Direct alignment with modeling agency focus on fashion and models.",
+        "audienceAlignment": "high",
+        "contentAlignment": "high",
+        "historicalEvidence": true
+      }
+    ],
+    "highlyCompatible": [
+      {
+        "category": "Beauty",
+        "confidenceScore": 85,
+        "reasoning": "Complements modeling with beauty products and services.",
+        "requiredAdaptations": [
+          "Incorporate product placements",
+          "Collaborate on shoots"
+        ]
+      }
+    ],
+    "moderatelyCompatible": [
+      {
+        "category": "Fitness",
+        "confidenceScore": 60,
+        "reasoning": "Potential overlap with model fitness routines.",
+        "successFactors": [
+          "Targeted campaigns",
+          "Engaging content"
+        ],
+        "risks": [
+          "Audience mismatch",
+          "Low relevance"
+        ]
+      }
+    ],
+    "requiresConsideration": [
+      {
+        "category": "Travel",
+        "confidenceScore": 50,
+        "specificConsiderations": [
+          "Location-based shoots",
+          "Travel partnerships"
+        ],
+        "minimumRequirements": [
+          "High-quality visuals",
+          "Audience interest"
+        ]
+      }
+    ],
+    "notRecommended": [
+      {
+        "category": "Technology",
+        "reasoning": "Little alignment with modeling agency content.",
+        "conflictAreas": [
+          "Thematic mismatch",
+          "Audience interests"
+        ]
+      }
+    ],
+    "brandCollaborationHistory": [],
+    "monetizationIndicators": [
+      {
+        "type": "sponsored_content",
+        "evidence": "Bio promotes applications via site, suggesting paid services.",
+        "frequency": "occasional",
+        "categories": [
+          "Fashion",
+          "Beauty"
+        ],
+        "adultContentMonetization": false,
+        "subscriptionModelUsage": false,
+        "fanFundingPlatforms": []
+      }
+    ]
+  },
+  "professionalReadiness": {
+    "businessSetupScore": 80,
+    "contentCreatorToolsUsage": [
+      "Instagram Business Tools",
+      "Analytics"
+    ],
+    "brandCollaborationExperience": "intermediate",
+    "mediaKitQuality": "basic",
+    "responseTimeEstimate": "moderate",
+    "multiPlatformPresence": [
+      "Instagram",
+      "Website"
+    ]
+  },
+  "summaryStats": {
+    "totalGeographicSignals": 3,
+    "totalContentTypes": 5,
+    "influencerTier": "micro",
+    "engagementTier": "high",
+    "brandSafetyLevel": "medium",
+    "audienceQualityTier": "medium",
+    "commercialReadiness": "ready",
+    "nicheInfluence": "focused",
+    "growthTrajectory": "growing",
+    "platformOptimization": "good",
+    "audienceAlignment": "good",
+    "contentConsistency": "consistent"
+  },
+  "currentStatus": {
+    "value": "Default",
+    "color": "#6B7280",
+    "isCustom": false,
+    "updatedAt": "2025-09-13T18:01:04.108Z"
+  },
+  "updatedAt": "2025-09-13T18:01:04.108Z",
+  "_aiMetadata": {
+    "modelUsed": "grok",
+    "processingTime": 55402,
+    "analyzedAt": "2025-09-13T18:01:59.509Z"
+  }
+}

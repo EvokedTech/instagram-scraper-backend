@@ -12,7 +12,9 @@
     "test:related": "node src/scripts/testRelatedProfilesExtraction.js",
     "test:full": "node src/scripts/testFullPipeline.js",
     "test:depth": "node src/scripts/testDepthProcessing.js",
-    "test:queue": "node src/scripts/testQueueSystem.js"
+    "test:queue": "node src/scripts/testQueueSystem.js",
+    "test:ai": "node scripts/testAIFallback.js",
+    "test:models": "node scripts/quickTestModels.js"
   },
   "keywords": [
     "instagram",

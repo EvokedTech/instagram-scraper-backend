@@ -20,6 +20,7 @@ const queueRoutes = require('./routes/queues');
 const dashboardRoutes = require('./routes/dashboard');
 const analysisRoutes = require('./routes/analysis');
 const testRoutes = require('./routes/test');
+const aiAnalysisRoutes = require('./routes/aiAnalysis');
 const bullBoard = require('./routes/bullBoard');
 
 const app = express();
@@ -80,7 +81,8 @@ app.get('/', (req, res) => {
       dashboard: '/api/dashboard',
       scraper: '/api/scraper',
       queues: '/api/queues',
-      analysis: '/api/analysis'
+      analysis: '/api/analysis',
+      aiAnalysis: '/api/ai-analysis'
     },
     documentation: 'See /api/health for detailed health status'
   });
@@ -94,6 +96,7 @@ app.use('/api/apify', apifyRoutes);
 app.use('/api/queues', queueRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/analysis', analysisRoutes);
+app.use('/api/ai-analysis', aiAnalysisRoutes);
 app.use('/api/test', testRoutes);
 
 // Bull Board UI (only in development and if Redis is available)
@@ -128,6 +131,24 @@ const startServer = async () => {
       logger.info(`Server is running on port ${PORT}`);
       logger.info(`Environment: ${process.env.NODE_ENV || 'development'}`);
       logger.info('Socket.IO server initialized');
+      
+      // Log critical configuration for production debugging
+      logger.info('====================================');
+      logger.info('CONFIGURATION CHECK:');
+      logger.info(`ANALYSIS_BACKEND_URL: ${process.env.ANALYSIS_BACKEND_URL || 'NOT SET (defaulting to localhost:5001)'}`);
+      logger.info(`MONGODB_URI: ${process.env.MONGODB_URI ? '✅ configured' : '❌ NOT SET'}`);
+      logger.info(`APIFY_API_TOKEN: ${process.env.APIFY_API_TOKEN ? '✅ configured' : '❌ NOT SET'}`);
+      logger.info(`CLOUDFLARE_R2: ${process.env.CLOUDFLARE_R2_ACCESS_KEY_ID ? '✅ configured' : '❌ NOT SET'}`);
+      
+      if (!process.env.ANALYSIS_BACKEND_URL) {
+        logger.error('');
+        logger.error('⚠️  CRITICAL WARNING: ANALYSIS_BACKEND_URL not set!');
+        logger.error('⚠️  Analysis webhooks will fail in production!');
+        logger.error('⚠️  Set ANALYSIS_BACKEND_URL to your deployed analyzer backend');
+        logger.error('⚠️  Example: https://analyzer-backend.railway.app');
+        logger.error('');
+      }
+      logger.info('====================================');
     });
   } catch (error) {
     logger.error('Failed to start server:', error);

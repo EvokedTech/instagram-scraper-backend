@@ -1,10 +1,12 @@
 const logger = require('../utils/logger');
 const AnalyzedRelatedProfile = require('../models/AnalyzedRelatedProfile');
 const RootProfileScraped = require('../models/RootProfileScraped');
+const aiAnalysisService = require('./aiAnalysisService');
 
 class ProfileAnalysisService {
   constructor() {
-    logger.info('ProfileAnalysisService initialized');
+    logger.info('ProfileAnalysisService initialized with AI fallback support');
+    this.processedProfiles = new Set(); // Track processed profiles to prevent duplicates
   }
 
   /**
@@ -15,13 +17,21 @@ class ProfileAnalysisService {
    */
   async analyzeRootProfile(rootProfile, sessionId) {
     try {
+      // Check for duplicate processing
+      const profileKey = `${rootProfile.username}_${sessionId}`;
+      if (this.processedProfiles.has(profileKey)) {
+        logger.info(`Profile ${rootProfile.username} already processed in this session, skipping`);
+        return await AnalyzedRelatedProfile.findOne({
+          sourceProfileId: rootProfile._id,
+          sourceCollection: 'rootprofiles_scraped_datas',
+          sessionId
+        });
+      }
+
       logger.info(`Analyzing root profile: ${rootProfile.username}`, {
         profileId: rootProfile._id,
         sessionId
       });
-
-      // Prepare analysis data (customize this based on your analysis requirements)
-      const analysisData = this.performAnalysis(rootProfile.profileData);
 
       // Check if analysis already exists for this profile
       const existingAnalysis = await AnalyzedRelatedProfile.findOne({
@@ -32,7 +42,28 @@ class ProfileAnalysisService {
 
       if (existingAnalysis) {
         logger.info(`Analysis already exists for root profile ${rootProfile.username}`);
+        this.processedProfiles.add(profileKey);
         return existingAnalysis;
+      }
+
+      // Use AI service for enhanced analysis with fallback support
+      let analysisData;
+      try {
+        const aiAnalysis = await aiAnalysisService.analyzeProfile(rootProfile.profileData, {
+          forceRefresh: false
+        });
+
+        // Combine AI analysis with basic metrics
+        analysisData = {
+          ...this.performAnalysis(rootProfile.profileData),
+          aiInsights: aiAnalysis.analysis,
+          modelUsed: aiAnalysis.modelUsed,
+          fromCache: aiAnalysis.fromCache
+        };
+      } catch (aiError) {
+        logger.warn(`AI analysis failed for ${rootProfile.username}, using basic analysis:`, aiError.message);
+        // Fallback to basic analysis if AI fails
+        analysisData = this.performAnalysis(rootProfile.profileData);
       }
 
       // Create new analysis document
@@ -49,11 +80,15 @@ class ProfileAnalysisService {
 
       await analyzedProfile.save();
 
+      // Mark profile as processed to prevent duplicates
+      this.processedProfiles.add(profileKey);
+
       // Update the root profile status to analyzed
       await rootProfile.markAsAnalyzed();
 
       logger.info(`Successfully analyzed root profile: ${rootProfile.username}`, {
-        analyzedProfileId: analyzedProfile._id
+        analyzedProfileId: analyzedProfile._id,
+        modelUsed: analysisData.modelUsed || 'basic'
       });
 
       return analyzedProfile;
@@ -290,7 +325,7 @@ class ProfileAnalysisService {
   async getAnalysisStats(sessionId) {
     try {
       const stats = await AnalyzedRelatedProfile.getAnalysisStats(sessionId);
-      
+
       const formattedStats = {
         rootProfiles: { completed: 0, failed: 0 },
         relatedProfiles: { completed: 0, failed: 0 },
@@ -309,6 +344,32 @@ class ProfileAnalysisService {
       logger.error(`Failed to get analysis stats for session ${sessionId}:`, error);
       throw error;
     }
+  }
+
+  /**
+   * Clear duplicate tracking cache
+   * Call this periodically or when memory needs to be freed
+   */
+  clearDuplicateCache() {
+    const previousSize = this.processedProfiles.size;
+    this.processedProfiles.clear();
+    logger.info(`Cleared duplicate tracking cache. Removed ${previousSize} entries.`);
+  }
+
+  /**
+   * Get AI model status
+   * @returns {Object} Status of available AI models
+   */
+  getAIModelStatus() {
+    return aiAnalysisService.getModelStatus();
+  }
+
+  /**
+   * Clear AI analysis cache
+   */
+  clearAICache() {
+    aiAnalysisService.clearCache();
+    logger.info('AI analysis cache cleared');
   }
 }
 

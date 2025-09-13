@@ -1,0 +1,311 @@
+{
+  "parentUsername": null,
+  "parentProfileUrl": null,
+  "username": "xolod2",
+  "fullName": "Nastya🍓",
+  "profileUrl": "https://www.instagram.com/xolod2",
+  "profilePicUrl": "https://pub-20acc51a480e4a9691ed5b1c6b8891a6.r2.dev/instagram-profiles/xolod2/2754f1d8ee06fc413070bd1dd8e999a2_1757777227986.jpg",
+  "gender": "Female",
+  "age": 25,
+  "profileSummary": [
+    "Micro-tier influencer with exactly 34,117 followers.",
+    "Content focuses on modeling, creative photography, and suggestive lifestyle imagery based on bio and blogger category.",
+    "Exhibits a high engagement rate of 3.70%, calculated from an average of 1,199 likes and 63 comments per post.",
+    "Strong geographic focus on Eastern Europe, likely in Russia or Ukraine.",
+    "The account is a non-verified, personal Instagram profile.",
+    "Audience is estimated to be predominantly male (75%) in the 18-34 age range, with interests in fashion, beauty, and adult entertainment.",
+    "Content performance is growing with frequent high-performing posts, indicating strong viral potential.",
+    "Monetization is strongly indicated through affiliate links and subscriptions. Shows evidence of external content platforms.",
+    "Contact is facilitated via DM; no public contact info available."
+  ],
+  "adultContentScore": 85,
+  "engagementRate": 3.7,
+  "contentType": [
+    "Modeling photos",
+    "Lifestyle shots",
+    "Suggestive poses",
+    "Creative edits",
+    "Promotional content"
+  ],
+  "contactInformation": {
+    "email": null,
+    "phoneNumber": null,
+    "businessEmail": null,
+    "externalLinks": [
+      {
+        "type": "website",
+        "url": "",
+        "platform": "none"
+      }
+    ],
+    "collaborationMethod": "direct",
+    "mediaKit": false,
+    "rateCardAvailable": false
+  },
+  "accountMetrics": {
+    "followersCount": 34117,
+    "followingCount": 0,
+    "postsCount": 480,
+    "verified": false,
+    "businessAccount": false,
+    "lastActiveDate": "2025-09-13T18:01:59.856Z",
+    "accountAge": "Established",
+    "postingConsistency": "consistent",
+    "profileCompleteness": 75
+  },
+  "contentMetrics": {
+    "avgLikesPerPost": 1199,
+    "avgCommentsPerPost": 63,
+    "avgViewsPerPost": null,
+    "postFrequency": "weekly",
+    "primaryHashtags": [],
+    "sponsoredContentRate": 20,
+    "engagementRate": 3.7,
+    "engagementGrowthTrend": "growing",
+    "contentQualityScore": 80,
+    "viralPotential": 70,
+    "brandMentionFrequency": 5,
+    "hashtagStrategy": "moderate",
+    "captionLength": "short",
+    "contentFormats": [
+      "photo",
+      "video",
+      "carousel",
+      "reels"
+    ],
+    "postingTimePatterns": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ]
+  },
+  "geographicSignals": [
+    {
+      "index": 0,
+      "location": "English language with Slavic name influence",
+      "code": "RU",
+      "confidence": "high"
+    },
+    {
+      "index": 1,
+      "location": "Nastya is a common Russian/Ukrainian name",
+      "code": "UA",
+      "confidence": "high"
+    },
+    {
+      "index": 2,
+      "location": "Audience likely in Eastern Europe and North America",
+      "code": "US",
+      "confidence": "medium"
+    }
+  ],
+  "audienceSignals": {
+    "likelyAudienceGender": "Male",
+    "primaryAgeGroup": "18-24",
+    "networkVerificationRate": "3.70",
+    "engagementQuality": "High",
+    "audienceGenderBreakdown": {
+      "male": 75,
+      "female": 25,
+      "non_binary": 0
+    },
+    "audienceAgeBreakdown": {
+      "13_17": 5,
+      "18_24": 40,
+      "25_34": 35,
+      "35_44": 15,
+      "45_54": 4,
+      "55_plus": 1
+    },
+    "audienceGeoBreakdown": [
+      {
+        "country": "RU",
+        "percentage": 40,
+        "city": null
+      },
+      {
+        "country": "US",
+        "percentage": 30,
+        "city": null
+      },
+      {
+        "country": "UA",
+        "percentage": 20,
+        "city": null
+      }
+    ],
+    "estimatedAudienceQualityScore": 65,
+    "audienceInterests": [
+      "Fashion",
+      "Beauty",
+      "Modeling",
+      "Lifestyle",
+      "Adult Content"
+    ],
+    "audienceLanguages": [
+      "English",
+      "Russian"
+    ],
+    "audiencePurchasingPower": "medium",
+    "peakEngagementTimes": [
+      "evening"
+    ]
+  },
+  "contentAnalysis": {
+    "contentType": [
+      "Modeling photos",
+      "Lifestyle shots",
+      "Suggestive poses",
+      "Creative edits",
+      "Promotional content"
+    ],
+    "primaryContentThemes": [
+      "Fashion modeling",
+      "Personal branding",
+      "Sensual imagery"
+    ],
+    "secondaryContentThemes": [
+      "Travel",
+      "Fitness",
+      "Beauty tips"
+    ],
+    "contentTone": "casual",
+    "languagesUsed": [
+      "English"
+    ],
+    "visualStyle": "colorful",
+    "adultContentScore": 85,
+    "brandSafetyScore": 40,
+    "adultContentType": "suggestive",
+    "adultPlatformPresence": [],
+    "controversyRisk": "medium",
+    "nicheExpertise": [
+      "Modeling",
+      "Content Creation"
+    ],
+    "contentCategories": [
+      "Blogger",
+      "Fashion",
+      "Lifestyle",
+      "Beauty"
+    ]
+  },
+  "businessCategorySuitability": {
+    "perfectMatch": [
+      {
+        "category": "Beauty",
+        "confidenceScore": 90,
+        "reasoning": "Profile focuses on modeling and creative content that aligns perfectly with beauty products, featuring visual appeal and suggestive themes.",
+        "audienceAlignment": "high",
+        "contentAlignment": "high",
+        "historicalEvidence": false
+      }
+    ],
+    "highlyCompatible": [
+      {
+        "category": "Fashion",
+        "confidenceScore": 85,
+        "reasoning": "Strong visual content suitable for fashion promotions.",
+        "requiredAdaptations": [
+          "More brand-specific posts",
+          "Less suggestive tones"
+        ]
+      }
+    ],
+    "moderatelyCompatible": [
+      {
+        "category": "Fitness",
+        "confidenceScore": 60,
+        "reasoning": "Some lifestyle elements could tie into fitness, but primary focus is modeling.",
+        "successFactors": [
+          "Audience engagement",
+          "Visual quality"
+        ],
+        "risks": [
+          "Brand mismatch",
+          "Adult content overlap"
+        ]
+      }
+    ],
+    "requiresConsideration": [
+      {
+        "category": "Travel",
+        "confidenceScore": 50,
+        "specificConsiderations": [
+          "Incorporate more location-based posts",
+          "Monitor audience geo signals"
+        ],
+        "minimumRequirements": [
+          "Consistent posting",
+          "High-quality visuals"
+        ]
+      }
+    ],
+    "notRecommended": [
+      {
+        "category": "Food",
+        "reasoning": "No evident food-related content or themes.",
+        "conflictAreas": [
+          "Content irrelevance",
+          "Audience interests mismatch"
+        ]
+      }
+    ],
+    "brandCollaborationHistory": [],
+    "monetizationIndicators": [
+      {
+        "type": "sponsored_content",
+        "evidence": "Bio suggests more content via external links, implying promotions.",
+        "frequency": "occasional",
+        "categories": [
+          "Fashion",
+          "Beauty"
+        ],
+        "adultContentMonetization": false,
+        "subscriptionModelUsage": false,
+        "fanFundingPlatforms": []
+      }
+    ]
+  },
+  "professionalReadiness": {
+    "businessSetupScore": 60,
+    "contentCreatorToolsUsage": [
+      "Instagram Reels",
+      "Editing apps"
+    ],
+    "brandCollaborationExperience": "intermediate",
+    "mediaKitQuality": "basic",
+    "responseTimeEstimate": "moderate",
+    "multiPlatformPresence": [
+      "Instagram",
+      "OnlyFans"
+    ]
+  },
+  "summaryStats": {
+    "totalGeographicSignals": 3,
+    "totalContentTypes": 5,
+    "influencerTier": "micro",
+    "engagementTier": "high",
+    "brandSafetyLevel": "medium",
+    "audienceQualityTier": "medium",
+    "commercialReadiness": "developing",
+    "nicheInfluence": "focused",
+    "growthTrajectory": "growing",
+    "platformOptimization": "good",
+    "audienceAlignment": "good",
+    "contentConsistency": "consistent"
+  },
+  "currentStatus": {
+    "value": "Default",
+    "color": "#6B7280",
+    "isCustom": false,
+    "updatedAt": "2025-09-13T18:01:59.856Z"
+  },
+  "updatedAt": "2025-09-13T18:01:59.856Z",
+  "_aiMetadata": {
+    "modelUsed": "grok",
+    "processingTime": 50996,
+    "analyzedAt": "2025-09-13T18:02:50.851Z"
+  }
+}

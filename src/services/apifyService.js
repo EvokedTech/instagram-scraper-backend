@@ -2,8 +2,10 @@ const { ApifyClient } = require('apify-client');
 const logger = require('../utils/logger');
 const RootProfileScraped = require('../models/RootProfileScraped');
 const RelatedProfileScraped = require('../models/RelatedProfileScraped');
+const AnalyzedRelatedProfile = require('../models/AnalyzedRelatedProfile');
 const { getApifyBatchSizeForDepth } = require('../utils/batchSizeCalculator');
 const axios = require('axios');
+const aiAnalysisService = require('./aiAnalysisService');
 
 class ApifyService {
     constructor() {
@@ -53,9 +55,14 @@ class ApifyService {
 
                 const scrapedData = items[0];
                 const processedData = this.parseProfileData(scrapedData, profileUrl);
-                
+
                 const savedProfile = await this.saveProfile(processedData, isRootProfile, sessionId, options);
-                
+
+                // Trigger AI analysis after successful scraping
+                if (savedProfile && processedData.rawData) {
+                    this.triggerAIAnalysis(savedProfile, processedData.rawData, sessionId);
+                }
+
                 logger.info(`Successfully scraped and saved profile: ${profileUrl}`);
                 return savedProfile;
 
@@ -192,7 +199,94 @@ class ApifyService {
     }
     
     /**
-     * Trigger analysis webhook to analyze the scraped profile
+     * Trigger AI analysis for the scraped profile
+     * @param {Object} savedProfile - The saved profile document
+     * @param {Object} profileData - The raw profile data from Apify
+     * @param {string} sessionId - The session ID
+     */
+    async triggerAIAnalysis(savedProfile, profileData, sessionId) {
+        try {
+            logger.info(`Starting AI analysis for profile: ${savedProfile.username}`);
+
+            // Check if analysis already exists
+            const existingAnalysis = await AnalyzedRelatedProfile.findOne({
+                sourceProfileId: savedProfile._id,
+                sessionId: sessionId
+            });
+
+            if (existingAnalysis) {
+                logger.info(`Analysis already exists for ${savedProfile.username}, skipping`);
+                return existingAnalysis;
+            }
+
+            // Perform AI analysis
+            const aiResult = await aiAnalysisService.analyzeProfile(profileData, {
+                forceRefresh: false
+            });
+
+            // Prepare analysis data
+            const analysisData = {
+                ...aiResult.analysis,
+                modelUsed: aiResult.modelUsed,
+                fromCache: aiResult.fromCache,
+                processingTime: aiResult.processingTime,
+                analyzedAt: new Date()
+            };
+
+            // Save analysis to database
+            const analyzedProfile = new AnalyzedRelatedProfile({
+                sourceProfileId: savedProfile._id,
+                sourceCollection: savedProfile.constructor.modelName,
+                sessionId: sessionId,
+                username: savedProfile.username,
+                profileUrl: savedProfile.profileUrl,
+                depth: savedProfile.depth || 0,
+                analysisData: analysisData,
+                analysisStatus: 'completed'
+            });
+
+            await analyzedProfile.save();
+
+            // Update the profile status to analyzed
+            if (savedProfile.markAsAnalyzed) {
+                await savedProfile.markAsAnalyzed();
+            }
+
+            logger.info(`AI analysis completed and saved for ${savedProfile.username} using ${aiResult.modelUsed}`);
+            return analyzedProfile;
+
+        } catch (error) {
+            logger.error(`AI analysis failed for ${savedProfile.username}:`, error.message);
+
+            // Save failed analysis record
+            try {
+                const failedAnalysis = new AnalyzedRelatedProfile({
+                    sourceProfileId: savedProfile._id,
+                    sourceCollection: savedProfile.constructor.modelName,
+                    sessionId: sessionId,
+                    username: savedProfile.username,
+                    profileUrl: savedProfile.profileUrl,
+                    depth: savedProfile.depth || 0,
+                    analysisData: {},
+                    analysisStatus: 'failed',
+                    errorDetails: {
+                        message: error.message,
+                        stack: error.stack,
+                        timestamp: new Date()
+                    }
+                });
+                await failedAnalysis.save();
+            } catch (saveError) {
+                logger.error('Failed to save failed analysis record:', saveError);
+            }
+
+            // Don't throw - let scraping continue even if analysis fails
+            return null;
+        }
+    }
+
+    /**
+     * Legacy webhook method (kept for backward compatibility)
      * @param {string} username - Instagram username
      */
     async triggerAnalysisWebhook(username) {
@@ -200,18 +294,18 @@ class ApifyService {
             // Get analysis backend URL from environment or use default
             const analysisBackendUrl = process.env.ANALYSIS_BACKEND_URL || 'http://localhost:5001';
             const webhookUrl = `${analysisBackendUrl}/api/analyze/webhook`;
-            
+
             logger.info(`Triggering analysis webhook for ${username}`);
-            
+
             const response = await axios.post(webhookUrl, {
                 username: username,
                 action: 'new_profile_scraped'
             }, {
                 timeout: 5000 // 5 second timeout
             });
-            
+
             logger.info(`Analysis webhook triggered successfully for ${username}: ${response.data.status}`);
-            
+
         } catch (error) {
             // Don't throw error - analysis will be caught by backup monitor
             logger.warn(`Failed to trigger analysis webhook for ${username}: ${error.message}`);
