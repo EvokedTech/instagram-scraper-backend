@@ -14,8 +14,9 @@ const LIMIT = parseInt(process.env.LIMIT) || 50; // Default to 50 profiles
 class LatestProfileAnalyzer {
   constructor() {
     this.apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-    this.primaryModel = 'qwen/qwen2.5-vl-72b-instruct';  // Correct model name
-    this.fallbackModel = 'x-ai/grok-3-mini';
+    this.primaryModel = 'qwen/qwen2.5-vl-72b-instruct';  // Primary model
+    this.fallbackModel = 'x-ai/grok-3-mini';  // First fallback
+    this.secondFallbackModel = 'qwen/qwen3-next-80b-a3b-thinking';  // Second fallback
     this.processedCount = 0;
     this.successCount = 0;
     this.failCount = 0;
@@ -113,25 +114,37 @@ class LatestProfileAnalyzer {
 
   async analyzeWithOpenRouter(profileData) {
     try {
-      // Try primary model (Qwen)
+      // Try primary model (Qwen 2.5)
       return await this.analyzeWithModel(profileData, this.primaryModel);
     } catch (primaryError) {
       console.error(`   ⚠️ Primary model failed:`, primaryError.message);
 
-      if (primaryError.response?.status === 402) {
-        console.log('   💰 Insufficient credits for Qwen, trying Grok fallback...');
+      if (primaryError.response?.status === 402 || primaryError.response?.status === 401) {
+        console.log('   💰 Insufficient credits or auth error for Qwen 2.5, trying Grok fallback...');
       }
 
       try {
-        // Try fallback model (Grok)
-        console.log(`   🔄 Switching to fallback model: ${this.fallbackModel}`);
+        // Try first fallback model (Grok)
+        console.log(`   🔄 Switching to first fallback: ${this.fallbackModel}`);
         return await this.analyzeWithModel(profileData, this.fallbackModel);
       } catch (fallbackError) {
-        console.error(`   ❌ Fallback model also failed:`, fallbackError.message);
-        console.log('   📝 Using local fallback analysis...');
-        const fallback = this.generateFallbackAnalysis(profileData);
-        fallback.modelUsed = 'local-fallback';
-        return fallback;
+        console.error(`   ⚠️ First fallback failed:`, fallbackError.message);
+
+        if (fallbackError.response?.status === 402 || fallbackError.response?.status === 401) {
+          console.log('   💰 Grok failed, trying Qwen3 Next fallback...');
+        }
+
+        try {
+          // Try second fallback model (Qwen3 Next)
+          console.log(`   🔄 Switching to second fallback: ${this.secondFallbackModel}`);
+          return await this.analyzeWithModel(profileData, this.secondFallbackModel);
+        } catch (secondFallbackError) {
+          console.error(`   ❌ All models failed:`, secondFallbackError.message);
+          console.log('   📝 Using local fallback analysis...');
+          const fallback = this.generateFallbackAnalysis(profileData);
+          fallback.modelUsed = 'local-fallback';
+          return fallback;
+        }
       }
     }
   }

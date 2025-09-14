@@ -33,11 +33,13 @@ class ProfileReanalyzer {
   constructor() {
     this.apiKey = process.env.OPENROUTER_API_KEY || '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';
     this.apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-    this.primaryModel = 'qwen/qwen2.5-vl-72b-instruct';  // Correct model name
-    this.fallbackModel = 'x-ai/grok-3-mini';
+    this.primaryModel = 'qwen/qwen2.5-vl-72b-instruct';  // Primary model
+    this.fallbackModel = 'x-ai/grok-3-mini';  // First fallback
+    this.secondFallbackModel = 'qwen/qwen3-next-80b-a3b-thinking';  // Second fallback
     console.log('🔑 Using API Key:', this.apiKey.substring(0, 20) + '...');
     console.log('🤖 Primary Model:', this.primaryModel);
-    console.log('🤖 Fallback Model:', this.fallbackModel);
+    console.log('🤖 Fallback Model 1:', this.fallbackModel);
+    console.log('🤖 Fallback Model 2:', this.secondFallbackModel);
   }
 
   async analyzeWithModel(profileData, model) {
@@ -141,30 +143,42 @@ class ProfileReanalyzer {
 
   async analyzeProfile(profileData) {
     try {
-      // Try primary model (Qwen)
+      // Try primary model (Qwen 2.5)
       console.log(`   🤖 Trying primary model: ${this.primaryModel}`);
       return await this.analyzeWithModel(profileData, this.primaryModel);
     } catch (primaryError) {
       console.error(`   ⚠️ Primary model failed:`, primaryError.message);
 
-      if (primaryError.response?.status === 402) {
-        console.log('   💰 Insufficient credits for Qwen, trying Grok fallback...');
+      if (primaryError.response?.status === 402 || primaryError.response?.status === 401) {
+        console.log('   💰 Insufficient credits or auth error for Qwen 2.5, trying Grok fallback...');
       }
 
       try {
-        // Try fallback model (Grok)
-        console.log(`   🔄 Switching to fallback model: ${this.fallbackModel}`);
+        // Try first fallback model (Grok)
+        console.log(`   🔄 Switching to first fallback: ${this.fallbackModel}`);
         return await this.analyzeWithModel(profileData, this.fallbackModel);
       } catch (fallbackError) {
-        console.error(`   ❌ Fallback model also failed:`, fallbackError.message);
+        console.error(`   ⚠️ First fallback failed:`, fallbackError.message);
 
-        if (fallbackError.response) {
-          console.error(`   📊 Response Status: ${fallbackError.response.status}`);
-          console.error(`   📊 Response Data:`, JSON.stringify(fallbackError.response.data, null, 2));
+        if (fallbackError.response?.status === 402 || fallbackError.response?.status === 401) {
+          console.log('   💰 Grok failed, trying Qwen3 Next fallback...');
         }
 
-        console.log('   📝 Using local fallback analysis...');
-        return this.generateFallbackAnalysis(profileData);
+        try {
+          // Try second fallback model (Qwen3 Next)
+          console.log(`   🔄 Switching to second fallback: ${this.secondFallbackModel}`);
+          return await this.analyzeWithModel(profileData, this.secondFallbackModel);
+        } catch (secondFallbackError) {
+          console.error(`   ❌ All models failed:`, secondFallbackError.message);
+
+          if (secondFallbackError.response) {
+            console.error(`   📊 Response Status: ${secondFallbackError.response.status}`);
+            console.error(`   📊 Response Data:`, JSON.stringify(secondFallbackError.response.data, null, 2));
+          }
+
+          console.log('   📝 Using local fallback analysis...');
+          return this.generateFallbackAnalysis(profileData);
+        }
       }
     }
   }
@@ -282,11 +296,11 @@ async function reanalyzeProfiles() {
         if (aiAnalysis.profileSummary && aiAnalysis.profileSummary.length > 0) {
           console.log(`   ✅ Profile summary generated: ${aiAnalysis.profileSummary.length} insights`);
           // Store which model was used
-          aiAnalysis.modelUsed = aiAnalysis.modelUsed || 'qwen/grok';
+          aiAnalysis.modelUsed = aiAnalysis.modelUsed || 'qwen/grok/qwen3';
         } else {
           console.log(`   ⚠️  No profile summary generated, using fallback`);
           aiAnalysis.profileSummary = analyzer.generateProfileSummary(profileData);
-          aiAnalysis.modelUsed = 'fallback';
+          aiAnalysis.modelUsed = 'local-fallback';
         }
 
         // Prepare the analysis document
