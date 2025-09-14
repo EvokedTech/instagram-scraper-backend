@@ -26,11 +26,11 @@ class BatchScrapingService {
       }
 
       logger.info(`Starting batch processing for session ${sessionId}`);
-      
+
       // Update session status
       session.status = 'running';
       await session.save();
-      
+
       // Get all pending profiles for this session
       const pendingProfiles = await RootProfileScraped.find({
         sessionId,
@@ -38,6 +38,18 @@ class BatchScrapingService {
       });
 
       logger.info(`Found ${pendingProfiles.length} profiles to process in batches of ${batchConfig.BATCH_SIZE}`);
+
+      // BULK MODE DETECTION: If more than 50 profiles, enable bulk mode
+      const isBulkOperation = pendingProfiles.length > 50;
+      if (isBulkOperation) {
+        logger.warn(`🚨 BULK MODE ENABLED: ${pendingProfiles.length} profiles detected`);
+        logger.warn(`⚠️  Webhooks will be triggered gradually to prevent API overload`);
+        this.bulkMode = true;
+        this.bulkSessionId = sessionId;
+        this.totalBulkProfiles = pendingProfiles.length;
+      } else {
+        this.bulkMode = false;
+      }
 
       // Process in batches
       const batches = this.createBatches(pendingProfiles, batchConfig.BATCH_SIZE);
@@ -110,6 +122,16 @@ class BatchScrapingService {
       logger.info(`❌ Failed: ${totalFailed}`);
       logger.info(`🔒 Skipped (Private): ${totalSkipped}`);
       logger.info(`========================================\n`);
+
+      // BULK MODE: Start background analysis after scraping is complete
+      if (this.bulkMode && totalSuccess > 0) {
+        logger.info(`\n🚀 BULK MODE: Starting background analysis for ${totalSuccess} profiles...`);
+        logger.info(`⏱️  Analysis will process at safe rate (30 profiles/minute)`);
+        logger.info(`📊 Estimated time: ${Math.ceil(totalSuccess / 30)} minutes`);
+
+        // Start background analysis process
+        this.startBulkAnalysis(sessionId, totalSuccess);
+      }
 
       return {
         totalProcessed,
@@ -201,14 +223,25 @@ class BatchScrapingService {
           
           // CRITICAL: Save the profile FIRST before triggering webhook
           await profile.save();
-          
-          // Add delay to ensure data is fully saved before triggering webhook
-          setTimeout(() => {
-            logger.info(`⏰ Triggering delayed webhook for ${profile.username} (ensuring data is saved)`);
-            this.triggerAnalysisWebhook(profile.username).catch(err => {
-              logger.warn(`Failed to trigger analysis for ${profile.username}: ${err.message}`);
-            });
-          }, 3000); // 3 second delay to ensure database write is complete
+
+          // BULK MODE HANDLING: Don't trigger webhooks immediately for bulk operations
+          if (this.bulkMode) {
+            logger.info(`  📦 BULK MODE: Skipping immediate webhook for ${profile.username} (will process later)`);
+            // Mark for background analysis
+            profile.metadata = {
+              ...profile.metadata,
+              pendingAnalysis: true,
+              bulkSessionId: this.bulkSessionId
+            };
+          } else {
+            // Normal mode: trigger webhook with delay
+            setTimeout(() => {
+              logger.info(`⏰ Triggering delayed webhook for ${profile.username} (ensuring data is saved)`);
+              this.triggerAnalysisWebhook(profile.username).catch(err => {
+                logger.warn(`Failed to trigger analysis for ${profile.username}: ${err.message}`);
+              });
+            }, 3000); // 3 second delay to ensure database write is complete
+          }
           
           logger.info(`  ✅ ${profile.username} - SUCCESS - Followers: ${result.data.followersCount || 'N/A'}, Posts: ${result.data.postsCount || 'N/A'}`);
           return { type: 'success', profile };
@@ -405,6 +438,89 @@ class BatchScrapingService {
    */
   delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  /**
+   * Start bulk analysis process that respects rate limits
+   */
+  async startBulkAnalysis(sessionId, totalProfiles) {
+    try {
+      // Get all scraped profiles that need analysis
+      const profilesToAnalyze = await RootProfileScraped.find({
+        sessionId,
+        status: 'scraped',
+        'metadata.pendingAnalysis': true
+      }).sort({ scrapedAt: 1 }); // Process in order they were scraped
+
+      if (profilesToAnalyze.length === 0) {
+        logger.info('No profiles pending analysis');
+        return;
+      }
+
+      logger.info(`\n📋 BULK ANALYSIS STARTED`);
+      logger.info(`Total profiles to analyze: ${profilesToAnalyze.length}`);
+      logger.info(`Rate limit: 30 profiles/minute (2 seconds between requests)`);
+      logger.info(`Estimated completion: ${Math.ceil(profilesToAnalyze.length / 30)} minutes\n`);
+
+      let successCount = 0;
+      let failCount = 0;
+
+      // Process profiles with rate limiting
+      for (let i = 0; i < profilesToAnalyze.length; i++) {
+        const profile = profilesToAnalyze[i];
+        const progress = Math.round((i / profilesToAnalyze.length) * 100);
+
+        try {
+          logger.info(`[${i + 1}/${profilesToAnalyze.length}] (${progress}%) Triggering analysis for ${profile.username}`);
+
+          // Trigger webhook for analysis
+          await this.triggerAnalysisWebhook(profile.username);
+
+          // Update profile metadata to remove pending flag
+          profile.metadata.pendingAnalysis = false;
+          await profile.save();
+
+          successCount++;
+
+          // CRITICAL: Wait 2 seconds between requests to respect rate limit
+          if (i < profilesToAnalyze.length - 1) {
+            await this.delay(2000); // 2 second delay = 30 requests per minute
+          }
+
+          // Log progress every 10 profiles
+          if ((i + 1) % 10 === 0) {
+            logger.info(`\n📊 Progress Update: ${i + 1}/${profilesToAnalyze.length} profiles analyzed`);
+            logger.info(`   Success: ${successCount}, Failed: ${failCount}`);
+            logger.info(`   Time remaining: ~${Math.ceil((profilesToAnalyze.length - i - 1) / 30)} minutes\n`);
+          }
+
+        } catch (error) {
+          logger.error(`Failed to trigger analysis for ${profile.username}: ${error.message}`);
+          failCount++;
+
+          // Still apply rate limiting even on failure
+          if (i < profilesToAnalyze.length - 1) {
+            await this.delay(2000);
+          }
+        }
+      }
+
+      logger.info(`\n✅ BULK ANALYSIS COMPLETE`);
+      logger.info(`Successfully analyzed: ${successCount}/${profilesToAnalyze.length}`);
+      logger.info(`Failed: ${failCount}`);
+
+      // Emit completion event
+      if (socketService.io) {
+        socketService.io.to(`session:${sessionId}`).emit('bulk:analysis:complete', {
+          totalAnalyzed: successCount,
+          totalFailed: failCount,
+          totalProfiles: profilesToAnalyze.length
+        });
+      }
+
+    } catch (error) {
+      logger.error(`Bulk analysis error for session ${sessionId}:`, error);
+    }
   }
 
   /**

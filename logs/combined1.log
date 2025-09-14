@@ -18909,3 +18909,279 @@
 {"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 02:02:21"}
 {"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 02:02:31"}
 {"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 02:02:41"}
+{"level":"info","message":"Using Redis URL configuration for redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 11:26:09"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 11:26:09"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 11:26:10"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 11:26:10"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 11:26:10"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-09-14 11:26:10","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"info","message":"ProfileAnalysisService initialized with AI fallback support","service":"instagram-scraper","timestamp":"2025-09-14 11:26:10"}
+{"level":"info","message":"Shared Redis client connected for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 11:26:10"}
+{"level":"info","message":"MongoDB connected successfully","service":"instagram-scraper","timestamp":"2025-09-14 11:26:11"}
+{"level":"info","message":"Redis client connected","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Redis client ready","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Connected to Redis at redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Redis connection verified with PING","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Initializing queue processors...","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Root profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Related profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Depth processing queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Related profile batch queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Analysis will be processed through n8n webhook","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"All queue processors initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Session completion checker started","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Server is running on port 5002","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Environment: development","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"CONFIGURATION CHECK:","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"ANALYSIS_BACKEND_URL: https://web-production-69b69.up.railway.app","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"MONGODB_URI: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"APIFY_API_TOKEN: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"CLOUDFLARE_R2: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 11:26:12"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:26:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:26:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:26:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:26:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:27:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:27:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:27:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:27:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:27:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:27:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:28:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:28:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:28:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:28:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:28:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:28:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:29:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:29:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:29:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:29:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:29:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:29:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:30:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:30:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:30:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:30:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:30:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:30:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:31:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:31:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:31:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:31:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:31:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:31:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:32:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:32:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:32:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:32:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:32:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:32:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:33:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:33:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:33:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:33:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:33:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:33:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:34:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:34:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:34:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:34:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:34:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:34:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:35:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:35:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:35:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:35:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:35:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:35:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:36:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:36:13"}
+{"level":"info","message":"Checking 5 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:36:23"}
+{"level":"info","message":"Checking 5 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:36:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:36:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:36:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:37:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:37:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:37:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:37:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:37:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:37:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:38:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:38:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:38:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:38:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:38:44"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:38:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:39:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:39:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:39:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:39:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:39:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:39:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:40:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:40:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:40:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:40:34"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:40:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:40:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:41:03"}
+{"level":"info","message":"Checking 5 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:41:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:41:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:41:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:41:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:41:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:42:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:42:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:42:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:42:33"}
+{"level":"info","message":"Checking 5 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:42:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:42:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:43:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:43:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:43:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:43:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:43:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:43:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:44:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:44:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:44:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:44:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:44:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:44:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:45:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:45:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:45:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:45:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:45:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:45:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:46:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:46:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:46:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:46:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:46:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:46:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:47:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:47:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:47:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:47:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:47:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:47:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:48:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:48:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:48:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:48:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:48:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:48:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:49:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:49:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:49:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:49:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:49:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:49:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:50:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:50:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:50:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:50:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:50:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:50:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:51:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:51:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:51:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:51:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:51:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:51:54"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:52:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:52:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:52:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:52:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:52:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:52:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:53:03"}
+{"level":"info","message":"Checking 5 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:53:13"}
+{"level":"info","message":"Checking 5 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:53:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:53:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:53:44"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:53:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:54:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:54:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:54:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:54:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:54:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:54:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:55:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:55:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:55:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:55:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:55:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:55:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:56:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:56:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:56:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:56:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:56:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:56:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:57:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:57:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:57:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:57:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:57:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:57:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:58:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:58:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:58:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:58:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:58:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:58:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:59:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:59:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:59:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:59:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:59:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 11:59:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 12:00:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 12:00:13"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 12:00:23"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 12:00:33"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 12:00:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 12:00:53"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 12:01:03"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 12:01:13"}
+{"level":"info","message":"Using Redis URL configuration for redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 12:01:27"}
+{"level":"info","message":"Created shared Redis clients for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 12:01:27"}
+{"level":"info","message":"Cloudflare R2 configuration detected","service":"instagram-scraper","timestamp":"2025-09-14 12:01:27"}
+{"level":"info","message":"Cloudflare R2 client initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 12:01:27"}
+{"level":"info","message":"Cloudflare CDN conversion enabled","service":"instagram-scraper","timestamp":"2025-09-14 12:01:27"}
+{"level":"info","message":"N8nWebhookService initialized","retryAttempts":3,"retryDelay":5000,"service":"instagram-scraper","timestamp":"2025-09-14 12:01:27","webhookUrl":"https://evoked.app.n8n.cloud/webhook/analysed-data"}
+{"level":"info","message":"ProfileAnalysisService initialized with AI fallback support","service":"instagram-scraper","timestamp":"2025-09-14 12:01:27"}
+{"level":"info","message":"Shared Redis client connected for Bull queues","service":"instagram-scraper","timestamp":"2025-09-14 12:01:28"}
+{"level":"info","message":"MongoDB connected successfully","service":"instagram-scraper","timestamp":"2025-09-14 12:01:30"}
+{"level":"info","message":"Redis client connected","service":"instagram-scraper","timestamp":"2025-09-14 12:01:31"}
+{"level":"info","message":"Redis client ready","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Connected to Redis at redis-14711.c16.us-east-1-2.ec2.redns.redis-cloud.com:14711","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Redis connection verified with PING","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Initializing queue processors...","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Root profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Related profile queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Depth processing queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Related profile batch queue processor initialized","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Analysis will be processed through n8n webhook","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"All queue processors initialized successfully","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Session completion checker started","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Server is running on port 5002","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Environment: development","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Socket.IO server initialized","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"CONFIGURATION CHECK:","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"ANALYSIS_BACKEND_URL: https://web-production-69b69.up.railway.app","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"MONGODB_URI: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"APIFY_API_TOKEN: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"CLOUDFLARE_R2: ✅ configured","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"====================================","service":"instagram-scraper","timestamp":"2025-09-14 12:01:32"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 12:01:43"}
+{"level":"info","message":"Checking 4 running sessions for completion","service":"instagram-scraper","timestamp":"2025-09-14 12:01:53"}
