@@ -14,7 +14,7 @@ const LIMIT = parseInt(process.env.LIMIT) || 50; // Default to 50 profiles
 class LatestProfileAnalyzer {
   constructor() {
     this.apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-    this.primaryModel = 'qwen/qwen-2.5-72b-instruct';
+    this.primaryModel = 'qwen/qwen2.5-vl-72b-instruct';  // Correct model name
     this.fallbackModel = 'x-ai/grok-3-mini';
     this.processedCount = 0;
     this.successCount = 0;

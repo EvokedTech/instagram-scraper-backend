@@ -6,42 +6,20 @@ const { MongoClient } = require('mongodb');
 const axios = require('axios');
 require('dotenv').config();
 
-const profilesToReanalyze = [
-  'justyna.e36',
-  'emme.rxh',
-  'olciaa_.okk',
-  'lxna.ofx',
-  'michelliii.ktr',
-  'lisaschafberg',
-  'weber_ovaa',
-  'xevelonax',
-  'czarnulkaa_003',
-  'loxixe.tmb',
-  'nurillo_qurbonov_',
-  'nurmetbe',
-  'malika_rahmonova_officalll',
-  'maxamadjonov_010',
-  '_komron_0905',
-  'shamsidd1n007',
-  'stroitelstva_remont_samarkand',
-  'vakhobov.009',
-  'blkkstar',
-  'millieenaro'
-];
+const profilesToReanalyze = ["weber_ovaa"];
 
 class ProfileReanalyzer {
   constructor() {
     this.apiKey = process.env.OPENROUTER_API_KEY || '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';
     this.apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-    this.primaryModel = 'qwen/qwen2.5-vl-72b-instruct';  // Correct model name
-    this.fallbackModel = 'x-ai/grok-3-mini';
+    this.model = 'qwen/qwen-2.5-72b-instruct';
     console.log('🔑 Using API Key:', this.apiKey.substring(0, 20) + '...');
-    console.log('🤖 Primary Model:', this.primaryModel);
-    console.log('🤖 Fallback Model:', this.fallbackModel);
+    console.log('🤖 Using Model:', this.model);
   }
 
-  async analyzeWithModel(profileData, model) {
-    const prompt = `
+  async analyzeProfile(profileData) {
+    try {
+      const prompt = `
         Analyze this Instagram profile and provide comprehensive insights:
 
         Username: @${profileData.username}
@@ -82,7 +60,7 @@ class ProfileReanalyzer {
       console.log(`   📡 Calling OpenRouter API for ${profileData.username}...`);
 
       const requestBody = {
-        model: model,
+        model: this.model,
         messages: [
           {
             role: 'system',
@@ -98,7 +76,7 @@ class ProfileReanalyzer {
       };
 
       console.log('   📤 Request URL:', this.apiUrl);
-      console.log('   📤 Request Model:', model);
+      console.log('   📤 Request Model:', requestBody.model);
 
       const response = await axios.post(
         this.apiUrl,
@@ -114,7 +92,7 @@ class ProfileReanalyzer {
         }
       );
 
-      console.log(`   ✅ API Response received for ${profileData.username} using ${model}`);
+      console.log(`   ✅ API Response received for ${profileData.username}`);
 
       const text = response.data.choices[0].message.content;
 
@@ -135,37 +113,20 @@ class ProfileReanalyzer {
       return this.generateFallbackAnalysis(profileData);
 
     } catch (error) {
-      throw error;
-    }
-  }
-
-  async analyzeProfile(profileData) {
-    try {
-      // Try primary model (Qwen)
-      console.log(`   🤖 Trying primary model: ${this.primaryModel}`);
-      return await this.analyzeWithModel(profileData, this.primaryModel);
-    } catch (primaryError) {
-      console.error(`   ⚠️ Primary model failed:`, primaryError.message);
-
-      if (primaryError.response?.status === 402) {
-        console.log('   💰 Insufficient credits for Qwen, trying Grok fallback...');
-      }
-
-      try {
-        // Try fallback model (Grok)
-        console.log(`   🔄 Switching to fallback model: ${this.fallbackModel}`);
-        return await this.analyzeWithModel(profileData, this.fallbackModel);
-      } catch (fallbackError) {
-        console.error(`   ❌ Fallback model also failed:`, fallbackError.message);
-
-        if (fallbackError.response) {
-          console.error(`   📊 Response Status: ${fallbackError.response.status}`);
-          console.error(`   📊 Response Data:`, JSON.stringify(fallbackError.response.data, null, 2));
+      console.error(`   ❌ Error analyzing ${profileData.username}:`, error.message);
+      if (error.response) {
+        console.error(`   📊 Response Status: ${error.response.status}`);
+        console.error(`   📊 Response Data:`, JSON.stringify(error.response.data, null, 2));
+        if (error.response?.status === 402) {
+          console.error('   💰 OpenRouter API: Insufficient credits or payment required');
         }
-
-        console.log('   📝 Using local fallback analysis...');
-        return this.generateFallbackAnalysis(profileData);
+      } else if (error.request) {
+        console.error('   🌐 No response received from OpenRouter API');
+        console.error('   🌐 Request details:', error.request._header);
+      } else {
+        console.error('   🚫 Error setting up request:', error.message);
       }
+      return this.generateFallbackAnalysis(profileData);
     }
   }
 
@@ -281,12 +242,9 @@ async function reanalyzeProfiles() {
         // Check if profile summary was generated
         if (aiAnalysis.profileSummary && aiAnalysis.profileSummary.length > 0) {
           console.log(`   ✅ Profile summary generated: ${aiAnalysis.profileSummary.length} insights`);
-          // Store which model was used
-          aiAnalysis.modelUsed = aiAnalysis.modelUsed || 'qwen/grok';
         } else {
           console.log(`   ⚠️  No profile summary generated, using fallback`);
           aiAnalysis.profileSummary = analyzer.generateProfileSummary(profileData);
-          aiAnalysis.modelUsed = 'fallback';
         }
 
         // Prepare the analysis document
@@ -318,7 +276,7 @@ async function reanalyzeProfiles() {
           analyzedAt: new Date(),
           lastUpdated: new Date(),
           source: 'reanalysis_script',
-          aiModel: aiAnalysis.modelUsed || 'fallback'
+          aiModel: 'qwen/qwen-2.5-72b-instruct'
         };
 
         // Update or insert the analysis
