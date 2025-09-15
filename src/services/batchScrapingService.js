@@ -530,12 +530,12 @@ class BatchScrapingService {
     const maxRetries = 3;
     let retryCount = 0;
 
-    // PRODUCTION FIX: Use Railway production URL as primary, with fallback
+    // PRODUCTION FIX: Use correct Railway production URL
     let analysisBackendUrl;
 
     if (process.env.NODE_ENV === 'production' || process.env.RAILWAY_ENVIRONMENT) {
-      // Always use Railway production URL in production
-      analysisBackendUrl = 'https://linkedin-analyzer-app-backend-production.up.railway.app';
+      // Always use correct Railway production URL in production
+      analysisBackendUrl = 'https://web-production-69b69.up.railway.app';
       logger.info(`🚀 PRODUCTION MODE: Using Railway backend URL for webhooks`);
     } else {
       // Development/local mode
