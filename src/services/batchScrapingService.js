@@ -224,24 +224,24 @@ class BatchScrapingService {
           // CRITICAL: Save the profile FIRST before triggering webhook
           await profile.save();
 
-          // BULK MODE HANDLING: Don't trigger webhooks immediately for bulk operations
-          if (this.bulkMode) {
-            logger.info(`  📦 BULK MODE: Skipping immediate webhook for ${profile.username} (will process later)`);
-            // Mark for background analysis
-            profile.metadata = {
-              ...profile.metadata,
-              pendingAnalysis: true,
-              bulkSessionId: this.bulkSessionId
-            };
-          } else {
-            // Normal mode: trigger webhook with delay
-            setTimeout(() => {
-              logger.info(`⏰ Triggering delayed webhook for ${profile.username} (ensuring data is saved)`);
-              this.triggerAnalysisWebhook(profile.username).catch(err => {
-                logger.warn(`Failed to trigger analysis for ${profile.username}: ${err.message}`);
-              });
-            }, 3000); // 3 second delay to ensure database write is complete
-          }
+          // ALWAYS trigger webhook for ALL profiles (even in bulk mode)
+          // Stagger webhooks to avoid overwhelming the analyzer
+          const baseDelay = this.bulkMode ? 2000 : 1000; // Base delay
+          const staggeredDelay = baseDelay + (index * 500); // Add 500ms per profile to stagger
+
+          setTimeout(() => {
+            logger.info(`⏰ Triggering webhook for ${profile.username} (${this.bulkMode ? 'BULK' : 'NORMAL'} mode) - Delay: ${staggeredDelay}ms`);
+            this.triggerAnalysisWebhook(profile.username).catch(err => {
+              logger.error(`❌ WEBHOOK FAILED for ${profile.username}: ${err.message}`);
+              // Retry once more after 10 seconds
+              setTimeout(() => {
+                logger.info(`🔄 Retrying webhook for ${profile.username}...`);
+                this.triggerAnalysisWebhook(profile.username).catch(err2 => {
+                  logger.error(`❌❌ WEBHOOK PERMANENTLY FAILED for ${profile.username}: ${err2.message}`);
+                });
+              }, 10000);
+            });
+          }, staggeredDelay);
           
           logger.info(`  ✅ ${profile.username} - SUCCESS - Followers: ${result.data.followersCount || 'N/A'}, Posts: ${result.data.postsCount || 'N/A'}`);
           return { type: 'success', profile };
@@ -530,19 +530,22 @@ class BatchScrapingService {
     const maxRetries = 3;
     let retryCount = 0;
 
-    // Get analysis backend URL from environment or use default
-    let analysisBackendUrl = process.env.ANALYSIS_BACKEND_URL || 'http://localhost:5001';
+    // PRODUCTION FIX: Use Railway production URL as primary, with fallback
+    let analysisBackendUrl;
+
+    if (process.env.NODE_ENV === 'production' || process.env.RAILWAY_ENVIRONMENT) {
+      // Always use Railway production URL in production
+      analysisBackendUrl = 'https://linkedin-analyzer-app-backend-production.up.railway.app';
+      logger.info(`🚀 PRODUCTION MODE: Using Railway backend URL for webhooks`);
+    } else {
+      // Development/local mode
+      analysisBackendUrl = process.env.ANALYSIS_BACKEND_URL || 'http://localhost:5001';
+    }
 
     // CRITICAL: Remove trailing slash to prevent double slashes in URL
     analysisBackendUrl = analysisBackendUrl.replace(/\/$/, '');
 
-    // Log the URL being used (important for debugging production issues)
-    if (!process.env.ANALYSIS_BACKEND_URL) {
-      logger.warn(`⚠️ ANALYSIS_BACKEND_URL not set, using default: ${analysisBackendUrl}`);
-      logger.warn('This will fail in production! Set ANALYSIS_BACKEND_URL environment variable.');
-    } else {
-      logger.info(`📍 Using analysis backend URL: ${analysisBackendUrl}`);
-    }
+    logger.info(`📍 Using analysis backend URL: ${analysisBackendUrl}`);
 
     while (retryCount < maxRetries) {
       try {
